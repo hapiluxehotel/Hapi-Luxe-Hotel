@@ -1,39 +1,134 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Deluxe Room | Hapi Luxe Hotel</title>
+
+  <style>
+    body {
+      margin:0;
+      font-family: 'Segoe UI', Arial;
+      background:#120c08;
+      color:#f8efe3;
+    }
+
+    .container {
+      max-width:1100px;
+      margin:auto;
+      padding:60px 20px;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size:48px;
+      margin-bottom:10px;
+    }
+
+    .subtitle {
+      color:#cdbca8;
+      margin-bottom:30px;
+    }
+
+    .gallery {
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:15px;
+      margin-bottom:40px;
+    }
+
+    .gallery img {
+      width:100%;
+      border-radius:20px;
+    }
+
+    .info {
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:40px;
+    }
+
+    .box {
+      background:#2b1c12;
+      padding:25px;
+      border-radius:20px;
+    }
+
+    h2 {
+      margin-bottom:10px;
+      font-family: 'Playfair Display', serif;
+    }
+
+    ul {
+      padding-left:18px;
+      color:#cdbca8;
+    }
+
+    .btn {
+      display:inline-block;
+      margin-top:30px;
+      padding:14px 24px;
+      background:#d6b176;
+      color:#1b110b;
+      border-radius:30px;
+      font-weight:bold;
+    }
+
+    .back {
+      display:inline-block;
+      margin-top:20px;
+      color:#cdbca8;
+    }
+
+    @media(max-width:900px){
+      .gallery {grid-template-columns:1fr;}
+      .info {grid-template-columns:1fr;}
+    }
+  </style>
 </head>
-<body style="font-family: Arial; padding:40px;">
 
-  <h1>Deluxe Room</h1>
+<body>
 
-  <p><strong>Diện tích:</strong> 25m²</p>
+  <div class="container">
 
-  <p>
-    Phòng Deluxe mang phong cách ấm áp, thiết kế tối giản với tông màu nâu – kem,
-    phù hợp cho khách nghỉ dưỡng và công tác.
-  </p>
+    <h1>Deluxe Room</h1>
+    <p class="subtitle">Không gian ấm áp, tinh tế và đầy đủ tiện nghi</p>
 
-  <h2>Tiện ích</h2>
-  <ul>
-    <li>Wifi miễn phí</li>
-    <li>TV màn hình phẳng</li>
-    <li>Máy lạnh</li>
-    <li>Phòng tắm riêng</li>
-  </ul>
+    <div class="gallery">
+      <img src="room1.jpg.png">
+      <img src="room1.jpg.png">
+      <img src="room1.jpg.png">
+    </div>
 
-  <h2>Hình ảnh</h2>
-  <img src="room1.jpg.png" style="width:300px;">
-  <img src="room1.jpg.png" style="width:300px;">
+    <div class="info">
 
-  <br><br>
+      <div class="box">
+        <h2>Thông tin phòng</h2>
+        <p>Phòng Deluxe mang phong cách tối giản với tông nâu – kem, tạo cảm giác ấm áp và thư giãn. Phù hợp cho khách công tác hoặc nghỉ dưỡng.</p>
 
-  <a href="tel:0918577188">📞 Đặt phòng ngay</a>
+        <p><strong>Diện tích:</strong> 25m²</p>
+      </div>
 
-  <br><br>
+      <div class="box">
+        <h2>Tiện ích</h2>
+        <ul>
+          <li>Wifi miễn phí</li>
+          <li>TV màn hình phẳng</li>
+          <li>Máy lạnh</li>
+          <li>Phòng tắm riêng</li>
+          <li>Nước nóng lạnh</li>
+        </ul>
+      </div>
 
-  <a href="index.html">← Quay lại</a>
+    </div>
+
+    <a class="btn" href="tel:0918577188">📞 Đặt phòng ngay</a>
+
+    <br>
+
+    <a class="back" href="index.html">← Quay lại trang chủ</a>
+
+  </div>
 
 </body>
 </html>
