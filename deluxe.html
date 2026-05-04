@@ -13,10 +13,47 @@
       color:#f8efe3;
     }
 
+    /* NAVBAR */
+    .topbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 99;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 7%;
+      background: rgba(18, 12, 8, 0.82);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(214, 177, 118, 0.2);
+    }
+
+    .brand {
+      font-family: Georgia, serif;
+      font-size: 23px;
+      color: #d6b176;
+      letter-spacing: 2px;
+    }
+
+    .menu {
+      display: flex;
+      gap: 24px;
+    }
+
+    .menu a {
+      color: #f8efe3;
+      text-decoration: none;
+    }
+
+    .menu a:hover {
+      color: #d6b176;
+    }
+
     .container {
       max-width:1100px;
       margin:auto;
-      padding:60px 20px;
+      padding:120px 20px 60px;
     }
 
     h1 {
@@ -30,17 +67,37 @@
       margin-bottom:30px;
     }
 
-    .gallery {
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:15px;
-      margin-bottom:40px;
+    /* SLIDER */
+    .slider {
+      position: relative;
+      margin-bottom: 40px;
     }
 
-    .gallery img {
-      width:100%;
-      border-radius:20px;
+    .slide {
+      width: 100%;
+      border-radius: 20px;
+      display: none;
     }
+
+    .slide.active {
+      display: block;
+    }
+
+    .prev, .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.5);
+      color: white;
+      border: none;
+      font-size: 30px;
+      padding: 8px 14px;
+      cursor: pointer;
+      border-radius: 10px;
+    }
+
+    .prev { left: 10px; }
+    .next { right: 10px; }
 
     .info {
       display:grid;
@@ -72,98 +129,60 @@
       color:#1b110b;
       border-radius:30px;
       font-weight:bold;
+      text-decoration:none;
     }
 
     .back {
       display:inline-block;
       margin-top:20px;
       color:#cdbca8;
+      text-decoration:none;
     }
 
     @media(max-width:900px){
-      .gallery {grid-template-columns:1fr;}
       .info {grid-template-columns:1fr;}
     }
-    .slider {
-  position: relative;
-  margin-bottom: 40px;
-}
-
-.slides {
-  position: relative;
-}
-
-.slide {
-  width: 100%;
-  border-radius: 20px;
-  display: none;
-}
-
-.slide.active {
-  display: block;
-}
-
-.prev, .next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0,0,0,0.5);
-  color: white;
-  border: none;
-  font-size: 30px;
-  padding: 8px 14px;
-  cursor: pointer;
-  border-radius: 10px;
-}
-
-.prev { left: 10px; }
-.next { right: 10px; }
   </style>
 </head>
-<script>
-let index = 0;
-const slides = document.querySelectorAll('.slide');
 
-function showSlide(i) {
-  slides.forEach(s => s.classList.remove('active'));
-  slides[i].classList.add('active');
-}
-
-function nextSlide() {
-  index = (index + 1) % slides.length;
-  showSlide(index);
-}
-
-function prevSlide() {
-  index = (index - 1 + slides.length) % slides.length;
-  showSlide(index);
-}
-</script>
 <body>
+
+  <!-- NAVBAR -->
+  <nav class="topbar">
+    <a href="index.html" class="brand" style="display:flex; align-items:center; gap:10px;">
+      <img src="logo.png" style="height:35px;">
+      HAPI LUXE HOTEL
+    </a>
+    <div class="menu">
+      <a href="index.html#about">Giới thiệu</a>
+      <a href="index.html#rooms">Phòng</a>
+      <a href="index.html#services">Tiện ích</a>
+      <a href="index.html#booking">Đặt phòng</a>
+      <a href="index.html#contact">Liên hệ</a>
+    </div>
+  </nav>
 
   <div class="container">
 
     <h1>Deluxe Room</h1>
     <p class="subtitle">Không gian ấm áp, tinh tế và đầy đủ tiện nghi</p>
 
+    <!-- SLIDER -->
     <div class="slider">
-  <button class="prev" onclick="prevSlide()">‹</button>
+      <button class="prev" onclick="prevSlide()">‹</button>
 
-  <div class="slides">
-    <img src="room1.jpg.png" class="slide active">
-    <img src="room1.jpg.png" class="slide">
-    <img src="room1.jpg.png" class="slide">
-  </div>
+      <img src="room1.jpg.png" class="slide active">
+      <img src="room1.jpg.png" class="slide">
+      <img src="room1.jpg.png" class="slide">
 
-  <button class="next" onclick="nextSlide()">›</button>
-</div>
+      <button class="next" onclick="nextSlide()">›</button>
+    </div>
 
     <div class="info">
 
       <div class="box">
         <h2>Thông tin phòng</h2>
         <p>Phòng Deluxe mang phong cách tối giản với tông nâu – kem, tạo cảm giác ấm áp và thư giãn. Phù hợp cho khách công tác hoặc nghỉ dưỡng.</p>
-
         <p><strong>Diện tích:</strong> 25m²</p>
       </div>
 
@@ -187,6 +206,27 @@ function prevSlide() {
     <a class="back" href="index.html">← Quay lại trang chủ</a>
 
   </div>
+
+  <!-- SCRIPT -->
+  <script>
+    let index = 0;
+    const slides = document.querySelectorAll('.slide');
+
+    function showSlide(i) {
+      slides.forEach(s => s.classList.remove('active'));
+      slides[i].classList.add('active');
+    }
+
+    function nextSlide() {
+      index = (index + 1) % slides.length;
+      showSlide(index);
+    }
+
+    function prevSlide() {
+      index = (index - 1 + slides.length) % slides.length;
+      showSlide(index);
+    }
+  </script>
 
 </body>
 </html>
