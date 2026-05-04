@@ -51,6 +51,14 @@
       color: #d6b176;
     }
 
+    /* NÚT ☰ */
+    .menu-toggle {
+      display: none;
+      font-size: 28px;
+      cursor: pointer;
+      color: #f8efe3;
+    }
+
     .container {
       max-width:1100px;
       margin:auto;
@@ -140,7 +148,7 @@
       text-decoration:none;
     }
 
-    /* CONTACT FOOTER */
+    /* CONTACT */
     .contact {
       text-align:center;
       padding:80px 20px;
@@ -158,7 +166,6 @@
 
     .contact-box h2 {
       font-size:32px;
-      margin-bottom:10px;
     }
 
     .contact-box p {
@@ -174,9 +181,32 @@
       font-size:14px;
     }
 
+    /* MOBILE */
     @media(max-width:900px){
-      .menu { display:none; }
-      .info { grid-template-columns:1fr; }
+
+      .menu {
+        display: none;
+        position: absolute;
+        top: 70px;
+        right: 6%;
+        background: #1a120c;
+        padding: 20px;
+        border-radius: 16px;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .menu.show {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .info {
+        grid-template-columns:1fr;
+      }
     }
 
   </style>
@@ -186,17 +216,22 @@
 
   <!-- NAVBAR -->
   <nav class="topbar">
+
     <a href="index.html" class="brand" style="display:flex; align-items:center; gap:10px;">
       <img src="logo.png" style="height:35px;">
       HAPI LUXE HOTEL
     </a>
-    <div class="menu">
+
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    <div class="menu" id="menu">
       <a href="index.html#about">Giới thiệu</a>
       <a href="index.html#rooms">Phòng</a>
       <a href="index.html#services">Tiện ích</a>
       <a href="index.html#booking">Đặt phòng</a>
       <a href="index.html#contact">Liên hệ</a>
     </div>
+
   </nav>
 
   <div class="container">
@@ -204,7 +239,6 @@
     <h1>Deluxe Room</h1>
     <p class="subtitle">Không gian ấm áp, tinh tế và đầy đủ tiện nghi</p>
 
-    <!-- SLIDER -->
     <div class="slider">
       <button class="prev" onclick="prevSlide()">‹</button>
 
@@ -216,7 +250,6 @@
     </div>
 
     <div class="info">
-
       <div class="box">
         <h2>Thông tin phòng</h2>
         <p>Phòng Deluxe mang phong cách tối giản với tông nâu – kem, tạo cảm giác ấm áp và thư giãn.</p>
@@ -233,7 +266,6 @@
           <li>Nước nóng lạnh</li>
         </ul>
       </div>
-
     </div>
 
     <a class="btn" href="tel:0918577188">📞 Đặt phòng ngay</a>
@@ -242,7 +274,6 @@
 
   </div>
 
-  <!-- CONTACT -->
   <section class="contact">
     <div class="contact-box">
       <h2>Hapi Luxe Hotel</h2>
@@ -253,10 +284,9 @@
   </section>
 
   <footer>
-    © 2026 Hapi Luxe Hotel. All rights reserved.
+    © 2026 Hapi Luxe Hotel
   </footer>
 
-  <!-- SCRIPT -->
   <script>
     let index = 0;
     let slides = [];
@@ -278,6 +308,10 @@
     function prevSlide() {
       index = (index - 1 + slides.length) % slides.length;
       showSlide(index);
+    }
+
+    function toggleMenu() {
+      document.getElementById("menu").classList.toggle("show");
     }
   </script>
 
