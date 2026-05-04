@@ -15,30 +15,32 @@
 
     /* NAVBAR */
     .topbar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 99;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 18px 7%;
-      background: rgba(18, 12, 8, 0.82);
-      backdrop-filter: blur(16px);
-      border-bottom: 1px solid rgba(214, 177, 118, 0.2);
-    }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 5%; /* giảm lại */
+  background: rgba(18, 12, 8, 0.82);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(214, 177, 118, 0.2);
+}
 
     .brand {
-      font-family: Georgia, serif;
-      font-size: 23px;
-      color: #d6b176;
-      letter-spacing: 2px;
-    }
+  font-family: Georgia, serif;
+  font-size: 18px; /* nhỏ lại */
+  color: #d6b176;
+  letter-spacing: 1px;
+}
 
     .menu {
-      display: flex;
-      gap: 24px;
+  display: flex;
+  gap: 16px;
+  font-size: 13px;
+}
     }
 
     .menu a {
@@ -140,8 +142,10 @@
     }
 
     @media(max-width:900px){
-      .info {grid-template-columns:1fr;}
-    }
+  .menu {
+    display: none;
+  }
+}
   </style>
 </head>
 
@@ -209,8 +213,28 @@
 
   <!-- SCRIPT -->
   <script>
-    let index = 0;
-    const slides = document.querySelectorAll('.slide');
+let index = 0;
+let slides = [];
+
+window.onload = function() {
+  slides = document.querySelectorAll('.slide');
+};
+
+function showSlide(i) {
+  slides.forEach(s => s.classList.remove('active'));
+  slides[i].classList.add('active');
+}
+
+function nextSlide() {
+  index = (index + 1) % slides.length;
+  showSlide(index);
+}
+
+function prevSlide() {
+  index = (index - 1 + slides.length) % slides.length;
+  showSlide(index);
+}
+</script>
 
     function showSlide(i) {
       slides.forEach(s => s.classList.remove('active'));
