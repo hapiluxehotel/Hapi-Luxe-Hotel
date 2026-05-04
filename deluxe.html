@@ -15,32 +15,31 @@
 
     /* NAVBAR */
     .topbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 99;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 5%; /* giảm lại */
-  background: rgba(18, 12, 8, 0.82);
-  backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(214, 177, 118, 0.2);
-}
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 99;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 6%;
+      background: rgba(18, 12, 8, 0.85);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(214, 177, 118, 0.2);
+    }
 
     .brand {
-  font-family: Georgia, serif;
-  font-size: 18px; /* nhỏ lại */
-  color: #d6b176;
-  letter-spacing: 1px;
-}
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #d6b176;
+      letter-spacing: 1px;
+    }
 
     .menu {
-  display: flex;
-  gap: 16px;
-  font-size: 13px;
-}
+      display: flex;
+      gap: 18px;
+      font-size: 14px;
     }
 
     .menu a {
@@ -141,11 +140,45 @@
       text-decoration:none;
     }
 
+    /* CONTACT FOOTER */
+    .contact {
+      text-align:center;
+      padding:80px 20px;
+      background:#1a120c;
+    }
+
+    .contact-box {
+      max-width:800px;
+      margin:auto;
+      background:#2b1c12;
+      padding:40px;
+      border-radius:30px;
+      border:1px solid rgba(214,177,118,0.2);
+    }
+
+    .contact-box h2 {
+      font-size:32px;
+      margin-bottom:10px;
+    }
+
+    .contact-box p {
+      color:#cdbca8;
+      margin:8px 0;
+    }
+
+    footer {
+      text-align:center;
+      padding:20px;
+      background:#0b0705;
+      color:#b7a28d;
+      font-size:14px;
+    }
+
     @media(max-width:900px){
-  .menu {
-    display: none;
-  }
-}
+      .menu { display:none; }
+      .info { grid-template-columns:1fr; }
+    }
+
   </style>
 </head>
 
@@ -186,7 +219,7 @@
 
       <div class="box">
         <h2>Thông tin phòng</h2>
-        <p>Phòng Deluxe mang phong cách tối giản với tông nâu – kem, tạo cảm giác ấm áp và thư giãn. Phù hợp cho khách công tác hoặc nghỉ dưỡng.</p>
+        <p>Phòng Deluxe mang phong cách tối giản với tông nâu – kem, tạo cảm giác ấm áp và thư giãn.</p>
         <p><strong>Diện tích:</strong> 25m²</p>
       </div>
 
@@ -204,37 +237,33 @@
     </div>
 
     <a class="btn" href="tel:0918577188">📞 Đặt phòng ngay</a>
-
     <br>
-
     <a class="back" href="index.html">← Quay lại trang chủ</a>
 
   </div>
 
+  <!-- CONTACT -->
+  <section class="contact">
+    <div class="contact-box">
+      <h2>Hapi Luxe Hotel</h2>
+      <p>📍 135/41 Trần Hưng Đạo, Quận 1, TP.HCM</p>
+      <p>📞 0918577188</p>
+      <p>📧 Hapiluxehotel@gmail.com</p>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Hapi Luxe Hotel. All rights reserved.
+  </footer>
+
   <!-- SCRIPT -->
   <script>
-let index = 0;
-let slides = [];
+    let index = 0;
+    let slides = [];
 
-window.onload = function() {
-  slides = document.querySelectorAll('.slide');
-};
-
-function showSlide(i) {
-  slides.forEach(s => s.classList.remove('active'));
-  slides[i].classList.add('active');
-}
-
-function nextSlide() {
-  index = (index + 1) % slides.length;
-  showSlide(index);
-}
-
-function prevSlide() {
-  index = (index - 1 + slides.length) % slides.length;
-  showSlide(index);
-}
-</script>
+    window.onload = function() {
+      slides = document.querySelectorAll('.slide');
+    };
 
     function showSlide(i) {
       slides.forEach(s => s.classList.remove('active'));
