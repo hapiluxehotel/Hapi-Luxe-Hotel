@@ -3,11 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Premium Room | Hapi Luxe Hotel</title>
+ <title>Premium Room | Hapi Luxe Hotel</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <style>
+<style>
     body {
       margin:0;
       font-family: 'Segoe UI', Arial;
@@ -15,57 +14,106 @@
       color:#f8efe3;
     }
 
+    /* NAVBAR */
     .topbar {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 18px 7%;
-      background: rgba(18, 12, 8, 0.82);
-      backdrop-filter: blur(16px);
-      border-bottom: 1px solid rgba(214, 177, 118, 0.2);
-    }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 14px 7%;
+  background: rgba(18, 12, 8, 0.85);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(214, 177, 118, 0.2);
+
+  max-width: 1400px;
+  margin: 0 auto;
+}
 
     .brand {
-      font-family: 'Playfair Display', serif;
-      font-weight: 600;
-      color: #d6b176;
-      text-decoration: none;
-    }
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  font-size: 22px;
+  color: #d6b176;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
 
     .menu {
-      display: flex;
-      gap: 24px;
-    }
+  display: flex;
+  gap: 18px;
+  font-size: 14px;
+
+  margin-left: auto;
+}
 
     .menu a {
       color: #d6b176;
       text-decoration: none;
     }
 
+    .menu a:hover {
+      color: #fffaf2;
+    }
+
     .container {
-      padding:120px 20px 60px;
       max-width:1100px;
       margin:auto;
+      padding:120px 20px 60px;
     }
 
-    h1 { font-size:48px; }
-
-    .slider img {
-      width:100%;
-      border-radius:20px;
-      display:none;
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size:48px;
+      margin-bottom:10px;
     }
 
-    .slide.active { display:block; }
+    .subtitle {
+      color:#cdbca8;
+      margin-bottom:30px;
+    }
+
+    /* SLIDER */
+    .slider {
+      position: relative;
+      margin-bottom: 40px;
+    }
+
+    .slide {
+      width: 100%;
+      border-radius: 20px;
+      display: none;
+    }
+
+    .slide.active {
+      display: block;
+    }
+
+    .prev, .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.5);
+      color: white;
+      border: none;
+      font-size: 30px;
+      padding: 8px 14px;
+      cursor: pointer;
+      border-radius: 10px;
+    }
+
+    .prev { left: 10px; }
+    .next { right: 10px; }
 
     .info {
       display:grid;
       grid-template-columns:1fr 1fr;
       gap:40px;
-      margin-top:40px;
     }
 
     .box {
@@ -74,75 +122,174 @@
       border-radius:20px;
     }
 
+    h2 {
+      margin-bottom:10px;
+      font-family: 'Playfair Display', serif;
+    }
+
+    ul {
+      padding-left:18px;
+      color:#cdbca8;
+    }
+
     .btn {
-      margin-top:30px;
       display:inline-block;
+      margin-top:30px;
       padding:14px 24px;
       background:#d6b176;
       color:#1b110b;
       border-radius:30px;
+      font-weight:bold;
       text-decoration:none;
     }
 
+    .back {
+      display:inline-block;
+      margin-top:20px;
+      color:#cdbca8;
+      text-decoration:none;
+    }
+
+    /* CONTACT FOOTER */
+    .contact {
+      text-align:center;
+      padding:80px 20px;
+      background:#1a120c;
+    }
+
+    .contact-box {
+      max-width:800px;
+      margin:auto;
+      background:#2b1c12;
+      padding:40px;
+      border-radius:30px;
+      border:1px solid rgba(214,177,118,0.2);
+    }
+
+    .contact-box h2 {
+      font-size:32px;
+      margin-bottom:10px;
+    }
+
+    .contact-box p {
+      color:#cdbca8;
+      margin:8px 0;
+    }
+
+    footer {
+      text-align:center;
+      padding:20px;
+      background:#0b0705;
+      color:#b7a28d;
+      font-size:14px;
+    }
+
     @media(max-width:900px){
+      .menu { display:none; }
       .info { grid-template-columns:1fr; }
     }
+
   </style>
 </head>
 
 <body>
 
-<nav class="topbar">
-  <a href="index.html" class="brand">HAPI LUXE HOTEL</a>
-  <div class="menu">
-    <a href="index.html#about">Giới thiệu</a>
-    <a href="index.html#rooms">Phòng</a>
-    <a href="index.html#services">Tiện ích</a>
-    <a href="index.html#booking">Đặt phòng</a>
-    <a href="index.html#contact">Liên hệ</a>
-  </div>
-</nav>
+  <!-- NAVBAR -->
+  <nav class="topbar">
+    <a href="index.html" class="brand" style="display:flex; align-items:center; gap:10px;">
+      <img src="logo.png" style="height:35px;">
+      HAPI LUXE HOTEL
+    </a>
+    <div class="menu">
+      <a href="index.html#about">Giới thiệu</a>
+      <a href="index.html#rooms">Phòng</a>
+      <a href="index.html#services">Tiện ích</a>
+      <a href="index.html#booking">Đặt phòng</a>
+      <a href="index.html#contact">Liên hệ</a>
+    </div>
+  </nav>
 
-<div class="container">
+  <div class="container">
 
-  <h1>Premium Room</h1>
-  <p>Không gian rộng rãi hơn, sang trọng và riêng tư.</p>
+    <h1>Premium Room</h1>
+    <p class="subtitle">Không gian ấm áp, tinh tế và đầy đủ tiện nghi</p>
 
-  <div class="slider">
-    <img src="room2.jpg" class="slide active">
-    <img src="room2.jpg" class="slide">
-    <img src="room2.jpg" class="slide">
-  </div>
+    <!-- SLIDER -->
+    <div class="slider">
+      <button class="prev" onclick="prevSlide()">‹</button>
 
-  <div class="info">
-    <div class="box">
-      <h2>Thông tin phòng</h2>
-      <p>Phòng Premium mang lại trải nghiệm rộng rãi, tinh tế và riêng tư hơn.</p>
-      <p><strong>Diện tích:</strong> 30m²</p>
+      <img src="room1.jpg.png" class="slide active">
+      <img src="room1.jpg.png" class="slide">
+      <img src="room1.jpg.png" class="slide">
+
+      <button class="next" onclick="nextSlide()">›</button>
     </div>
 
-    <div class="box">
-      <h2>Tiện ích</h2>
-      <ul>
-        <li>Wifi miễn phí</li>
-        <li>TV màn hình lớn</li>
-        <li>Máy lạnh</li>
-        <li>Bồn tắm</li>
-      </ul>
+    <div class="info">
+
+      <div class="box">
+        <h2>Thông tin phòng</h2>
+        <p>Phòng Deluxe mang phong cách tối giản với tông nâu – kem, tạo cảm giác ấm áp và thư giãn.</p>
+        <p><strong>Diện tích:</strong> 25m²</p>
+      </div>
+
+      <div class="box">
+        <h2>Tiện ích</h2>
+        <ul>
+          <li>Wifi miễn phí</li>
+          <li>TV màn hình phẳng</li>
+          <li>Máy lạnh</li>
+          <li>Phòng tắm riêng</li>
+          <li>Nước nóng lạnh</li>
+        </ul>
+      </div>
+
     </div>
+
+    <a class="btn" href="tel:0918577188">📞 Đặt phòng ngay</a>
+    <br>
+    <a class="back" href="index.html">← Quay lại trang chủ</a>
+
   </div>
 
-</div>
+  <!-- CONTACT -->
+  <section class="contact">
+    <div class="contact-box">
+      <h2>Hapi Luxe Hotel</h2>
+      <p>📍 135/41 Trần Hưng Đạo, Quận 1, TP.HCM</p>
+      <p>📞 0918577188</p>
+      <p>📧 Hapiluxehotel@gmail.com</p>
+    </div>
+  </section>
 
-<script>
-let index = 0;
-let slides = document.querySelectorAll('.slide');
+  <footer>
+    © 2026 Hapi Luxe Hotel. All rights reserved.
+  </footer>
 
-function showSlide(i){
-  slides.forEach(s=>s.classList.remove('active'));
-  slides[i].classList.add('active');
-}
-</script>
+  <!-- SCRIPT -->
+  <script>
+    let index = 0;
+    let slides = [];
+
+    window.onload = function() {
+      slides = document.querySelectorAll('.slide');
+    };
+
+    function showSlide(i) {
+      slides.forEach(s => s.classList.remove('active'));
+      slides[i].classList.add('active');
+    }
+
+    function nextSlide() {
+      index = (index + 1) % slides.length;
+      showSlide(index);
+    }
+
+    function prevSlide() {
+      index = (index - 1 + slides.length) % slides.length;
+      showSlide(index);
+    }
+  </script>
 
 </body>
 </html>
