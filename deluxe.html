@@ -116,6 +116,45 @@
       gap:40px;
     }
 
+  .other-rooms .info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.other-rooms .room {
+  background: #2b1c12;
+  border-radius: 20px;
+  overflow: hidden;
+  display: block;
+  transition: 0.3s;
+}
+
+.other-rooms .room:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.other-rooms .room img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.other-rooms .room-body {
+  padding: 18px;
+}
+
+.other-rooms h3 {
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+
+.other-rooms p {
+  font-size: 14px;
+  color: #cdbca8;
+}
     .box {
       background:#2b1c12;
       padding:25px;
@@ -251,7 +290,7 @@
       
       <h2 style="margin-bottom:20px;">Các hạng phòng khác</h2>
 
-      <div class="rooms-grid">
+      <div class="info">
 
         <!-- PREMIUM -->
         <a href="premium.html" class="room">
