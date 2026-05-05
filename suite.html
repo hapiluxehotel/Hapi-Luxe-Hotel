@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Suite Room | Hapi Luxe Hotel</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin:0;
+      font-family: 'Segoe UI', Arial;
+      background:#120c08;
+      color:#f8efe3;
+    }
+
+    .topbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 7%;
+      background: rgba(18, 12, 8, 0.82);
+    }
+
+    .brand {
+      font-family: 'Playfair Display', serif;
+      color: #d6b176;
+      text-decoration: none;
+    }
+
+    .menu {
+      display: flex;
+      gap: 24px;
+    }
+
+    .menu a {
+      color: #d6b176;
+      text-decoration: none;
+    }
+
+    .container {
+      padding:120px 20px;
+      max-width:1100px;
+      margin:auto;
+    }
+
+    h1 { font-size:48px; }
+
+    .slider img {
+      width:100%;
+      border-radius:20px;
+      display:none;
+    }
+
+    .slide.active { display:block; }
+
+    .info {
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:40px;
+      margin-top:40px;
+    }
+
+    .box {
+      background:#2b1c12;
+      padding:25px;
+      border-radius:20px;
+    }
+
+    @media(max-width:900px){
+      .info { grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+
+<body>
+
+<nav class="topbar">
+  <a href="index.html" class="brand">HAPI LUXE HOTEL</a>
+  <div class="menu">
+    <a href="index.html#about">Giới thiệu</a>
+    <a href="index.html#rooms">Phòng</a>
+    <a href="index.html#services">Tiện ích</a>
+    <a href="index.html#booking">Đặt phòng</a>
+    <a href="index.html#contact">Liên hệ</a>
+  </div>
+</nav>
+
+<div class="container">
+
+  <h1>Suite Room</h1>
+  <p>Trải nghiệm cao cấp với không gian rộng rãi và sang trọng nhất.</p>
+
+  <div class="slider">
+    <img src="room3.jpg.png" class="slide active">
+    <img src="room3.jpg.png" class="slide">
+    <img src="room3.jpg.png" class="slide">
+  </div>
+
+  <div class="info">
+    <div class="box">
+      <h2>Thông tin phòng</h2>
+      <p>Phòng Suite cao cấp, không gian rộng rãi, phù hợp nghỉ dưỡng sang trọng.</p>
+      <p><strong>Diện tích:</strong> 40m²</p>
+    </div>
+
+    <div class="box">
+      <h2>Tiện ích</h2>
+      <ul>
+        <li>Wifi miễn phí</li>
+        <li>Smart TV</li>
+        <li>Máy lạnh</li>
+        <li>Bồn tắm cao cấp</li>
+        <li>Ban công</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+<script>
+let index = 0;
+let slides = document.querySelectorAll('.slide');
+
+function showSlide(i){
+  slides.forEach(s=>s.classList.remove('active'));
+  slides[i].classList.add('active');
+}
+</script>
+
+</body>
+</html>
