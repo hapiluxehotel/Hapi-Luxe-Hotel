@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
- <title>Suite Room | Hapi Luxe Hotel</title>
+ <title>Premium Room | Hapi Luxe Hotel</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
@@ -116,6 +116,45 @@
       gap:40px;
     }
 
+  .other-rooms .info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.other-rooms .room {
+  background: #2b1c12;
+  border-radius: 20px;
+  overflow: hidden;
+  display: block;
+  transition: 0.3s;
+}
+
+.other-rooms .room:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.other-rooms .room img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.other-rooms .room-body {
+  padding: 18px;
+}
+
+.other-rooms h3 {
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+
+.other-rooms p {
+  font-size: 14px;
+  color: #cdbca8;
+}
     .box {
       background:#2b1c12;
       padding:25px;
@@ -211,7 +250,7 @@
 
   <div class="container">
 
-    <h1>Suite Room</h1>
+    <h1>Premium Room</h1>
     <p class="subtitle">Không gian ấm áp, tinh tế và đầy đủ tiện nghi</p>
 
     <!-- SLIDER -->
@@ -244,7 +283,36 @@
         </ul>
       </div>
 
-    </div>
+    </div> 
+
+    <!-- PHÒNG KHÁC -->
+    <section class="other-rooms" style="margin-top:40px;">
+      
+      <h2 style="margin-bottom:20px;">Các hạng phòng khác</h2>
+
+      <div class="info">
+
+        <!-- DELUXE -->
+        <a href="deluxe.html" class="room">
+          <img src="room2.jpg" alt="Premium Room">
+          <div class="room-body">
+            <h3>Deluxe Room</h3>
+            <p>Không gian rộng rãi hơn, sang trọng và riêng tư.</p>
+          </div>
+        </a>
+
+        <!-- PREMIUM -->
+        <a href="premium.html" class="room">
+          <img src="room3.jpg.png" alt="Suite Room">
+          <div class="room-body">
+            <h3>Premium Room</h3>
+            <p>Trải nghiệm cao cấp với không gian thư giãn tối đa.</p>
+          </div>
+        </a>
+
+      </div>
+
+    </section>
 
     <a class="btn" href="tel:0918577188">📞 Đặt phòng ngay</a>
     <br>
