@@ -176,6 +176,30 @@
       border-radius:20px;
     }
 
+  .room-meta{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+  margin-top:28px;
+  flex-wrap:wrap;
+}
+
+.meta-item{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:#f8efe3;
+  font-size:18px;
+  font-weight:500;
+}
+
+.meta-item img{
+  width:24px;
+  height:24px;
+  object-fit:contain;
+}
+  
     h2 {
       margin-bottom:10px;
       font-family: 'Playfair Display', serif;
@@ -283,22 +307,46 @@
 
       <div class="box">
         <h2>Thông tin phòng</h2>
-        <p>Phòng Deluxe mang phong cách tối giản với tông nâu – kem, tạo cảm giác ấm áp và thư giãn.</p>
-        <p><strong>Diện tích:</strong> 25m²</p>
+        <p>Không gian Suite Room được thiết kế rộng rãi và thư giãn với phong cách tối giản hiện đại, kết hợp nội thất gỗ ấm áp và ánh sáng nhẹ nhàng.
+        Suite Room hiện có 2 lựa chọn:
+        Suite với bồn tắm nằm thư giãn trong phòng
+        Suite với bể sục riêng ngoài ban công</p>
+        
+       <div class="room-meta">
+
+      <div class="meta-item">
+        <img src="icon-size.png">
+        <span>28m²</span>
       </div>
 
-      <div class="box">
-        <h2>Tiện ích</h2>
-        <ul>
-          <li>Wifi miễn phí</li>
-          <li>TV màn hình phẳng</li>
-          <li>Máy lạnh</li>
-          <li>Phòng tắm riêng</li>
-          <li>Nước nóng lạnh</li>
-        </ul>
+      <div class="meta-item">
+        <img src="icon-user.png">
+        <span>2 người</span>
       </div>
 
-    </div> 
+      <div class="meta-item">
+        <img src="icon-window.png">
+        <span>Ban công rộng</span>
+      </div>
+
+    </div>
+
+  </div> 
+
+  <div class="box">
+    <h2>Tiện ích</h2>
+
+    <ul>
+      <li>Ban công riêng & Bể Sục</li>
+      <li>TV màn hình phẳng</li>
+      <li>Giường lớn rộng rãi</li>
+      <li>Quà lưu niệm và trái cây</li>
+      <li>Phòng tắm riêng</li>
+      <li>Bồn tắm nằm</li>
+    </ul>
+  </div>
+
+</div>
 
     <!-- PHÒNG KHÁC -->
     <section class="other-rooms" style="margin-top:40px;">
