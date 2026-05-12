@@ -180,12 +180,22 @@
     }
 
     .room, .service {
-      background: var(--brown);
-      border: 1px solid rgba(214,177,118,0.16);
-      border-radius: 30px;
-      overflow: hidden;
-      box-shadow: 0 22px 50px rgba(0,0,0,0.24);
-    }
+  background: var(--brown);
+  border: 1px solid rgba(214,177,118,0.16);
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 22px 50px rgba(0,0,0,0.24);
+}
+
+.room{
+  transition:0.35s;
+  cursor:pointer;
+}
+
+.room:hover{
+  transform:translateY(-8px);
+  box-shadow:0 28px 60px rgba(0,0,0,0.35);
+}
 
     .room img {
       width: 100%;
@@ -391,30 +401,35 @@
       <p>Thiết kế tối giản, màu sắc nhẹ nhàng, phù hợp cho khách du lịch, công tác hoặc cặp đôi.</p>
     </div>
     <div class="rooms-grid">
-      <div class="room">
-        <img src="room1.jpg.png" alt="Deluxe Room">
-        <div class="room-body">
-          <h3><a href="deluxe.html">Deluxe Room</a></h3>
+      <a href="deluxe.html" class="room">
+  <img src="room1.jpg.png" alt="Deluxe Room">
+  <div class="room-body">
+    <h3>Deluxe Room</h3>
           <p>Phòng tiêu chuẩn tinh tế, đầy đủ tiện nghi cho kỳ nghỉ thoải mái.</p>
           <div class="price">Liên hệ giá tốt nhất</div>
         </div>
-      </div>
-      <div class="room">
+        
+     </a> 
+      
+      <a href="premium.html" class="room">
         <img src="room2.jpg.png" alt="Premium Room">
         <div class="room-body">
-          <h3><a href="premium.html">Premium Room</a></h3>
+          <h3>Premium Room</h3>
           <p>Không gian rộng hơn, sắc nâu trắng sang trọng và cảm giác riêng tư.</p>
           <div class="price">Liên hệ giá tốt nhất</div>
         </div>
-      </div>
-      <div class="room">
+        
+      </a>
+      
+      <a href="suite.html" class="room">
         <img src="room3.jpg.png" alt="Suite Room">
         <div class="room-body">
-           <h3><a href="suite.html">Suite Room</a></h3>
+           <h3>Suite Room</h3>
           <p>Trải nghiệm cao cấp hơn với không gian nghỉ ngơi tinh tế và thư giãn.</p>
           <div class="price">Liên hệ giá tốt nhất</div>
         </div>
-      </div>
+        
+        </a>
     </div>
   </section>
 
