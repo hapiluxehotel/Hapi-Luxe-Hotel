@@ -350,7 +350,50 @@
 
   color:#e8d8c4;
 }
+  
+.attractions{
+  margin-top:60px;
+}
 
+.attraction-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
+}
+
+.attraction-card{
+  background:#2b1c12;
+  border-radius:28px;
+  overflow:hidden;
+  text-decoration:none;
+  color:#fff;
+  transition:0.3s;
+}
+
+.attraction-card:hover{
+  transform:translateY(-5px);
+}
+
+.attraction-card img{
+  width:100%;
+  height:230px;
+  object-fit:cover;
+}
+
+.attraction-body{
+  padding:22px;
+}
+
+.attraction-body h3{
+  margin-bottom:10px;
+  color:#d6b176;
+}
+
+.attraction-body p{
+  color:#cdbca8;
+  line-height:1.6;
+}
+  
 @media(max-width:900px){
 
   .menu{
@@ -495,6 +538,44 @@
     <div>🍖 Lò nướng ngoài trời</div>
     <div>💻 Bàn làm việc</div>
     <div>🌿 Thư giãn ngoài trời</div>
+
+  </div>
+
+</section>
+    
+    <section class="attractions">
+
+  <div class="section-head">
+    <span class="label">Khu vực tham quan</span>
+    <h2>Địa điểm nổi bật gần khách sạn</h2>
+    <p>Thuận tiện khám phá trung tâm Sài Gòn chỉ trong vài phút di chuyển.</p>
+  </div>
+
+  <div class="attraction-grid">
+
+    <a href="https://maps.google.com/?q=Chợ+Bến+Thành" target="_blank" class="attraction-card">
+      <img src="benthanh.jpg" alt="Chợ Bến Thành">
+      <div class="attraction-body">
+        <h3>Chợ Bến Thành</h3>
+        <p>Biểu tượng nổi tiếng của Sài Gòn với ẩm thực và mua sắm địa phương.</p>
+      </div>
+    </a>
+
+    <a href="https://maps.google.com/?q=Phố+đi+bộ+Nguyễn+Huệ" target="_blank" class="attraction-card">
+      <img src="nguyenhue.jpg" alt="Nguyễn Huệ">
+      <div class="attraction-body">
+        <h3>Phố đi bộ Nguyễn Huệ</h3>
+        <p>Không gian sôi động, hiện đại và nhiều hoạt động về đêm.</p>
+      </div>
+    </a>
+
+    <a href="https://maps.google.com/?q=Bùi+Viện" target="_blank" class="attraction-card">
+      <img src="buivien.jpg" alt="Bùi Viện">
+      <div class="attraction-body">
+        <h3>Phố Tây Bùi Viện</h3>
+        <p>Khu phố giải trí nhộn nhịp nổi tiếng tại Quận 1.</p>
+      </div>
+    </a>
 
   </div>
 
