@@ -229,68 +229,81 @@
     }
 
     /* CONTACT FOOTER */
-    .contact {
-      text-align:center;
-      padding:80px 20px;
-      background:#1a120c;
-    }
-
-   .contact-wrapper{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:30px;
-  align-items:stretch;
+    .contact{
+  padding:90px 7%;
+  background:#120c08;
 }
 
-.map-box{
+.contact-modern{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  align-items:center;
+}
+
+.contact-info h2{
+  font-size:42px;
+  margin:14px 0 22px;
+}
+
+.contact-info p{
+  color:#cdbca8;
+  margin-bottom:14px;
+}
+
+.socials{
+  display:flex;
+  gap:14px;
+  margin-top:24px;
+}
+
+.socials a{
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  background:#2b1c12;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  transition:0.3s;
+}
+
+.socials a:hover{
+  transform:translateY(-4px);
+}
+
+.socials img{
+  width:20px;
+}
+
+.contact-map{
   position:relative;
   overflow:hidden;
-  border-radius:34px;
-  min-height:420px;
+  border-radius:28px;
+  min-height:320px;
   display:block;
 }
 
-.map-box img{
+.contact-map img{
   width:100%;
   height:100%;
   object-fit:cover;
   transition:0.4s;
 }
 
-.map-box:hover img{
+.contact-map:hover img{
   transform:scale(1.05);
 }
 
-.map-overlay{
+.map-button{
   position:absolute;
-  inset:0;
-  background:rgba(0,0,0,0.35);
-  display:flex;
-  align-items:center;
-  justify-content:center;
+  left:20px;
+  bottom:20px;
+  background:rgba(0,0,0,0.65);
   color:white;
-  font-size:24px;
-  font-family:'Cormorant Garamond', serif;
-  letter-spacing:1px;
-}
-  
-    .contact-box {
-      max-width:800px;
-      margin:auto;
-      background:#2b1c12;
-      padding:40px;
-      border-radius:30px;
-      border:1px solid rgba(214,177,118,0.2);
-    }
-
-    .contact-box h2 {
-      font-size:32px;
-      margin-bottom:10px;
-    }
-
-    .contact-box p {
-  color:#cdbca8;
-  margin:8px 0;
+  padding:12px 18px;
+  border-radius:999px;
+  font-size:14px;
 }
 
 .label{
@@ -400,6 +413,14 @@
 
 @media(max-width:900px){
 
+  .menu{
+    display:none;
+  }
+
+  .info{
+    grid-template-columns:1fr;
+  }
+
   .facility-grid{
     grid-template-columns:1fr;
   }
@@ -408,11 +429,10 @@
     grid-template-columns:1fr;
   }
 
+  .contact-modern{
+  grid-template-columns:1fr;
 }
 
-@media(max-width:900px){
-  .menu { display:none; }
-  .info { grid-template-columns:1fr; }
 }
 
   </style>
@@ -614,33 +634,50 @@
   </div>
 
   <!-- CONTACT -->
-  <section class="contact" id="contact">
+   <section class="contact" id="contact">
 
-  <div class="contact-wrapper">
+  <div class="contact-modern">
 
     <!-- LEFT -->
-    <div class="contact-box">
-      <span class="label">Liên hệ</span>
+    <div class="contact-info">
+
+      <span class="label">Liên hệ với chúng tôi</span>
 
       <h2>Hapi Luxe Hotel</h2>
 
-      <p>📍 135/41 Trần Hưng Đạo, Phường Cầu Ông Lãnh, Quận 1, TP Hồ Chí Minh</p>
+      <p>📍 135/41 Trần Hưng Đạo, Phường Cầu Ông Lãnh, Quận 1, TP. Hồ Chí Minh</p>
 
-      <p>📞 0918577188</p>
+      <p>📞 (+84) 0918577188</p>
 
-      <p>📧 Hapiluxehotel@gmail.com</p>
+      <p>✉️ Hapiluxehotel@gmail.com</p>
+
+      <div class="socials">
+
+        <a href="https://www.facebook.com/share/1Dn7LBtDuQ/" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png">
+        </a>
+
+        <a href="https://instagram.com" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
+        </a>
+
+        <a href="https://www.tiktok.com/@hapiluxehotel68?_r=1&_t=ZS-96I9Gov3n2Q" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png">
+        </a>
+
+      </div>
+
     </div>
 
     <!-- RIGHT -->
-    <a class="map-box"
-       href="https://www.google.com/maps/place/10%C2%B045'57.0%22N+106%C2%B041'44.0%22E/@10.765845,106.6949193,214m/data=!3m2!1e3!4b1!4m4!3m3!8m2!3d10.765845!4d106.695563?entry=ttu&g_ep=EgoyMDI2MDUwMi4wIKXMDSoASAFQAw%3D%3D"
+    <a class="contact-map"
+       href="https://www.google.com/maps/place/Hapi+Luxe+Hotel/"
        target="_blank">
 
-      <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=1200&auto=format&fit=crop"
-           alt="Google Map">
+      <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=1200&auto=format&fit=crop">
 
-      <div class="map-overlay">
-        Xem trên Google Maps
+      <div class="map-button">
+        🗺️ Xem trên Google Maps
       </div>
 
     </a>
