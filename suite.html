@@ -352,6 +352,51 @@
 
   color:#e8d8c4;
 }
+  
+.attractions{
+  margin-top:60px;
+}
+
+.attraction-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+  align-items:start;
+}
+
+.attraction-card{
+  background:#2b1c12;
+  border-radius:28px;
+  overflow:hidden;
+  text-decoration:none;
+  color:#fff;
+  transition:0.3s;
+}
+
+.attraction-card:hover{
+  transform:translateY(-5px);
+}
+
+.attraction-card img{
+  width:100%;
+  height:240px;
+  object-fit:cover;
+  border-radius:20px;
+}
+
+.attraction-body{
+  padding:22px;
+}
+
+.attraction-body h3{
+  margin-bottom:10px;
+  color:#d6b176;
+}
+
+.attraction-body p{
+  color:#cdbca8;
+  line-height:1.6;
+}
 
 @media(max-width:900px){
 
@@ -490,6 +535,44 @@
     <div>🍖 Lò nướng ngoài trời</div>
     <div>💻 Bàn làm việc</div>
     <div>🌿 Thư giãn ngoài trời</div>
+
+  </div>
+
+</section>
+
+     <section class="attractions">
+
+  <div class="section-head">
+    <span class="label">Khu vực tham quan</span>
+    <h2>Địa điểm nổi bật gần khách sạn</h2>
+    <p>Thuận tiện khám phá trung tâm Sài Gòn chỉ trong vài phút di chuyển.</p>
+  </div>
+
+  <div class="attraction-grid">
+
+    <a href="https://www.google.com/maps/place/Ch%E1%BB%A3+B%E1%BA%BFn+Th%C3%A0nh/@10.7725168,106.6931499,856m/data=!3m2!1e3!4b1!4m6!3m5!1s0x31752f3f3129e64d:0x8d6b2d79522c7f30!8m2!3d10.7725168!4d106.6980208!16s%2Fm%2F02q30t6?entry=ttu&g_ep=EgoyMDI2MDUwNi4wIKXMDSoASAFQAw%3D%3D"class="attraction-card">
+      <img src="benthanh.jpg" alt="Chợ Bến Thành">
+      <div class="attraction-body">
+        <h3>Chợ Bến Thành Cách 600m</h3>
+        <p>Biểu tượng nổi tiếng của Sài Gòn với ẩm thực và mua sắm địa phương.</p>
+      </div>
+    </a>
+
+    <a href="https://www.google.com/maps/place/Nguy%C3%AA%CC%83n+Hu%C3%AA%CC%A3,+S%C3%A0i+G%C3%B2n,+H%E1%BB%93+Ch%C3%AD+Minh,+Vi%E1%BB%87t+Nam/@10.7740739,106.703627,428m/data=!3m1!1e3!4m6!3m5!1s0x31752f46bf7d119d:0xebf6179d9abce572!8m2!3d10.7738495!4d106.7036566!16s%2Fg%2F11clt74722?entry=ttu&g_ep=EgoyMDI2MDUwNi4wIKXMDSoASAFQAw%3D%3D"class="attraction-card">
+      <img src="nguyenhue.jpg" alt="Nguyễn Huệ">
+      <div class="attraction-body">
+        <h3>Phố đi bộ Nguyễn Huệ Cách 1.2km</h3>
+        <p>Không gian sôi động, hiện đại và nhiều hoạt động về đêm.</p>
+      </div>
+    </a>
+
+    <a href="https://www.google.com/maps/place/Ph%E1%BB%91+%C4%91i+b%E1%BB%99+B%C3%B9i+Vi%E1%BB%87n/@10.7673625,106.6933144,127m/data=!3m1!1e3!4m6!3m5!1s0x31752f1605cbdc09:0xf1c00d273532c3a6!8m2!3d10.767351!4d106.6938836!16s%2Fg%2F11fz_hbt2k?entry=ttu&g_ep=EgoyMDI2MDUwNi4wIKXMDSoASAFQAw%3D%3D"class="attraction-card">
+      <img src="buivien.jpg" alt="Bùi Viện">
+      <div class="attraction-body">
+        <h3>Phố Tây Bùi Viện Cách </h3>
+        <p>Khu phố giải trí nhộn nhịp nổi tiếng tại Quận 1.</p>
+      </div>
+    </a>
 
   </div>
 
