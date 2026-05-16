@@ -20,3 +20,30 @@ if ('serviceWorker' in navigator) {
   });
 
 }
+function openService(type){
+
+  if(type === 'room'){
+    alert('Room Service Coming Soon');
+  }
+
+  if(type === 'guide'){
+    alert('Hotel Guide Coming Soon');
+  }
+
+  if(type === 'nearby'){
+    alert('Nearby Places Coming Soon');
+  }
+
+  if(type === 'cafe'){
+    alert('Cafe & Drinks Coming Soon');
+  }
+
+  if(type === 'support'){
+    alert('Support Coming Soon');
+  }
+
+  if(type === 'checkout'){
+    alert('Fast Checkout Coming Soon');
+  }
+
+}
