@@ -1,4 +1,4 @@
-const CACHE_NAME = 'hapi-luxe-v1';
+const CACHE_NAME = 'hapi-luxe-v2';
 
 const urlsToCache = [
   './',
