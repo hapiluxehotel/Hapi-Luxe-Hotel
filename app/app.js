@@ -10,16 +10,16 @@ enterBtn.addEventListener('click', () => {
 
 });
 
-if ('serviceWorker' in navigator) {
+// if ('serviceWorker' in navigator) {
 
-  window.addEventListener('load', () => {
+//   window.addEventListener('load', () => {
 
-    navigator.serviceWorker.register('./service-worker.js')
-      .then(() => console.log('PWA Ready'));
+//     navigator.serviceWorker.register('./service-worker.js')
+//       .then(() => console.log('PWA Ready'));
 
-  });
+//   });
 
-}
+// }
 function openService(type){
 
   if(type === 'room'){
