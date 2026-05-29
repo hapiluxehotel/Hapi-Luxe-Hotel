@@ -44,21 +44,48 @@ body{
     margin-top:20px;
 }
 
+.price-top{
+    font-size:40px;
+    font-weight:bold;
+    color:#f3d18f;
+    margin-top:10px;
+}
+
+.info-card{
+    background:#c08a60;
+    border-radius:25px;
+    padding:25px;
+    margin-top:25px;
+}
+
+.combo-card{
+    background:#c08a60;
+    border-radius:25px;
+    padding:25px;
+    margin-top:25px;
+}
+
+.extra-card{
+    background:#c08a60;
+    border-radius:25px;
+    padding:25px;
+    margin-top:25px;
+}
+
 .desc{
-    margin-top:15px;
-    font-size:24px;
-    line-height:1.5;
+    font-size:22px;
+    line-height:1.6;
 }
 
 .desc-en{
     margin-top:15px;
     font-size:14px;
     opacity:0.9;
-    line-height:1.6;
+    line-height:1.7;
 }
 
 .info-row{
-    margin-top:30px;
+    margin-top:25px;
     display:flex;
     justify-content:space-between;
     align-items:center;
@@ -78,62 +105,36 @@ body{
 }
 
 .travel-big{
-    font-size:32px;
+    font-size:30px;
     font-weight:bold;
 }
 
 .section-title{
-    margin-top:40px;
-    font-size:32px;
+    font-size:28px;
     font-weight:bold;
-}
-
-.combo-box{
-    margin-top:20px;
-    background:rgba(255,255,255,0.08);
-    border-radius:25px;
-    padding:25px;
+    margin-bottom:20px;
 }
 
 .combo-item{
     margin-bottom:18px;
-    font-size:22px;
-    line-height:1.4;
+    font-size:20px;
+    line-height:1.5;
+}
+
+.combo-item:last-child{
+    margin-bottom:0;
 }
 
 .combo-item small{
     display:block;
+    margin-top:4px;
     font-size:13px;
     opacity:0.8;
 }
 
-.price{
-    text-align:center;
-    margin-top:30px;
-    font-size:52px;
-    font-weight:bold;
-    color:#f3d18f;
-}
-
-.extra-info{
-    margin-top:35px;
+.extra-card{
     font-size:18px;
-    line-height:1.8;
-}
-
-.action-btn{
-    display:block;
-    width:100%;
-    box-sizing:border-box;
-    text-align:center;
-    text-decoration:none;
-    background:#6c430d;
-    color:white;
-    padding:18px;
-    border-radius:18px;
-    margin-top:30px;
-    font-size:18px;
-    font-weight:bold;
+    line-height:2;
 }
 
 </style>
@@ -153,6 +154,12 @@ body{
 <div class="title">
 Trạm Hoàng Hôn Cafe
 </div>
+
+<div class="price-top">
+199.000đ/combo
+</div>
+
+<div class="info-card">
 
 <div class="desc">
 Trải nghiệm quán cafe cực chill bên sông Sài Gòn, địa điểm du lịch chụp ảnh rất đẹp, kết hợp nghe nhạc acoustic ngắm hoàng hôn.
@@ -175,39 +182,37 @@ Di chuyển
 
 </div>
 
+</div>
+
+<div class="combo-card">
+
 <div class="section-title">
 Menu Combo
 </div>
 
-<div class="combo-box">
-
 <div class="combo-item">
-• 2 nước uống tự chọn
+✔ 2 nước uống tự chọn
 <small>Two drinks of your choice</small>
 </div>
 
 <div class="combo-item">
-• 1 món ăn nhẹ cho 2 người
+✔ 1 món ăn nhẹ cho 2 người
 <small>One snack platter for two guests</small>
 </div>
 
 <div class="combo-item">
-• Nghe nhạc acoustic ngắm hoàng hôn
+✔ Nghe nhạc acoustic ngắm hoàng hôn
 <small>Live acoustic music performances at sunset</small>
 </div>
 
 <div class="combo-item">
-• Chụp ảnh check-in nhiều không gian
-<small>Access to multiple scenic photo spots</small>
+✔ Chụp ảnh check-in nhiều không gian
+<small>Multiple beautiful photo spots</small>
 </div>
 
 </div>
 
-<div class="price">
-199.000đ/combo
-</div>
-
-<div class="extra-info">
+<div class="extra-card">
 
 📍 Khoảng cách: 20 phút<br>
 
@@ -219,11 +224,8 @@ Menu Combo
 
 </div>
 
-<a href="https://maps.google.com" target="_blank" class="action-btn">
-📍 Chỉ Đường Trên Google Maps
-</a>
-
 </div>
 
 </body>
 </html>
+```
