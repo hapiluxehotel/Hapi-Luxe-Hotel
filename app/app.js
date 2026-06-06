@@ -4,9 +4,26 @@ const welcomeScreen = document.querySelector('.welcome-screen');
 const homeScreen = document.querySelector('.home-screen');
 
 enterBtn.addEventListener('click', () => {
+  
+const music = new Audio('welcome.mp3');
+  music.volume = 0.3;
+  music.play();
+  
+  const speech = new SpeechSynthesisUtterance(
+    "Xin chào, chào mừng quý khách đến với Hapi Luxe Hotel."
+  );
 
-  welcomeScreen.style.display = 'none';
-  homeScreen.classList.remove('hidden');
+  speech.lang = "vi-VN";
+  speech.rate = 0.95;
+
+  speechSynthesis.speak(speech);
+
+  setTimeout(() => {
+
+    welcomeScreen.style.display = 'none';
+    homeScreen.classList.remove('hidden');
+
+  }, 1000);
 
 });
 
