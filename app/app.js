@@ -4,15 +4,15 @@ const welcomeScreen = document.querySelector('.welcome-screen');
 const homeScreen = document.querySelector('.home-screen');
 
 enterBtn.addEventListener('click', () => {
-  
-const music = new Audio('welcome.mp3');
-  music.volume = 0.3;
+
+  const music = new Audio('welcome.mp3');
+
+  music.volume = 0.5;
+
   music.play();
 
-  setTimeout(() => {
-
-    welcomeScreen.style.display = 'none';
-    homeScreen.classList.remove('hidden');
+  welcomeScreen.style.display = 'none';
+  homeScreen.classList.remove('hidden');
 
 });
 
