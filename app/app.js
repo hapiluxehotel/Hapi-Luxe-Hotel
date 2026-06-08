@@ -5,7 +5,7 @@ const homeScreen = document.querySelector('.home-screen');
 
 enterBtn.addEventListener('click', () => {
 
-  const music = new Audio('welcome.mp3');
+  const music = new Audio('wellcome.mp3');
 
   music.volume = 0.5;
 
