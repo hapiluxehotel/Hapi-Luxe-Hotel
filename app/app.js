@@ -5,11 +5,13 @@ const homeScreen = document.querySelector('.home-screen');
 
 enterBtn.addEventListener('click', () => {
 
-  const music = new Audio('wellcome.mp3');
-
-  music.volume = 0.5;
-
-  music.play();
+  try{
+    const music = new Audio('wellcome.mp3');
+    music.volume = 0.5;
+    music.play();
+  }catch(e){
+    console.log(e);
+  }
 
   welcomeScreen.style.display = 'none';
   homeScreen.classList.remove('hidden');
