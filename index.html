@@ -382,15 +382,17 @@
 .room-modal{
     position:fixed;
     inset:0;
-    background:rgba(0,0,0,.75);
-    backdrop-filter:blur(8px);
-
     display:none;
-
     justify-content:center;
     align-items:center;
 
-    z-index:9999;
+    width:100%;
+    height:100vh;
+
+    background:rgba(0,0,0,.75);
+    backdrop-filter:blur(8px);
+
+    z-index:99999;
 }
 
 .room-modal.show{
@@ -399,18 +401,18 @@
 
 .room-modal-content{
 
-    width:min(1200px,92%);
-    min-height:520px;
+width:min(1200px,92%);
+max-height:90vh;
 
-    background:#2b1c12;
+overflow-y:auto;
 
-    border-radius:28px;
+background:#2b1c12;
 
-    padding:45px;
+border-radius:28px;
 
-    position:relative;
+padding:45px;
 
-    animation:popup .35s;
+position:relative;
 }
 
 @keyframes popup{
@@ -743,25 +745,28 @@ gap:28px;
   </div>
 
 </section>
-<!-- ROOM SELECT MODAL -->
-<div class="room-modal show" id="roomModal">
-
-  <div class="room-modal-content">
-
-    <button class="modal-close" id="closeModal">&times;</button>
-
-    <h2 id="modalTitle">ROOM</h2>
-
-    <div class="modal-room-grid" id="modalRoomGrid">
-
-    </div>
-
-  </div>
 
 </div>
   <footer>
-  © 2026 Hapi Luxe Hotel. Luxury Boutique Hotel in Ho Chi Minh
+    © 2026 Hapi Luxe Hotel...
 </footer>
+
+<!-- ROOM SELECT MODAL -->
+<div class="room-modal" id="roomModal">
+
+    <div class="room-modal-content">
+
+        <button class="modal-close" id="closeModal">&times;</button>
+
+        <h2 id="modalTitle">ROOM</h2>
+
+        <div class="modal-room-grid" id="modalRoomGrid">
+
+        </div>
+
+    </div>
+
+</div>
 
 <script>
 
@@ -784,6 +789,12 @@ modal.classList.remove("show");
 }
 
 }
+
+
+</script>
+
+</body>
+
 
 // Mở Deluxe
 document.querySelector(".deluxe-card").onclick = () => {
@@ -822,7 +833,9 @@ document.querySelector(".premium-card").onclick=()=>{
 
     modal.classList.add("show");
 
-    document.getElementById("modalTitle").innerHTML="PREMIUM ROOM";
+    document.getElementById("modalTitle").innerHTML = "PREMIUM ROOM";
+
+    document.getElementById("modalRoomGrid").innerHTML = `
 
 }
 
@@ -832,7 +845,8 @@ document.querySelector(".suite-card").onclick=()=>{
     modal.classList.add("show");
 
     document.getElementById("modalTitle").innerHTML="SUITE ROOM";
-
+  
+    document.getElementById("modalRoomGrid").innerHTML = 
 }
 </script>
 
