@@ -770,31 +770,20 @@ gap:28px;
 
 <script>
 
-const modal=document.getElementById("roomModal");
+const modal = document.getElementById("roomModal");
+const closeBtn = document.getElementById("closeModal");
 
-const closeBtn=document.getElementById("closeModal");
-
-closeBtn.onclick=()=>{
-
-modal.classList.remove("show");
-
+// Đóng popup khi bấm nút X
+closeBtn.onclick = () => {
+    modal.classList.remove("show");
 }
 
-window.onclick=(e)=>{
-
-if(e.target===modal){
-
-modal.classList.remove("show");
-
+// Đóng popup khi bấm ra ngoài
+window.onclick = (e) => {
+    if (e.target === modal) {
+        modal.classList.remove("show");
+    }
 }
-
-}
-
-
-</script>
-
-</body>
-
 
 // Mở Deluxe
 document.querySelector(".deluxe-card").onclick = () => {
@@ -805,31 +794,35 @@ document.querySelector(".deluxe-card").onclick = () => {
 
     document.getElementById("modalRoomGrid").innerHTML = `
 
-    <div class="select-room-card">
-        <img src="deluxe2.png">
+        <div class="select-room-card">
 
-        <h3>Room 02</h3>
+            <img src="deluxe2.png">
 
-        <p>24m² • Cửa sổ lớn • Tầng 2</p>
+            <h3>Room 02</h3>
 
-        <button>Xem phòng</button>
-    </div>
+            <p>24m² • Cửa sổ lớn • Tầng 2</p>
 
-    <div class="select-room-card">
-        <img src="deluxe2.png">
+            <button>Xem phòng</button>
 
-        <h3>Room 04</h3>
+        </div>
 
-        <p>28m² • Ban công • Bồn tắm</p>
+        <div class="select-room-card">
 
-        <button>Xem phòng</button>
-    </div>
+            <img src="deluxe2.png">
+
+            <h3>Room 04</h3>
+
+            <p>28m² • Ban công • Bồn tắm</p>
+
+            <button>Xem phòng</button>
+
+        </div>
 
     `;
 
 }
 // Mở Premium
-document.querySelector(".premium-card").onclick=()=>{
+document.querySelector(".premium-card").onclick = () => {
 
     modal.classList.add("show");
 
@@ -837,17 +830,84 @@ document.querySelector(".premium-card").onclick=()=>{
 
     document.getElementById("modalRoomGrid").innerHTML = `
 
+        <div class="select-room-card">
+
+            <img src="room2.jpg.png">
+
+            <h3>Room 01</h3>
+
+            <p>26m² • Ban công • Bồn tắm</p>
+
+            <button>Xem phòng</button>
+
+        </div>
+
+        <div class="select-room-card">
+
+            <img src="room2.jpg.png">
+
+            <h3>Room 03</h3>
+
+            <p>26m² • Ban công</p>
+
+            <button>Xem phòng</button>
+
+        </div>
+
+        <div class="select-room-card">
+
+            <img src="room2.jpg.png">
+
+            <h3>Room 07</h3>
+
+            <p>26m² • Ban công</p>
+
+            <button>Xem phòng</button>
+
+        </div>
+
+    `;
+
 }
 
+
 // Mở Suite
-document.querySelector(".suite-card").onclick=()=>{
+document.querySelector(".suite-card").onclick = () => {
 
     modal.classList.add("show");
 
-    document.getElementById("modalTitle").innerHTML="SUITE ROOM";
-  
-    document.getElementById("modalRoomGrid").innerHTML = 
+    document.getElementById("modalTitle").innerHTML = "SUITE ROOM";
+
+    document.getElementById("modalRoomGrid").innerHTML = `
+
+        <div class="select-room-card">
+
+            <img src="room3.jpg.png">
+
+            <h3>Room 05</h3>
+
+            <p>35m² • Bồn tắm • Ban công</p>
+
+            <button>Xem phòng</button>
+
+        </div>
+
+        <div class="select-room-card">
+
+            <img src="room3.jpg.png">
+
+            <h3>Room 06</h3>
+
+            <p>35m² • Bồn tắm • Ban công</p>
+
+            <button>Xem phòng</button>
+
+        </div>
+
+    `;
+
 }
+
 </script>
 
 </body>
