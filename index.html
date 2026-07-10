@@ -449,18 +449,44 @@ cursor:pointer;
 }
 
 .modal-room-grid{
-.select-room-card{
 
-background:#3a281b;
+    margin-top:35px;
 
-border-radius:22px;
+    display:grid;
 
-padding:18px;
+    grid-template-columns:repeat(3,1fr);
 
-transition:.3s;
+    gap:28px;
 
 }
 
+.select-room-card{
+
+    background:#3a281b;
+
+    border-radius:22px;
+
+    padding:18px;
+
+    transition:.3s;
+
+}
+
+.select-room-card img{
+
+    width:100%;
+
+    height:180px;
+
+    object-fit:cover;
+
+    border-radius:18px;
+
+    display:block;
+
+    margin-bottom:18px;
+
+}
 .select-room-card:hover{
 
 transform:translateY(-8px);
