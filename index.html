@@ -447,7 +447,71 @@ cursor:pointer;
 }
 
 .modal-room-grid{
+.select-room-card{
 
+background:#3a281b;
+
+border-radius:22px;
+
+padding:18px;
+
+transition:.3s;
+
+}
+
+.select-room-card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.room-thumb{
+
+height:180px;
+
+background:#5a402d;
+
+border-radius:18px;
+
+margin-bottom:18px;
+
+}
+
+.select-room-card h3{
+
+margin:10px 0;
+
+font-size:24px;
+
+}
+
+.select-room-card p{
+
+color:#d8c7b0;
+
+line-height:1.7;
+
+margin-bottom:20px;
+
+}
+
+.select-room-card button{
+
+width:100%;
+
+padding:14px;
+
+border:none;
+
+border-radius:40px;
+
+background:#d6b176;
+
+font-weight:bold;
+
+cursor:pointer;
+
+}
 margin-top:35px;
 
 display:grid;
@@ -722,14 +786,37 @@ modal.classList.remove("show");
 }
 
 // Mở Deluxe
-document.querySelector(".deluxe-card").onclick=()=>{
+document.querySelector(".deluxe-card").onclick = () => {
 
     modal.classList.add("show");
 
-    document.getElementById("modalTitle").innerHTML="DELUXE ROOM";
+    document.getElementById("modalTitle").innerHTML = "DELUXE ROOM";
+
+    document.getElementById("modalRoomGrid").innerHTML = `
+
+    <div class="select-room-card">
+        <img src="deluxe2.png">
+
+        <h3>Room 02</h3>
+
+        <p>24m² • Cửa sổ lớn • Tầng 2</p>
+
+        <button>Xem phòng</button>
+    </div>
+
+    <div class="select-room-card">
+        <img src="deluxe2.png">
+
+        <h3>Room 04</h3>
+
+        <p>28m² • Ban công • Bồn tắm</p>
+
+        <button>Xem phòng</button>
+    </div>
+
+    `;
 
 }
-
 // Mở Premium
 document.querySelector(".premium-card").onclick=()=>{
 
