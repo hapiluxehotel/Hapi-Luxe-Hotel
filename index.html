@@ -377,7 +377,86 @@
   }
 
 }
-    
+   /* ===== ROOM MODAL ===== */
+
+.room-modal{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.75);
+    backdrop-filter:blur(8px);
+
+    display:none;
+
+    justify-content:center;
+    align-items:center;
+
+    z-index:9999;
+}
+
+.room-modal.show{
+    display:flex;
+}
+
+.room-modal-content{
+
+    width:min(1200px,92%);
+    min-height:520px;
+
+    background:#2b1c12;
+
+    border-radius:28px;
+
+    padding:45px;
+
+    position:relative;
+
+    animation:popup .35s;
+}
+
+@keyframes popup{
+
+from{
+opacity:0;
+transform:translateY(20px) scale(.95);
+}
+
+to{
+opacity:1;
+transform:none;
+}
+
+}
+
+.modal-close{
+
+position:absolute;
+
+top:20px;
+right:25px;
+
+background:none;
+
+border:none;
+
+font-size:42px;
+
+color:#fff;
+
+cursor:pointer;
+
+}
+
+.modal-room-grid{
+
+margin-top:35px;
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:28px;
+
+} 
     footer {
       padding: 28px 7%;
       text-align: center;
@@ -439,7 +518,7 @@
       <p>Thiết kế tối giản, màu sắc nhẹ nhàng, phù hợp cho khách du lịch, công tác hoặc cặp đôi.</p>
     </div>
     <div class="rooms-grid">
-      <a href="deluxe.html" class="room">
+      <div class="room deluxe-card">
   <img src="room1.jpg.png" alt="Deluxe Room">
   <div class="room-body">
     <h3>Deluxe Room</h3>
@@ -447,9 +526,9 @@
           <div class="price">Liên hệ giá tốt nhất</div>
         </div>
         
-     </a> 
+     </div> 
       
-      <a href="premium.html" class="room">
+      <div class="room premium-card">
         <img src="room2.jpg.png" alt="Premium Room">
         <div class="room-body">
           <h3>Premium Room</h3>
@@ -457,9 +536,9 @@
           <div class="price">Liên hệ giá tốt nhất</div>
         </div>
         
-      </a>
+      </div>
       
-      <a href="suite.html" class="room">
+      <div class="room suite-card">
         <img src="room3.jpg.png" alt="Suite Room">
         <div class="room-body">
            <h3>Suite Room</h3>
@@ -467,7 +546,7 @@
           <div class="price">Liên hệ giá tốt nhất</div>
         </div>
         
-        </a>
+        </div>
     </div>
   </section>
 
@@ -600,9 +679,71 @@
   </div>
 
 </section>
+<!-- ROOM SELECT MODAL -->
+<div class="room-modal" id="roomModal">
 
+  <div class="room-modal-content">
+
+    <button class="modal-close" id="closeModal">&times;</button>
+
+    <h2 id="modalTitle">ROOM</h2>
+
+    <div class="modal-room-grid" id="modalRoomGrid">
+
+    </div>
+
+  </div>
+
+</div>
   <footer>
-    © 2026 Hapi Luxe Hotel. Luxury Boutique Hotel in Ho Chi Minh City.
-  </footer>
-</body>
-</html>
+  © 2026 Hapi Luxe Hotel. Luxury Boutique Hotel in Ho Chi Minh
+</footer>
+
+<script>
+
+const modal=document.getElementById("roomModal");
+
+const closeBtn=document.getElementById("closeModal");
+
+closeBtn.onclick=()=>{
+
+modal.classList.remove("show");
+
+}
+
+window.onclick=(e)=>{
+
+if(e.target===modal){
+
+modal.classList.remove("show");
+
+}
+
+}
+
+// Mở Deluxe
+document.querySelector(".deluxe-card").onclick=()=>{
+
+    modal.classList.add("show");
+
+    document.getElementById("modalTitle").innerHTML="DELUXE ROOM";
+
+}
+
+// Mở Premium
+document.querySelector(".premium-card").onclick=()=>{
+
+    modal.classList.add("show");
+
+    document.getElementById("modalTitle").innerHTML="PREMIUM ROOM";
+
+}
+
+// Mở Suite
+document.querySelector(".suite-card").onclick=()=>{
+
+    modal.classList.add("show");
+
+    document.getElementById("modalTitle").innerHTML="SUITE ROOM";
+
+}
