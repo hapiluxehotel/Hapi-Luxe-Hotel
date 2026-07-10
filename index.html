@@ -452,15 +452,19 @@ cursor:pointer;
 
     margin-top:35px;
 
-    display:grid;
+    display:flex;
 
-    grid-template-columns:repeat(3,1fr);
+    justify-content:center;
+
+    flex-wrap:wrap;
 
     gap:28px;
 
 }
 
 .select-room-card{
+
+    width:320px;
 
     background:#3a281b;
 
@@ -471,7 +475,6 @@ cursor:pointer;
     transition:.3s;
 
 }
-
 .select-room-card img{
 
     width:100%;
@@ -485,6 +488,31 @@ cursor:pointer;
     display:block;
 
     margin-bottom:18px;
+
+}
+    .room-info{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:8px;
+
+    margin:16px 0;
+
+}
+
+.room-info span{
+
+    background:rgba(214,177,118,.15);
+
+    color:#e8d8c4;
+
+    padding:6px 10px;
+
+    border-radius:999px;
+
+    font-size:14px;
 
 }
 .select-room-card:hover{
@@ -826,7 +854,11 @@ document.querySelector(".deluxe-card").onclick = () => {
 
             <h3>Room 02</h3>
 
-            <p>24m² • Cửa sổ lớn • Tầng 2</p>
+           <div class="room-info">
+   <span><i class="fa-solid fa-ruler-combined"></i> 26m²</span>
+   <span><i class="fa-regular fa-window-maximize"></i> Cửa sổ</span>
+    <span>💼🛌 2 Giường</span>
+</div>
 
             <button>Xem phòng</button>
 
@@ -836,9 +868,13 @@ document.querySelector(".deluxe-card").onclick = () => {
 
             <img src="deluxe2.png">
 
-            <h3>Room 04</h3>
+            <h3>Room 06</h3>
 
-            <p>28m² • Ban công • Bồn tắm</p>
+            <div class="room-info">
+     <span><i class="fa-solid fa-ruler-combined"></i> 26m²</span>
+    <span><i class="fa-regular fa-window-maximize"></i> Cửa sổ</span>
+     <span>💼 Bàn làm việc</span>
+</div>
 
             <button>Xem phòng</button>
 
