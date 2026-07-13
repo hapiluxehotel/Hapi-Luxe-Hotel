@@ -295,63 +295,7 @@ h1,h2,h3,h4{
 .hero-meta i{ color: var(--gold); }
 
 .room-hero-actions{ display: flex; flex-wrap: wrap; gap: 14px; }
-/* ===== HERO PRICE ===== */
 
-.hero-price{
-
-    margin:35px 0 26px;
-
-}
-
-.old-price{
-    position:relative;
-    display:inline-block;
-
-    font-family:var(--font-heading);
-
-    font-size:30px;
-
-    font-weight:600;
-
-    color:#c8b39b;
-
-    opacity:.65;
-}
-
-.old-price::after{
-
-    content:"";
-
-    position:absolute;
-
-    left:-3%;
-    right:-3%;
-
-    top:50%;
-
-    height:3px;
-
-    background:var(--gold);
-
-    transform:translateY(-50%);
-}
-.new-price{
-
-    margin-top:6px;
-
-    font-family:var(--font-heading);
-
-    font-size:62px;
-
-    line-height:1;
-
-    font-weight:700;
-
-    color:var(--gold);
-
-    text-shadow:
-        2px 2px 0 #3a281b;
-}
 
 /* ==========================================================================
    7. GALLERY  (large image + thumbnail slider + lightbox)
