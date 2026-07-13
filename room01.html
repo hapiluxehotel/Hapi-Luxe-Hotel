@@ -97,6 +97,250 @@ text-align:center;
 margin-top:60px;
 border-top:1px solid rgba(255,255,255,.08)
 }
+ /*==========================
+ HOTEL FACILITIES
+==========================*/
+
+.hotel-facilities,
+.nearby-section{
+    margin-top:90px;
+}
+
+.section-title{
+    margin-bottom:35px;
+}
+
+.section-title span{
+    display:block;
+    color:#d6b176;
+    font-size:12px;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    margin-bottom:12px;
+}
+
+.section-title h2{
+    font-family:"Cormorant Garamond",serif;
+    font-size:42px;
+    color:#fff;
+    margin-bottom:10px;
+}
+
+.section-title p{
+    color:#cdbca8;
+    line-height:1.8;
+}
+
+
+/*==========================
+ SLIDER
+==========================*/
+
+.facility-slider,
+.nearby-slider{
+
+    display:flex;
+    align-items:center;
+    gap:20px;
+
+}
+
+.facility-track,
+.near-track{
+
+    display:grid;
+    grid-auto-flow:column;
+
+    grid-auto-columns:calc((100% - 40px)/3);
+
+    gap:24px;
+
+    overflow:hidden;
+
+    scroll-behavior:smooth;
+
+}
+
+
+/*==========================
+ CARD
+==========================*/
+
+.facility-card,
+.near-card{
+
+    background:#3a281b;
+
+    border-radius:24px;
+
+    overflow:hidden;
+
+    text-decoration:none;
+
+    color:#fff;
+
+    transition:.35s;
+
+    display:block;
+
+}
+
+.facility-card:hover,
+.near-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.25);
+
+}
+
+.facility-card img,
+.near-card img{
+
+    width:100%;
+
+    height:220px;
+
+    object-fit:cover;
+
+    display:block;
+
+}
+
+.facility-card h3{
+
+    text-align:center;
+
+    padding:18px;
+
+    font-size:20px;
+
+    font-family:"Cormorant Garamond",serif;
+
+}
+
+.near-card div{
+
+    padding:22px;
+
+}
+
+.near-card h3{
+
+    font-size:26px;
+
+    font-family:"Cormorant Garamond",serif;
+
+    margin-bottom:8px;
+
+}
+
+.near-card p{
+
+    color:#d8c8b5;
+
+    line-height:1.7;
+
+}
+
+
+/*==========================
+ BUTTON
+==========================*/
+
+.facility-arrow,
+.near-arrow{
+
+    width:48px;
+
+    height:48px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#d6b176;
+
+    color:#2b1c12;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    flex-shrink:0;
+
+}
+
+.facility-arrow:hover,
+.near-arrow:hover{
+
+    transform:scale(1.08);
+
+}
+
+
+/*==========================
+ ICON LIST
+==========================*/
+
+.facility-list{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:20px;
+
+    margin-top:40px;
+
+    padding-top:30px;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+}
+
+.facility-list div{
+
+    color:#e8dccd;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    font-size:15px;
+
+}
+
+.facility-list i{
+
+    color:#d6b176;
+
+}
+
+
+/*==========================
+ MOBILE
+==========================*/
+
+@media(max-width:900px){
+
+.facility-track,
+.near-track{
+
+grid-auto-columns:80%;
+
+}
+
+.facility-list{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
 @media(max-width:768px){
 .hero h1{font-size:40px}
 .gallery-main img{height:320px}
@@ -160,14 +404,198 @@ border-top:1px solid rgba(255,255,255,.08)
 </div>
 </section>
 
-<section>
-<h2>House Rules</h2>
-<div class="rules">
-<div class="rule"><strong>Check-in</strong><br>14:00</div>
-<div class="rule"><strong>Check-out</strong><br>12:00</div>
-<div class="rule"><strong>Smoking</strong><br>Not Allowed</div>
-<div class="rule"><strong>Guests</strong><br>Maximum 2</div>
+<!-- HOTEL FACILITIES -->
+
+<section class="hotel-facilities">
+
+<div class="section-title">
+
+<span>HOTEL FACILITIES</span>
+
+<h2>Tiện ích khách sạn</h2>
+
+<p>Tận hưởng những không gian và dịch vụ chung được thiết kế để kỳ nghỉ của bạn trọn vẹn hơn.</p>
+
 </div>
+
+<div class="facility-slider">
+
+<button class="facility-arrow prev">
+<i class="fa-solid fa-chevron-left"></i>
+</button>
+
+<div class="facility-track">
+
+<div class="facility-card">
+
+<img src="bbq.png">
+
+<h3>Rooftop BBQ & Café</h3>
+
+</div>
+
+<div class="facility-card">
+
+<img src="kitchen.jpg">
+
+<h3>Khu bếp chung</h3>
+
+</div>
+
+<div class="facility-card">
+
+<img src="laundry.jpg">
+
+<h3>Giặt & Sấy miễn phí</h3>
+
+</div>
+
+<div class="facility-card">
+
+<img src="workspace.jpg">
+
+<h3>Không gian làm việc</h3>
+
+</div>
+
+<div class="facility-card">
+
+<img src="coffee.jpg">
+
+<h3>Coffee Corner</h3>
+
+</div>
+
+</div>
+
+<button class="facility-arrow next">
+<i class="fa-solid fa-chevron-right"></i>
+</button>
+
+</div>
+
+<div class="facility-list">
+
+<div><i class="fa-solid fa-key"></i> Self Check-in 24/7</div>
+
+<div><i class="fa-solid fa-location-dot"></i> Trung tâm Quận 1</div>
+
+<div><i class="fa-solid fa-broom"></i> Dọn phòng hằng ngày</div>
+
+<div><i class="fa-solid fa-fire"></i> Rooftop BBQ</div>
+
+<div><i class="fa-solid fa-laptop"></i> Khu làm việc</div>
+
+<div><i class="fa-solid fa-leaf"></i> Không gian thư giãn</div>
+
+</div>
+
+</section>
+
+
+
+
+
+<!-- NEARBY -->
+
+<section class="nearby-section">
+
+<div class="section-title">
+
+<span>NEARBY PLACES</span>
+
+<h2>Địa điểm nổi bật gần khách sạn</h2>
+
+<p>Chỉ vài phút để khám phá những biểu tượng nổi tiếng của Sài Gòn.</p>
+
+</div>
+
+<div class="nearby-slider">
+
+<button class="near-arrow prev">
+<i class="fa-solid fa-chevron-left"></i>
+</button>
+
+<div class="near-track">
+
+<a class="near-card" href="#">
+
+<img src="benthanh.jpg">
+
+<div>
+
+<h3>Chợ Bến Thành</h3>
+
+<p>Cách 600m</p>
+
+</div>
+
+</a>
+
+<a class="near-card" href="#">
+
+<img src="nguyenhue.jpg">
+
+<div>
+
+<h3>Phố đi bộ Nguyễn Huệ</h3>
+
+<p>Cách 1.2km</p>
+
+</div>
+
+</a>
+
+<a class="near-card" href="#">
+
+<img src="buivien.jpg">
+
+<div>
+
+<h3>Phố Tây Bùi Viện</h3>
+
+<p>Cách 400m</p>
+
+</div>
+
+</a>
+
+<a class="near-card" href="#">
+
+<img src="opera.jpg">
+
+<div>
+
+<h3>Nhà hát Thành phố</h3>
+
+<p>Cách 1.4km</p>
+
+</div>
+
+</a>
+
+<a class="near-card" href="#">
+
+<img src="museum.jpg">
+
+<div>
+
+<h3>Dinh Độc Lập</h3>
+
+<p>Cách 1.5km</p>
+
+</div>
+
+</a>
+
+</div>
+
+<button class="near-arrow next">
+<i class="fa-solid fa-chevron-right"></i>
+</button>
+
+</div>
+
 </section>
 
 <section>
@@ -189,26 +617,63 @@ border-top:1px solid rgba(255,255,255,.08)
 <footer>© 2026 Hapi Luxe Hotel</footer>
 
 <script>
-const main=document.getElementById('mainImage');
-const thumbs=document.querySelectorAll('#thumbs img');
+/* ==========================
+   HOTEL FACILITIES SLIDER
+========================== */
 
-thumbs.forEach(img=>{
- img.onclick=()=>{
-   main.src=img.src;
-   thumbs.forEach(i=>i.classList.remove('active'));
-   img.classList.add('active');
- }
+const facilityTrack = document.querySelector(".facility-track");
+
+if(facilityTrack){
+
+document.querySelector(".facility-arrow.next").addEventListener("click",()=>{
+
+facilityTrack.scrollBy({
+left: facilityTrack.clientWidth/3 + 24,
+behavior:"smooth"
 });
 
-document.getElementById('next').onclick=()=>{
- document.getElementById('thumbs').scrollBy({left:350,behavior:'smooth'});
-};
+});
 
-document.getElementById('prev').onclick=()=>{
- document.getElementById('thumbs').scrollBy({left:-350,behavior:'smooth'});
-};
+document.querySelector(".facility-arrow.prev").addEventListener("click",()=>{
 
-main.onclick=()=>window.open(main.src,"_blank");
+facilityTrack.scrollBy({
+left: -(facilityTrack.clientWidth/3 + 24),
+behavior:"smooth"
+});
+
+});
+
+}
+
+
+/* ==========================
+   NEARBY PLACES SLIDER
+========================== */
+
+const nearTrack = document.querySelector(".near-track");
+
+if(nearTrack){
+
+document.querySelector(".near-arrow.next").addEventListener("click",()=>{
+
+nearTrack.scrollBy({
+left: nearTrack.clientWidth/3 + 24,
+behavior:"smooth"
+});
+
+});
+
+document.querySelector(".near-arrow.prev").addEventListener("click",()=>{
+
+nearTrack.scrollBy({
+left: -(nearTrack.clientWidth/3 + 24),
+behavior:"smooth"
+});
+
+});
+
+}
+
 </script>
 
 </body>
