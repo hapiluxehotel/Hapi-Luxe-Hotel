@@ -249,13 +249,16 @@ h1,h2,h3,h4{
    ========================================================================== */
 .room-hero{
   position: relative;
-  min-height: 78vh;
+  min-height:100vh;
   display: flex;
-  align-items: flex-end;
+  align-items:center;
   padding: 150px 7% 70px;
-  background:
-    linear-gradient(180deg, rgba(18,12,8,.35) 0%, rgba(18,12,8,.55) 55%, var(--dark) 100%),
-    var(--hero-image, linear-gradient(135deg, var(--brown), var(--brown-soft))) center/cover no-repeat;
+ background:
+    linear-gradient(
+        rgba(0,0,0,.60),
+        rgba(0,0,0,.60)
+    ),
+    var(--hero-image) center center/cover no-repeat;
 }
 
 .room-hero-box{ max-width: 760px; animation: fadeInUp .8s var(--ease) both; }
