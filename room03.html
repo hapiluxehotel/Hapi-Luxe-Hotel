@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Room 03 · Premium Tropical | Hapi Luxe Hotel</title>
+<meta name="description" content="Premium Balcony Room at Hapi Luxe Hotel — 26m², king bed, private balcony and bathtub in the heart of District 1, Ho Chi Minh City.">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<!-- Shared room stylesheet -->
+<link rel="stylesheet" href="room.css">
+</head>
+<body>
+
+<!-- ==========================================================================
+     TOPBAR
+     ========================================================================== -->
+<header class="topbar">
+  <a class="back-link" href="index.html">
+    <i class="fa-solid fa-arrow-left"></i>
+    <span>Back to Rooms</span>
+  </a>
+
+  <a class="brand" href="index.html">
+    <img src="logo.png" alt="Hapi Luxe Hotel logo">
+    <span class="brand-text">HAPI LUXE HOTEL</span>
+  </a>
+
+  <div class="topbar-actions">
+    <span class="room-crumb">Premium Room · Room 01</span>
+    <a class="btn sm" href="index.html#booking">Book Now</a>
+  </div>
+</header>
+
+
+<!-- ==========================================================================
+     HERO
+     ========================================================================== -->
+<section class="room-hero" style="--hero-image:url('images/hero/room1hero.jpg');">
+  <div class="room-hero-box">
+    <span class="eyebrow">Premium Room</span>
+    <h1>Room 01 · Premium Tropical</h1>
+    <p class="room-hero-tag">Một không gian nghỉ dưỡng ấm cúng với tông màu gỗ chủ đạo, có bồn tắm riêng nhìn ra cửa sổ lớn, không gian xanh mát tạo cảm giác thư giãn.</p>
+
+    <div class="hero-meta">
+      <span><i class="fa-solid fa-ruler-combined"></i> 26m²</span>
+      <span><i class="fa-solid fa-user-group"></i> 2 Khách</span>
+      <span><i class="fa-solid fa-tree"></i> Cửa sổ lớn</span>
+      <span><i class="fa-solid fa-bath"></i> Bồn tắm</span>
+    </div>
+
+    <div class="room-hero-actions">
+      <a class="btn" href="index.html#booking">880.000 VND/Đêm</a>
+      <a class="btn secondary" href="#gallery">Xem ảnh</a>
+    </div>
+  </div>
+</section>
+
+
+<div class="container">
+
+<!-- ==========================================================================
+     GALLERY
+     Large image + thumbnail slider + lightbox with keyboard & swipe support.
+     Add or remove <img class="thumb"> elements freely — room.js reads them
+     automatically, so the gallery supports an unlimited number of images.
+     ========================================================================== -->
+<section class="room-gallery reveal" id="gallery">
+
+  <div class="gallery-main">
+   <img id="mainImage"src="images/premium/premium1.jpg"alt="Room 01 Premium Balcony — main view">
+    <button class="gallery-zoom" id="openLightbox" aria-label="Expand image">
+      <i class="fa-solid fa-expand"></i>
+    </button>
+    <span class="gallery-count" id="galleryCount">1 / 6</span>
+  </div>
+
+  <div class="thumb-row">
+    <button class="icon-btn thumb-prev" id="thumbPrev" aria-label="Scroll thumbnails left">
+      <i class="fa-solid fa-chevron-left"></i>
+    </button>
+
+    <div class="thumb-track" id="thumbTrack">
+      <img class="thumb active" src="images/premium/premium1.jpg" data-full="images/premium/premium1.jpg" alt="Room 01 view 1">
+      <img class="thumb"src="images/premium/premium2.jpg"data-full="images/premium/premium2.jpg">
+      <img class="thumb"src="images/premium/premium3.jpg"data-full="images/premium/premium3.jpg">
+      <img class="thumb"src="images/premium/premium4.jpg"data-full="images/premium/premium4.jpg">
+      <img class="thumb"src="images/premium/premium5.jpg"data-full="images/premium/premium5.jpg">
+      <img class="thumb"src="images/premium/premium6.jpg"data-full="images/premium/premium6.jpg">
+      <img class="thumb" src="images/premium/premium7.jpg" data-full="images/premium/premium7.jpg">
+      <img class="thumb" src="images/premium/premium8.jpg" data-full="images/premium/premium8.jpg">
+      <img class="thumb" src="images/premium/premium9.jpg" data-full="images/premium/premium9.jpg">
+      <img class="thumb" src="images/premium/premium10.jpg" data-full="images/premium/premium10.jpg">
+      <img class="thumb" src="images/premium/premium11.jpg" data-full="images/premium/premium11.jpg">
+      <img class="thumb" src="images/premium/premium12.jpg" data-full="images/premium/premium12.jpg">
+      <img class="thumb" src="images/premium/premium13.jpg" data-full="images/premium/premium13.jpg">
+      <img class="thumb" src="images/premium/premium14.JPG" data-full="images/premium/premium14.jpg">
+      <img class="thumb" src="images/premium/premium15.jpg" data-full="images/premium/premium15.jpg">
+      <img class="thumb" src="images/premium/premium16.jpg" data-full="images/premium/premium16.jpg">
+      <img class="thumb" src="images/premium/premium17.jpg" data-full="images/premium/premium17.jpg">
+      <img class="thumb" src="images/premium/premium18.JPG" data-full="images/premium/premium18.jpg">
+      <img class="thumb" src="images/premium/premium19.JPG" data-full="images/premium/premium19.jpg">
+    </div>
+
+    <button class="icon-btn thumb-next" id="thumbNext" aria-label="Scroll thumbnails right">
+      <i class="fa-solid fa-chevron-right"></i>
+    </button>
+  </div>
+
+</section>
+
+
+<!-- ==========================================================================
+     ABOUT ROOM
+     2 columns — description (left) / room details (right)
+     ========================================================================== -->
+<section class="rm-section reveal" id="about-room">
+  <div class="about-room">
+
+    <div class="about-copy">
+      <span class="eyebrow">Thông tin về phòng</span>
+      <h2>Không gian yên tĩnh nhiệt đới, lý tưởng cho những buổi sáng thư thái.</h2>
+      <p>Phòng 01 mang phong cách Tropical ấm áp với tông gỗ tự nhiên, sắc kem trang nhã và điểm nhấn vàng tinh tế. Phòng có ban công riêng yên tĩnh, bồn tắm thư giãn, giường cỡ lớn và góc làm việc riêng, lý tưởng cho cả kỳ nghỉ lãng mạn lẫn chuyến công tác..</p>
+      <p>Chỉ cách chợ Bến Thành và các điểm tham quan trung tâm Quận 1 vài phút..</p>
+    </div>
+
+    <aside class="room-details">
+      <h3>Room Details</h3>
+      <ul class="detail-list">
+        <li><i class="fa-solid fa-ruler-combined"></i> 26m² Room Size</li>
+        <li><i class="fa-solid fa-bed"></i> Giường King</li>
+        <li><i class="fa-solid fa-tree"></i> Cửa sổ lớn</li>
+        <li><i class="fa-solid fa-bath"></i> Bồn tắm</li>
+        <li><i class="fa-solid fa-briefcase"></i> Bàn làm việc</li>
+        <li><i class="fa-solid fa-tv"></i> Smart TV</li>
+        <li><i class="fa-solid fa-wifi"></i> Wifi tốc độ cao</li>
+        <li><i class="fa-solid fa-mug-hot"></i> Trà và Cafe miên phí</li>
+      </ul>
+    </aside>
+
+  </div>
+</section>
+
+
+<!-- ==========================================================================
+     ROOM FEATURES  (luxury feature cards, hover animation)
+     ========================================================================== -->
+<section class="rm-section reveal" id="room-features">
+  <div class="section-title">
+    <span class="eyebrow">Tiện ích phòng</span>
+    <h2>Mọi chi tiết đều được cân nhắc kỹ lưỡng.</h2>
+    <p>Những tiện nghi chu đáo biến kỳ nghỉ thành một chuyến đi thư giãn.</p>
+  </div>
+
+  <div class="features-grid">
+    <div class="feature-card"><i class="fa-solid fa-bed"></i><span>King Bed</span></div>
+    <div class="feature-card"><i class="fa-solid fa-bath"></i><span>Bathtub</span></div>
+    <div class="feature-card"><i class="fa-solid fa-tree"></i><span>Private Balcony</span></div>
+    <div class="feature-card"><i class="fa-solid fa-tv"></i><span>Smart TV</span></div>
+    <div class="feature-card"><i class="fa-solid fa-wifi"></i><span>High-speed WiFi</span></div>
+    <div class="feature-card"><i class="fa-solid fa-snowflake"></i><span>Air Conditioning</span></div>
+    <div class="feature-card"><i class="fa-solid fa-mug-hot"></i><span>Coffee Station</span></div>
+    <div class="feature-card"><i class="fa-solid fa-briefcase"></i><span>Workspace</span></div>
+  </div>
+</section>
+
+
+<!-- ==========================================================================
+     HOTEL FACILITIES  (carousel, always 3 cards visible on desktop)
+     ========================================================================== -->
+<section class="rm-section reveal" id="facilities">
+  <div class="section-title">
+    <span class="eyebrow">Hotel Facilities</span>
+    <h2>Tiện ích khách sạn</h2>
+    <p>Tận hưởng những không gian và dịch vụ chung được thiết kế để kỳ nghỉ của bạn trọn vẹn hơn.</p>
+  </div>
+
+  <div class="carousel">
+    <button class="icon-btn" data-prev aria-label="Previous facilities">
+      <i class="fa-solid fa-chevron-left"></i>
+    </button>
+
+    <div class="carousel-track">
+      <div class="facility-card">
+        <img src="images/Tien ich/santhuong1.jpg" alt="Rooftop BBQ">
+        <h3>Rooftop BBQ</h3>
+      </div>
+      <div class="facility-card">
+        <img src="images/Tien ich/bep2.JPG" alt="Shared Kitchen">
+        <h3>Shared Kitchen</h3>
+      </div>
+      <div class="facility-card">
+        <img src="images/Tien ich/maygiat.JPG" alt="Laundry">
+        <h3>Laundry</h3>
+      </div>
+      <div class="facility-card">
+        <img src="images/Tien ich/santhuong2.jpg" alt="Coffee Corner">
+        <h3>Coffee Corner</h3>
+      </div>
+      <div class="facility-card">
+        <img src="images/Tien ich/selfcheckin.jpg" alt="Self Check-in">
+        <h3>Self Check-in</h3>
+      </div>
+     
+    </div>
+
+    <button class="icon-btn" data-next aria-label="Next facilities">
+      <i class="fa-solid fa-chevron-right"></i>
+    </button>
+  </div>
+
+  <div class="facility-list">
+    <div><i class="fa-solid fa-key"></i> Self Check-in 24/7</div>
+    <div><i class="fa-solid fa-location-dot"></i> Trung tâm Quận 1</div>
+    <div><i class="fa-solid fa-broom"></i> Dọn phòng hằng ngày</div>
+    <div><i class="fa-solid fa-fire"></i> Rooftop BBQ</div>
+    <div><i class="fa-solid fa-laptop"></i> Khu làm việc</div>
+    <div><i class="fa-solid fa-leaf"></i> Không gian thư giãn</div>
+  </div>
+</section>
+
+
+<!-- ==========================================================================
+     NEARBY PLACES  (carousel, always 3 cards visible on desktop)
+     ========================================================================== -->
+<section class="rm-section reveal" id="nearby">
+  <div class="section-title">
+    <span class="eyebrow">Nearby Places</span>
+    <h2>Địa điểm nổi bật gần khách sạn</h2>
+    <p>Chỉ vài phút để khám phá những biểu tượng nổi tiếng của Sài Gòn.</p>
+  </div>
+
+  <div class="carousel">
+    <button class="icon-btn" data-prev aria-label="Previous nearby places">
+      <i class="fa-solid fa-chevron-left"></i>
+    </button>
+
+    <div class="carousel-track">
+
+      <a class="near-card" href="https://www.google.com/maps/dir/Hapi+Luxe+Hotel,+135%2F41+Tr%E1%BA%A7n+H%C6%B0ng+%C4%90%E1%BA%A1o,+Qu%E1%BA%ADn+1,+H%E1%BB%93+Ch%C3%AD+Minh,+Vi%E1%BB%87t+Nam/Ch%E1%BB%A3+B%E1%BA%BFn+Th%C3%A0nh,+B%E1%BA%BFn+Th%C3%A0nh,+H%E1%BB%93+Ch%C3%AD+Minh,+Vi%E1%BB%87t+Nam/@10.769173,106.6939976,856m/data=!3m2!1e3!4b1!4m14!4m13!1m5!1m1!1s0x31752fa6061ae09f:0xc3d6ddf21d44b511!2m2!1d106.6955287!2d10.7658461!1m5!1m1!1s0x31752f3f3129e64d:0x8d6b2d79522c7f30!2m2!1d106.6980208!2d10.7725168!3e2?entry=ttu&g_ep=EgoyMDI2MDcwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">
+        <img src="images/ganday/benthanh.webp" alt="Chợ Bến Thành">
+        <div class="near-body">
+          <h3>Chợ Bến Thành</h3>
+          <span class="near-distance"><i class="fa-solid fa-location-dot"></i> Cách 600m</span>
+          <p>Biểu tượng mua sắm sầm uất của Sài Gòn, đầy đủ ẩm thực và quà lưu niệm.</p>
+          <span class="near-map">Xem trên bản đồ <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+        </div>
+      </a>
+
+      <a class="near-card" href="https://www.google.com/maps/dir/Hapi+Luxe+Hotel,+135%2F41+Tr%E1%BA%A7n+H%C6%B0ng+%C4%90%E1%BA%A1o,+Qu%E1%BA%ADn+1,+H%E1%BB%93+Ch%C3%AD+Minh,+Vi%E1%BB%87t+Nam/Ph%E1%BB%91+%C4%91i+b%E1%BB%99+B%C3%B9i+Vi%E1%BB%87n,+B%C3%B9i+Vi%E1%BB%87n+Ph%E1%BA%A1m+Ng%C5%A9+L%C3%A3o,+ph%C6%B0%E1%BB%9Dng,+B%E1%BA%BFn+Th%C3%A0nh,+H%E1%BB%93+Ch%C3%AD+Minh,+Vi%E1%BB%87t+Nam/@10.7666302,106.6921275,856m/data=!3m2!1e3!4b1!4m14!4m13!1m5!1m1!1s0x31752fa6061ae09f:0xc3d6ddf21d44b511!2m2!1d106.6955287!2d10.7658461!1m5!1m1!1s0x31752f1605cbdc09:0xf1c00d273532c3a6!2m2!1d106.6938836!2d10.767351!3e2?entry=ttu&g_ep=EgoyMDI2MDcwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">
+        <img src="images/ganday/nguyenhue.jpg" alt="Phố đi bộ Nguyễn Huệ">
+        <div class="near-body">
+          <h3>Phố đi bộ Nguyễn Huệ</h3>
+          <span class="near-distance"><i class="fa-solid fa-location-dot"></i> Cách 1.2km</span>
+          <p>Không gian đi bộ hiện đại, lý tưởng để dạo bước buổi tối.</p>
+          <span class="near-map">Xem trên bản đồ <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+        </div>
+      </a>
+
+      <a class="near-card" href="https://www.google.com/maps/dir/Hapi+Luxe+Hotel,+135%2F41+Tr%E1%BA%A7n+H%C6%B0ng+%C4%90%E1%BA%A1o,+Qu%E1%BA%ADn+1,+H%E1%BB%93+Ch%C3%AD+Minh,+Vi%E1%BB%87t+Nam/Ph%C3%B4%CC%81+%C4%91i+b%C3%B4%CC%A3+Nguy%C3%AA%CC%83n+Hu%C3%AA%CC%A3,+Nguy%C3%AA%CC%83n+Hu%C3%AA%CC%A3,+S%C3%A0i+G%C3%B2n,+H%E1%BB%93+Ch%C3%AD+Minh,+Vi%E1%BB%87t+Nam/@10.7697279,106.6940375,1711m/data=!3m2!1e3!4b1!4m14!4m13!1m5!1m1!1s0x31752fa6061ae09f:0xc3d6ddf21d44b511!2m2!1d106.6955287!2d10.7658461!1m5!1m1!1s0x31752f46fd67ea19:0x57881ba4c546af7a!2m2!1d106.7036542!2d10.7740664!3e0?entry=ttu&g_ep=EgoyMDI2MDcwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">
+        <img src="images/ganday/buivien.webp" alt="Phố Tây Bùi Viện">
+        <div class="near-body">
+          <h3>Phố Tây Bùi Viện</h3>
+          <span class="near-distance"><i class="fa-solid fa-location-dot"></i> Cách 400m</span>
+          <p>Khu phố sôi động với quán bar, ẩm thực đường phố và âm nhạc về đêm.</p>
+          <span class="near-map">Xem trên bản đồ <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+        </div>
+      </a>
+
+      <a class="near-card" href="https://www.google.com/maps/dir/Hapi+Luxe+Hotel,+135%2F41+Tr%E1%BA%A7n+H%C6%B0ng+%C4%90%E1%BA%A1o,+Qu%E1%BA%ADn+1,+H%E1%BB%93+Ch%C3%AD+Minh,+Vi%E1%BB%87t+Nam/Nh%C3%A0+h%C3%A1t+Th%C3%A0nh+ph%E1%BB%91+H%E1%BB%93+Ch%C3%AD+Minh,+07+C%C3%B4ng+tr%C6%B0%E1%BB%9Dng+Lam+S%C6%A1n,+S%C3%A0i+G%C3%B2n,+H%E1%BB%93+Ch%C3%AD+Minh+700000,+Vi%E1%BB%87t+Nam/@10.7706769,106.6955634,1711m/data=!3m2!1e3!4b1!4m14!4m13!1m5!1m1!1s0x31752fa6061ae09f:0xc3d6ddf21d44b511!2m2!1d106.6955287!2d10.7658461!1m5!1m1!1s0x31752f4649e7ca29:0x55f531b6120cae3b!2m2!1d106.7031715!2d10.7766128!3e0?entry=ttu&g_ep=EgoyMDI2MDcwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">
+        <img src="images/ganday/nhahat.webp" alt="Nhà hát Thành phố">
+        <div class="near-body">
+          <h3>Nhà hát Thành phố</h3>
+          <span class="near-distance"><i class="fa-solid fa-location-dot"></i> Cách 1.4km</span>
+          <p>Công trình kiến trúc Pháp cổ điển giữa lòng trung tâm thành phố.</p>
+          <span class="near-map">Xem trên bản đồ <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+        </div>
+      </a>
+
+      <a class="near-card" href="https://www.google.com/maps/dir/Hapi+Luxe+Hotel,+135%2F41+Tr%E1%BA%A7n+H%C6%B0ng+%C4%90%E1%BA%A1o,+Qu%E1%BA%ADn+1,+H%E1%BB%93+Ch%C3%AD+Minh,+Vi%E1%BB%87t+Nam/Dinh+%C4%90%E1%BB%99c+L%E1%BA%ADp,+B%E1%BA%BFn+Th%C3%A0nh,+H%E1%BB%93+Ch%C3%AD+Minh,+Vi%E1%BB%87t+Nam/@10.771868,106.685072,3422m/data=!3m2!1e3!4b1!4m14!4m13!1m5!1m1!1s0x31752fa6061ae09f:0xc3d6ddf21d44b511!2m2!1d106.6955287!2d10.7658461!1m5!1m1!1s0x31752f385570472f:0x1787491df0ed8d6a!2m2!1d106.6953021!2d10.7769942!3e0?entry=ttu&g_ep=EgoyMDI2MDcwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">
+        <img src="images/ganday/đinhoclap.jpg" alt="Dinh Độc Lập">
+        <div class="near-body">
+          <h3>Dinh Độc Lập</h3>
+          <span class="near-distance"><i class="fa-solid fa-location-dot"></i> Cách 1.5km</span>
+          <p>Di tích lịch sử quan trọng với khuôn viên xanh mát, rộng rãi.</p>
+          <span class="near-map">Xem trên bản đồ <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+        </div>
+      </a>
+
+    </div>
+
+    <button class="icon-btn" data-next aria-label="Next nearby places">
+      <i class="fa-solid fa-chevron-right"></i>
+    </button>
+  </div>
+</section>
+
+
+<!-- ==========================================================================
+     OTHER PREMIUM ROOMS
+     ========================================================================== -->
+<section class="rm-section reveal" id="other-rooms">
+  <div class="section-title">
+    <span class="eyebrow">Khám phá thêm</span>
+    <h2>HẠNG PHÒNG KHÁC</h2>
+    <p>Hãy lựa chọn các phòng cao cấp khác phù hợp với kỳ nghỉ.</p>
+  </div>
+
+  <div class="other-rooms-grid">
+
+    <div class="other-room-card">
+      <img src="images/premium/premium03 (4).jpg" alt="Room 03 Premium Balcony">
+      <div class="other-room-body">
+        <h3>Room 03 · Premium Balcony</h3>
+        <span class="price">880.000 VND/Đêm</span>
+        <a class="btn sm" href="room03.html">Xem Phòng</a>
+      </div>
+    </div>
+
+    <div class="other-room-card">
+      <img src="images/premium/premium07 (15).jpg" alt="Room 07 Premium Balcony">
+      <div class="other-room-body">
+        <h3>Room 07 · Premium Balcony</h3>
+        <span class="price">880.000 VND/Đêm</span>
+        <a class="btn sm" href="room07.html">Xem Phòng</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</div>
+
+
+<!-- ==========================================================================
+     FOOTER  (same style as index.html)
+     ========================================================================== -->
+<footer>
+  © 2026 Hapi Luxe Hotel. All rights reserved.
+</footer>
+
+
+<!-- ==========================================================================
+     LIGHTBOX  (shared markup, driven by room.js)
+     ========================================================================== -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close gallery">&times;</button>
+  <button class="lightbox-arrow lightbox-prev" id="lightboxPrev" aria-label="Previous image">
+    <i class="fa-solid fa-chevron-left"></i>
+  </button>
+  <img class="lightbox-img" id="lightboxImg" src="" alt="Room 01 enlarged view">
+  <button class="lightbox-arrow lightbox-next" id="lightboxNext" aria-label="Next image">
+    <i class="fa-solid fa-chevron-right"></i>
+  </button>
+  <span class="lightbox-counter" id="lightboxCounter">1 / 6</span>
+</div>
+
+
+<!-- Shared room script -->
+<script src="room.js"></script>
+</body>
+</html>
