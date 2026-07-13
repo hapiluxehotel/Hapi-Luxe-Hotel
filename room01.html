@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Room 01 · Premium Balcony | Hapi Luxe</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<style>
+:root{
+ --dark:#120c08;
+ --brown:#2b1c12;
+ --cream:#f8efe3;
+ --gold:#d6b176;
+ --soft:#3a281b;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Poppins,sans-serif;background:var(--dark);color:var(--cream)}
+.topbar{
+position:sticky;top:0;z-index:99;
+background:rgba(18,12,8,.9);
+backdrop-filter:blur(10px);
+display:flex;justify-content:space-between;align-items:center;
+padding:18px 8%;
+border-bottom:1px solid rgba(255,255,255,.08)
+}
+.topbar a{color:var(--cream);text-decoration:none}
+.book{background:var(--gold);color:#22140b;padding:12px 22px;border-radius:40px;font-weight:600}
+.container{width:min(1200px,92%);margin:auto;padding:50px 0}
+.hero h1{font:700 54px "Cormorant Garamond",serif}
+.hero p{margin-top:12px;color:#d8c7b0}
+.hero-meta{margin-top:15px;display:flex;gap:18px;flex-wrap:wrap}
+.gallery-main img{
+width:100%;height:620px;object-fit:cover;border-radius:22px
+}
+.thumb-wrap{display:flex;align-items:center;gap:15px;margin-top:20px}
+.thumbs{display:flex;gap:12px;overflow-x:auto;scroll-behavior:smooth}
+.thumbs img{
+width:120px;height:80px;object-fit:cover;border-radius:12px;
+cursor:pointer;opacity:.6;border:2px solid transparent
+}
+.thumbs img.active{opacity:1;border-color:var(--gold)}
+.arrow{
+background:var(--soft);color:#fff;border:none;
+width:42px;height:42px;border-radius:50%;cursor:pointer
+}
+section{margin-top:60px}
+h2{
+font:600 38px "Cormorant Garamond",serif;
+margin-bottom:25px
+}
+.features{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:18px
+}
+.feature{
+background:var(--brown);
+padding:20px;
+border-radius:18px;
+text-align:center
+}
+.feature i{font-size:28px;color:var(--gold);margin-bottom:12px}
+.rules{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px
+}
+.rule{
+background:var(--brown);
+padding:20px;
+border-radius:18px
+}
+.other{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px
+}
+.card{
+background:var(--brown);
+border-radius:20px;
+overflow:hidden;
+text-decoration:none;
+color:white;
+transition:.3s
+}
+.card:hover{transform:translateY(-6px)}
+.card img{width:100%;height:180px;object-fit:cover}
+.card div{padding:18px}
+footer{
+padding:35px;
+text-align:center;
+margin-top:60px;
+border-top:1px solid rgba(255,255,255,.08)
+}
+@media(max-width:768px){
+.hero h1{font-size:40px}
+.gallery-main img{height:320px}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+<a href="index.html"><i class="fa fa-arrow-left"></i> Back to Rooms</a>
+<a class="book" href="#">BOOK NOW</a>
+</div>
+
+<div class="container">
+
+<div class="hero">
+<h1>ROOM 01 · Premium Balcony</h1>
+<p>Boutique Tropical Experience</p>
+<div class="hero-meta">
+<span><i class="fa-solid fa-ruler-combined"></i> 26m²</span>
+<span><i class="fa-solid fa-user-group"></i> 2 Guests</span>
+<span><i class="fa-solid fa-tree"></i> Balcony</span>
+<span><i class="fa-solid fa-bath"></i> Bathtub</span>
+</div>
+</div>
+
+<section class="gallery">
+<div class="gallery-main">
+<img id="mainImage" src="images/premium/room01-cover.jpg" onerror="this.src='room2.jpg.png'">
+</div>
+
+<div class="thumb-wrap">
+<button class="arrow" id="prev">&#10094;</button>
+<div class="thumbs" id="thumbs">
+<img class="active" src="images/premium/room01-cover.jpg" onerror="this.src='room2.jpg.png'">
+<img src="images/premium/room01-1.jpg" onerror="this.src='room2.jpg.png'">
+<img src="images/premium/room01-2.jpg" onerror="this.src='room2.jpg.png'">
+<img src="images/premium/room01-3.jpg" onerror="this.src='room2.jpg.png'">
+<img src="images/premium/room01-4.jpg" onerror="this.src='room2.jpg.png'">
+</div>
+<button class="arrow" id="next">&#10095;</button>
+</div>
+</section>
+
+<section>
+<h2>About this Room</h2>
+<p>Designed in a warm tropical style with natural wood, a private balcony and a relaxing bathtub. This room is perfect for couples or business travelers seeking a peaceful stay in the heart of Ho Chi Minh City.</p>
+</section>
+
+<section>
+<h2>Room Features</h2>
+<div class="features">
+<div class="feature"><i class="fa-solid fa-bed"></i><br>King Bed</div>
+<div class="feature"><i class="fa-solid fa-bath"></i><br>Bathtub</div>
+<div class="feature"><i class="fa-solid fa-tree"></i><br>Balcony</div>
+<div class="feature"><i class="fa-solid fa-tv"></i><br>Smart TV</div>
+<div class="feature"><i class="fa-solid fa-wifi"></i><br>High-speed WiFi</div>
+<div class="feature"><i class="fa-solid fa-snowflake"></i><br>Air Conditioning</div>
+<div class="feature"><i class="fa-solid fa-mug-hot"></i><br>Coffee Station</div>
+<div class="feature"><i class="fa-solid fa-briefcase"></i><br>Workspace</div>
+</div>
+</section>
+
+<section>
+<h2>House Rules</h2>
+<div class="rules">
+<div class="rule"><strong>Check-in</strong><br>14:00</div>
+<div class="rule"><strong>Check-out</strong><br>12:00</div>
+<div class="rule"><strong>Smoking</strong><br>Not Allowed</div>
+<div class="rule"><strong>Guests</strong><br>Maximum 2</div>
+</div>
+</section>
+
+<section>
+<h2>Other Premium Rooms</h2>
+<div class="other">
+<a class="card" href="room03.html">
+<img src="room2.jpg.png">
+<div><strong>Room 03</strong><br>Premium Balcony</div>
+</a>
+<a class="card" href="room07.html">
+<img src="room2.jpg.png">
+<div><strong>Room 07</strong><br>Premium Balcony</div>
+</a>
+</div>
+</section>
+
+</div>
+
+<footer>© 2026 Hapi Luxe Hotel</footer>
+
+<script>
+const main=document.getElementById('mainImage');
+const thumbs=document.querySelectorAll('#thumbs img');
+
+thumbs.forEach(img=>{
+ img.onclick=()=>{
+   main.src=img.src;
+   thumbs.forEach(i=>i.classList.remove('active'));
+   img.classList.add('active');
+ }
+});
+
+document.getElementById('next').onclick=()=>{
+ document.getElementById('thumbs').scrollBy({left:350,behavior:'smooth'});
+};
+
+document.getElementById('prev').onclick=()=>{
+ document.getElementById('thumbs').scrollBy({left:-350,behavior:'smooth'});
+};
+
+main.onclick=()=>window.open(main.src,"_blank");
+</script>
+
+</body>
+</html>
