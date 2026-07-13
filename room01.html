@@ -387,8 +387,212 @@
   </button>
   <span class="lightbox-counter" id="lightboxCounter">1 / 6</span>
 </div>
+     
+     <!-- ROOM SELECT MODAL -->
+<div class="room-modal" id="roomModal">
+
+    <div class="room-modal-content">
+
+        <button class="modal-close" id="closeModal">&times;</button>
+
+        <h2 id="modalTitle">ROOM</h2>
+
+        <div class="modal-room-grid" id="modalRoomGrid">
+
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+
+const modal = document.getElementById("roomModal");
+const closeBtn = document.getElementById("closeModal");
+
+// Đóng popup khi bấm nút X
+closeBtn.onclick = () => {
+    modal.classList.remove("show");
+}
+
+// Đóng popup khi bấm ra ngoài
+window.onclick = (e) => {
+    if (e.target === modal) {
+        modal.classList.remove("show");
+    }
+}
+
+// Mở Deluxe
+document.querySelector(".deluxe-card").onclick = () => {
+
+    modal.classList.add("show");
+
+    document.getElementById("modalTitle").innerHTML = "DELUXE ROOM";
+
+    document.getElementById("modalRoomGrid").innerHTML = `
+
+        <div class="select-room-card">
+
+            <img src="images/deluxe/deluxe1.jpg">
+
+            <h3>Room 02</h3>
+
+           <div class="room-info">
+   <span><i class="fa-solid fa-ruler-combined"></i> 26m²</span>
+   <span><i class="fa-regular fa-window-maximize"></i> Cửa sổ</span>
+   <span><i class="fa-solid fa-user-group"></i> 2-3 người</span>
+   <span><i class="fa-solid fa-chair"></i> Bàn làm việc</span>
+</div>
+
+            <button onclick="location.href='room02.html'">Xem phòng</button>
+
+        </div>
+
+        <div class="select-room-card">
+
+            <img src="images/deluxe/Deluxe01.jpg">
+            
+            <h3>Room 06</h3>
+
+            <div class="room-info">
+     <span><i class="fa-solid fa-ruler-combined"></i> 26m²</span>
+    <span><i class="fa-regular fa-window-maximize"></i> Cửa sổ</span>
+     <span><i class="fa-solid fa-user-group"></i> 2 người</span>
+     <span><i class="fa-solid fa-chair"></i> Bàn làm việc</span>
+</div>
+
+            <button onclick="location.href='room06.html'">Xem phòng</button>
+
+        </div>
+
+    `;
+
+}
+// Mở Premium
+document.querySelector(".premium-card").onclick = () => {
+
+    modal.classList.add("show");
+
+    document.getElementById("modalTitle").innerHTML = "PREMIUM ROOM";
+
+    document.getElementById("modalRoomGrid").innerHTML = `
+
+        <div class="select-room-card">
+
+           <img src="images/premium/premium1.jpg">
+
+            <h3>Room 01</h3>
+
+           <div class="room-info">
+     <span><i class="fa-solid fa-ruler-combined"></i> 26m²</span>
+     <span><i class="fa-regular fa-window-maximize"></i> Cửa sổ</span>
+     <span><i class="fa-solid fa-user-group"></i> 2 người</span>
+     <span><i class="fa-solid fa-bath"></i> Bồn tắm</span>
+     <span><i class="fa-solid fa-chair"></i> Bàn làm việc</span>
+           </div>
+
+           <button onclick="location.href='room01.html'">
+    Xem phòng
+</button>
+
+        </div>
+
+        <div class="select-room-card">
+
+            <img src="images/premium/premium03 (4).jpg">
+
+            <h3>Room 03</h3>
+
+            <div class="room-info">
+     <span><i class="fa-solid fa-ruler-combined"></i> 26m²</span>
+     <span>𓈈> Balcony</span>
+     <span><i class="fa-solid fa-user-group"></i> 2 người</span>
+     <span><i class="fa-solid fa-chair"></i> Bàn làm việc</span>
+           </div>
+
+            <button onclick="location.href='room03.html'">
+          Xem phòng
+     </button>
+
+        </div>
+
+        <div class="select-room-card">
+
+            <img src="images/premium/premium07 (15).jpg">
+
+            <h3>Room 07</h3>
+
+             <div class="room-info">
+     <span><i class="fa-solid fa-ruler-combined"></i> 26m²</span>
+     <span>𓈈> Balcony</span>
+     <span><i class="fa-solid fa-user-group"></i> 2 người</span>
+     <span><i class="fa-solid fa-chair"></i> Bàn làm việc</span>
+           </div>
+
+            <button onclick="location.href='room07.html'">
+    Xem phòng
+</button>
+
+        </div>
+
+    `;
+
+}
 
 
+// Mở Suite
+document.querySelector(".suite-card").onclick = () => {
+
+    modal.classList.add("show");
+
+    document.getElementById("modalTitle").innerHTML = "SUITE ROOM";
+
+    document.getElementById("modalRoomGrid").innerHTML = `
+
+        <div class="select-room-card">
+
+            <img src="images/suite/suite05 (18).jpg">
+
+            <h3>Room 05</h3>
+
+            <div class="room-info">
+     <span><i class="fa-solid fa-ruler-combined"></i> 27m²</span>
+     <span>𓈈> Balcony</span>
+     <span><i class="fa-solid fa-user-group"></i> 2 người</span>
+     <span><i class="fa-solid fa-bath"></i> Bồn tắm</span>
+     <span><i class="fa-solid fa-chair"></i> Bàn làm việc</span>
+           </div>
+
+            <button onclick="location.href='room05.html'">
+    Xem phòng
+</button>
+
+        </div>
+
+        <div class="select-room-card">
+
+            <img src="images/suite/suite04 (9).jpg">
+
+            <h3>Room 04</h3>
+
+             <div class="room-info">
+     <span><i class="fa-solid fa-ruler-combined"></i> 27m²</span>
+     <span><i class="fa-regular fa-window-maximize"></i> Cửa sổ</span>
+     <span><i class="fa-solid fa-user-group"></i> 2 người</span>
+     <span><i class="fa-solid fa-bath"></i> Bồn tắm</span>
+     <span><i class="fa-solid fa-chair"></i> Bàn làm việc</span>
+           </div>
+
+            <button>Xem phòng</button>
+
+        </div>
+
+    `;
+
+}
+     
+</script>
+     
 <!-- Shared room script -->
 <script src="room.js"></script>
 </body>
