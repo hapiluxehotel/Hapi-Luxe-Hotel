@@ -609,39 +609,55 @@ margin-bottom:20px;
 
 }
 
-    .section-nav{
+  .section-nav{
+
     position:fixed;
-    right:40px;
+
+    right:42px;
+
     top:50%;
+
     transform:translateY(-50%);
+
     display:flex;
+
     flex-direction:column;
+
     align-items:center;
-    gap:12px;
-    z-index:999;
+
+    gap:14px;
+
+    z-index:9999;
+
 }
 
 .section-nav span{
+
     width:1px;
-    height:28px;
-    background:rgba(255,255,255,.25);
-}
 
-.section-nav a{
-    font-family:'Cinzel',serif;
-    text-decoration:none;
-    font-size:28px;
-    color:rgba(255,255,255,.35);
+    height:32px;
+
+    background:rgba(255,255,255,.15);
+
     transition:.35s;
+
 }
 
 .section-nav a{
 
-    font-family:'Cinzel',serif;
-    text-decoration:none;
+    width:42px;
+
+    text-align:center;
+
+    font-family:'Cormorant Garamond',serif;
+
     font-size:30px;
 
-    color:#fff;
+    font-weight:600;
+
+    text-decoration:none;
+
+    color:#ffffff;
 
     opacity:.25;
 
@@ -655,9 +671,9 @@ margin-bottom:20px;
 
     opacity:1;
 
-    transform:scale(1.25);
+    transform:scale(1.28);
 
-    text-shadow:0 0 18px rgba(214,177,118,.7);
+    text-shadow:0 0 18px rgba(214,177,118,.65);
 
 }
     footer {
@@ -1120,34 +1136,36 @@ document.querySelector(".suite-card").onclick = () => {
     `;
 
 }
-const sections = document.querySelectorAll("header, section");
+const sections = document.querySelectorAll("header[id], section[id]");
 const navLinks = document.querySelectorAll(".section-nav a");
 
-window.addEventListener("scroll", () => {
+const observer = new IntersectionObserver((entries)=>{
 
-    let current = "";
+    entries.forEach(entry=>{
 
-    sections.forEach(section => {
+        if(entry.isIntersecting){
 
-        const sectionTop = section.offsetTop - 200;
+            navLinks.forEach(link=>{
 
-        if (window.scrollY >= sectionTop) {
-            current = section.getAttribute("id");
+                link.classList.remove("active");
+
+                if(link.getAttribute("href")==="#"+entry.target.id){
+
+                    link.classList.add("active");
+
+                }
+
+            });
+
         }
 
     });
 
-    navLinks.forEach(link => {
-
-        link.classList.remove("active");
-
-        if (link.getAttribute("href") == "#" + current) {
-            link.classList.add("active");
-        }
-
-    });
-
+},{
+    threshold:0.45
 });
+
+sections.forEach(section=>observer.observe(section));
 </script>
 
 </body>
