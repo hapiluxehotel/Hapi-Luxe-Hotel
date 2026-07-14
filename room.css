@@ -692,7 +692,8 @@ h1,h2,h3,h4{
     overflow-x:auto;
     scroll-behavior:smooth;
     scrollbar-width:none;
-    padding-bottom:8px;
+
+    padding:0 40px;
 }
 
 .other-rooms-grid::-webkit-scrollbar{
@@ -728,6 +729,41 @@ h1,h2,h3,h4{
 .other-room-body .price{ color: var(--gold); font-weight: 700; font-size: 14.5px; }
 .other-room-body .btn{ margin-top: auto; align-self: flex-start; }
 
+/* ===== OTHER ROOMS SLIDER ===== */
+
+.other-prev,
+.other-next{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    width:52px;
+    height:52px;
+    border:none;
+    border-radius:50%;
+    background:rgba(43,28,18,.92);
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    z-index:20;
+    transition:.3s;
+    box-shadow:0 10px 25px rgba(0,0,0,.35);
+}
+
+.other-prev{
+    left:-20px;
+}
+
+.other-next{
+    right:-20px;
+}
+
+.other-prev:hover,
+.other-next:hover{
+    background:var(--gold);
+    color:var(--dark);
+}
 
 /* ==========================================================================
    13. FOOTER  (identical to index.html footer)
@@ -794,7 +830,3 @@ footer a:hover{ color: var(--gold); }
   .topbar .brand span.brand-text{ display: none; }
 }
 
-@media (max-width: 420px){
-  .features-grid{ grid-template-columns: 1fr 1fr; }
-  .other-rooms-grid{ grid-template-columns: 1fr; }
-}
