@@ -171,55 +171,71 @@ linear-gradient(90deg,rgba(18,12,8,.72) 0%,rgba(18,12,8,.50) 38%,rgba(18,12,8,.2
 
 .hero-bottom{
     display:flex;
-    align-items:center;
-    gap:34px;
-    margin-top:42px;
-    color:#d7c7b2;
+    align-items:flex-start;
+    gap:42px;
+    margin-top:46px;
 }
 
 .hero-rating{
     display:flex;
-    align-items:center;
-    gap:14px;
+    flex-direction:column;
 }
 
 .stars{
     color:var(--gold);
+    font-size:22px;
+    letter-spacing:3px;
+    margin-bottom:6px;
+}
+
+    .stars span{
+
+    color:#fff;
+
     font-size:18px;
-    letter-spacing:2px;
+
+    font-weight:600;
+
+    margin-left:10px;
+
+}
+    
+.rating-text{
+    color:#e5d5c1;
+    font-size:18px;
+    line-height:1.6;
 }
 
 .rating-text strong{
-    color:var(--white);
-    font-size:18px;
-}
-
-.rating-text{
-    line-height:1.45;
-    color:#d7c7b2;
-    font-size:15px;
+    color:#fff;
 }
 
 .hero-line{
     width:1px;
-    height:54px;
+    height:64px;
     background:rgba(255,255,255,.18);
 }
 
 .hero-brand{
     display:flex;
     align-items:center;
-    gap:14px;
+    gap:16px;
 }
 
 .hero-brand i{
+    font-size:30px;
     color:var(--gold);
-    font-size:26px;
 }
 
 .hero-brand strong{
-    color:var(--white);
-    font-size:18px;
+    color:#fff;
+    font-size:22px;
+}
+
+.hero-brand div{
+    color:#e5d5c1;
+    line-height:1.55;
+    font-size:17px;
 }
 
 .hero-brand div{
@@ -805,9 +821,14 @@ margin-bottom:20px;
 <div class="hero-info">
 
     <div class="hero-rating">
-        <div class="stars">★★★★★ <span>4.9/5</span></div>
-        <p>300+ đánh giá từ khách hàng</p>
-    </div>
+       <div class="stars">
+★★★★★
+<span>4.9/5</span>
+</div>
+
+<div class="rating-text">
+300+ đánh giá từ khách hàng
+</div>
 
     <div class="hero-divider"></div>
 
