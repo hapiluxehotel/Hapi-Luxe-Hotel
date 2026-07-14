@@ -609,32 +609,6 @@ margin-bottom:20px;
 
 }
 
-.select-room-card button{
-
-width:100%;
-
-padding:14px;
-
-border:none;
-
-border-radius:40px;
-
-background:#d6b176;
-
-font-weight:bold;
-
-cursor:pointer;
-
-}
-margin-top:35px;
-
-display:grid;
-
-grid-template-columns:repeat(3,1fr);
-
-gap:28px;
-
-} 
     .section-nav{
     position:fixed;
     right:40px;
@@ -661,10 +635,30 @@ gap:28px;
     transition:.35s;
 }
 
+.section-nav a{
+
+    font-family:'Cinzel',serif;
+    text-decoration:none;
+    font-size:30px;
+
+    color:#fff;
+
+    opacity:.25;
+
+    transition:.35s;
+
+}
+
 .section-nav a.active{
+
     color:var(--gold);
+
     opacity:1;
-    transform:scale(1.15);
+
+    transform:scale(1.25);
+
+    text-shadow:0 0 18px rgba(214,177,118,.7);
+
 }
     footer {
       padding: 28px 7%;
@@ -1126,7 +1120,34 @@ document.querySelector(".suite-card").onclick = () => {
     `;
 
 }
+const sections = document.querySelectorAll("header, section");
+const navLinks = document.querySelectorAll(".section-nav a");
 
+window.addEventListener("scroll", () => {
+
+    let current = "";
+
+    sections.forEach(section => {
+
+        const sectionTop = section.offsetTop - 200;
+
+        if (window.scrollY >= sectionTop) {
+            current = section.getAttribute("id");
+        }
+
+    });
+
+    navLinks.forEach(link => {
+
+        link.classList.remove("active");
+
+        if (link.getAttribute("href") == "#" + current) {
+            link.classList.add("active");
+        }
+
+    });
+
+});
 </script>
 
 </body>
