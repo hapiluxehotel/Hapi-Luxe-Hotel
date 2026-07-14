@@ -40,10 +40,12 @@
       justify-content: space-between;
       align-items: center;
       padding: 18px 7%;
-      background: rgba(18, 12, 8, 0.82);
-      backdrop-filter: blur(16px);
-      border-bottom: 1px solid rgba(214, 177, 118, 0.2);
-    }
+       background: rgba(28, 20, 14, 0.28);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border-bottom: 1px solid rgba(255,255,255,.08);
+    transition: background .3s ease, backdrop-filter .3s ease;
+}
 
     .brand {
       font-family: Georgia, serif;
@@ -69,7 +71,7 @@
       padding: 120px 7% 70px;
       background:
         linear-gradient(90deg, rgba(18,12,8,0.92), rgba(18,12,8,0.55), rgba(18,12,8,0.9)),
-        url('hero.jpg.png') center/cover no-repeat;
+        url('herotrang.avif') center/cover no-repeat;
     }
 
     .hero-box {
