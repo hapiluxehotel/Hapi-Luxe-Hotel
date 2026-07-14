@@ -62,6 +62,58 @@
       color: var(--cream);
     }
 
+    .topbar-right{
+    display:flex;
+    align-items:center;
+    gap:40px;
+}
+
+    .book-btn{
+
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    padding:14px 28px;
+
+    border:1px solid rgba(214,177,118,.45);
+
+    border-radius:999px;
+
+    background:rgba(255,255,255,.05);
+
+    color:var(--cream);
+
+    font-size:15px;
+
+    font-weight:600;
+
+    backdrop-filter:blur(10px);
+
+    transition:.3s;
+
+}
+
+.book-btn:hover{
+
+    background:var(--gold);
+
+    color:#1b110b;
+
+}
+
+.book-btn span{
+
+    transition:.3s;
+
+}
+
+.book-btn:hover span{
+
+    transform:translateX(4px);
+
+}
+    
     .menu a:hover { color: var(--gold); }
 
     .hero {
@@ -606,12 +658,19 @@ gap:28px;
     <div class="menu">
       <a href="#about">Giới thiệu</a>
       <a href="#rooms">Phòng</a>
-      <a href="#s  ervices">Tiện ích</a>
+      <a href="#services">Tiện ích</a>
       <a href="#booking">Đặt phòng</a>
       <a href="#contact">Liên hệ</a>
     </div>
-  </nav>
 
+    <a href="#booking" class="book-btn">
+        Đặt phòng ngay
+        <span>→</span>
+    </a>
+
+</div>
+    
+</nav>
   <header class="hero" id="top">
     <div class="hero-box">
       <span class="label">Boutique Tropical Hotel</span>
