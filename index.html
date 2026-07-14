@@ -169,6 +169,65 @@ linear-gradient(90deg,rgba(18,12,8,.72) 0%,rgba(18,12,8,.50) 38%,rgba(18,12,8,.2
       gap: 15px;
     }
 
+.hero-bottom{
+    display:flex;
+    align-items:center;
+    gap:34px;
+    margin-top:42px;
+    color:#d7c7b2;
+}
+
+.hero-rating{
+    display:flex;
+    align-items:center;
+    gap:14px;
+}
+
+.stars{
+    color:var(--gold);
+    font-size:18px;
+    letter-spacing:2px;
+}
+
+.rating-text strong{
+    color:var(--white);
+    font-size:18px;
+}
+
+.rating-text{
+    line-height:1.45;
+    color:#d7c7b2;
+    font-size:15px;
+}
+
+.hero-line{
+    width:1px;
+    height:54px;
+    background:rgba(255,255,255,.18);
+}
+
+.hero-brand{
+    display:flex;
+    align-items:center;
+    gap:14px;
+}
+
+.hero-brand i{
+    color:var(--gold);
+    font-size:26px;
+}
+
+.hero-brand strong{
+    color:var(--white);
+    font-size:18px;
+}
+
+.hero-brand div{
+    line-height:1.5;
+    color:#d7c7b2;
+    font-size:15px;
+}
+    
     .btn {
       display: inline-flex;
       align-items: center;
@@ -746,9 +805,7 @@ margin-bottom:20px;
 <div class="hero-info">
 
     <div class="hero-rating">
-        <div class="stars">
-            ★★★★★ <span>4.9/5</span>
-        </div>
+        <div class="stars">★★★★★ <span>4.9/5</span></div>
         <p>300+ đánh giá từ khách hàng</p>
     </div>
 
@@ -756,7 +813,7 @@ margin-bottom:20px;
 
     <div class="hero-brand">
 
-        <img src="logo.png" alt="Logo">
+        <i class="fa-solid fa-leaf"></i>
 
         <div>
             <strong>Boutique Tropical Hotel</strong>
