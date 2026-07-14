@@ -635,6 +635,37 @@ grid-template-columns:repeat(3,1fr);
 gap:28px;
 
 } 
+    .section-nav{
+    position:fixed;
+    right:40px;
+    top:50%;
+    transform:translateY(-50%);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:12px;
+    z-index:999;
+}
+
+.section-nav span{
+    width:1px;
+    height:28px;
+    background:rgba(255,255,255,.25);
+}
+
+.section-nav a{
+    font-family:'Cinzel',serif;
+    text-decoration:none;
+    font-size:28px;
+    color:rgba(255,255,255,.35);
+    transition:.35s;
+}
+
+.section-nav a.active{
+    color:var(--gold);
+    opacity:1;
+    transform:scale(1.15);
+}
     footer {
       padding: 28px 7%;
       text-align: center;
@@ -670,11 +701,28 @@ gap:28px;
         Đặt phòng ngay
         <span>→</span>
     </a>
-
-</div>
     
 </nav>
-  <header class="hero" id="top">
+
+<div class="section-nav">
+
+    <a href="#top" class="active">01</a>
+    <span></span>
+
+    <a href="#about">02</a>
+    <span></span>
+
+    <a href="#rooms">03</a>
+    <span></span>
+
+    <a href="#services">04</a>
+    <span></span>
+
+    <a href="#contact">05</a>
+
+</div>
+
+<header class="hero" id="top">
     <div class="hero-box">
       <span class="label">Boutique Tropical Hotel</span>
       <h1>Nghỉ dưỡng tinh tế giữa lòng Sài Gòn.</h1>
