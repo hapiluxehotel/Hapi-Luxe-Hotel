@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   initGallery();
   initCarousels();
+  initOtherRoomsSlider();
   initRippleButtons();
   initScrollReveal();
 
@@ -313,4 +314,43 @@ function initScrollReveal() {
   }, { threshold: 0.15 });
 
   revealEls.forEach(function (el) { observer.observe(el); });
+}
+/* ==========================================================================
+   OTHER ROOMS SLIDER
+========================================================================== */
+
+function initOtherRoomsSlider(){
+
+    const grid = document.querySelector(".other-rooms-grid");
+    const prev = document.querySelector(".other-prev");
+    const next = document.querySelector(".other-next");
+
+    if(!grid || !prev || !next) return;
+
+    const card = grid.querySelector(".other-room-card");
+
+    if(!card) return;
+
+    const gap = 24;
+
+    const step = card.offsetWidth + gap;
+
+    next.addEventListener("click",()=>{
+
+        grid.scrollBy({
+            left:step,
+            behavior:"smooth"
+        });
+
+    });
+
+    prev.addEventListener("click",()=>{
+
+        grid.scrollBy({
+            left:-step,
+            behavior:"smooth"
+        });
+
+    });
+
 }
