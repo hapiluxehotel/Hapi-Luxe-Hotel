@@ -343,13 +343,152 @@ linear-gradient(90deg,rgba(18,12,8,.72) 0%,rgba(18,12,8,.50) 38%,rgba(18,12,8,.2
       background: var(--brown);
     }
 
-    .about-card {
-      padding: 34px;
-      border: 1px solid rgba(214,177,118,0.18);
-      border-radius: 32px;
-      background: rgba(255,250,242,0.04);
-    }
+  .about-card{
 
+display:flex;
+
+gap:45px;
+
+padding:52px;
+
+border-radius:36px;
+
+border:1px solid rgba(214,177,118,.16);
+
+background:rgba(255,255,255,.03);
+
+align-items:flex-start;
+
+}
+.about-left{
+
+width:250px;
+
+position:relative;
+
+padding-left:25px;
+
+}
+    .about-left::before{
+
+content:"";
+
+position:absolute;
+
+left:7px;
+
+top:10px;
+
+bottom:10px;
+
+width:2px;
+
+background:rgba(214,177,118,.35);
+
+}
+    .about-item{
+
+position:relative;
+
+margin-bottom:42px;
+
+}
+
+dán tiếp
+
+.dot{
+
+position:absolute;
+
+left:-24px;
+
+top:8px;
+
+width:14px;
+
+height:14px;
+
+border-radius:50%;
+
+background:var(--gold);
+
+border:3px solid #5d402a;
+
+}
+
+dán tiếp
+
+.about-item h4{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:28px;
+
+color:var(--gold);
+
+margin-bottom:6px;
+
+}
+
+dán tiếp
+
+.about-item p{
+
+color:#cdbca8;
+
+font-size:15px;
+
+line-height:1.8;
+
+margin:0;
+
+}
+
+dán tiếp
+
+.about-divider{
+
+width:1px;
+
+background:rgba(214,177,118,.18);
+
+align-self:stretch;
+
+}
+
+dán tiếp
+
+.about-right{
+
+flex:1;
+
+}
+
+dán tiếp
+
+.about-right h2{
+
+font-size:58px;
+
+line-height:1.05;
+
+margin:18px 0 24px;
+
+}
+
+dán tiếp
+
+.about-right p{
+
+font-size:18px;
+
+line-height:1.9;
+
+max-width:560px;
+
+color:#d7c7b3;
+
+}
     .about-card p { color: var(--muted); margin-bottom: 16px; }
 
     .about-img {
@@ -936,15 +1075,54 @@ margin-bottom:20px;
     </div>
   </header>
 
-  <section class="about" id="about">
-    <div class="about-card">
-      <span class="label">Về chúng tôi</span>
-      <h2>Đơn giản, tinh tế và thân thiện.</h2>
-      <p>Khách sạn được định hướng theo phong cách tối sang trọng, sử dụng sắc nâu gỗ, trắng kem và điểm xanh tropical để tạo cảm giác ấm áp, thư giãn nhưng vẫn hiện đại.</p>
-      <p>Nằm tại Quận 1, Hapi Luxe Hotel thuận tiện để di chuyển, nghỉ ngơi và khám phá trung tâm thành phố. Định hướng của chúng tôi là mang đến cảm giác thư thái khi lu trú tại đậy</p>
+<div class="about-card">
+
+    <div class="about-left">
+
+        <div class="about-item">
+            <span class="dot"></span>
+            <div>
+                <h4>2026</h4>
+                <p>Hapi Luxe ra đời</p>
+            </div>
+        </div>
+
+        <div class="about-item">
+            <span class="dot"></span>
+            <div>
+                <h4>Boutique Tropical</h4>
+                <p>Phong cách nghỉ dưỡng tropical hiện đại</p>
+            </div>
+        </div>
+
+        <div class="about-item">
+            <span class="dot"></span>
+            <div>
+                <h4>Quận 1, TP.HCM</h4>
+                <p>Vị trí trung tâm, kết nối mọi trải nghiệm</p>
+            </div>
+        </div>
+
     </div>
-    <div class="about-img" aria-label="Không gian khách sạn"></div>
-  </section>
+
+    <div class="about-divider"></div>
+
+    <div class="about-right">
+
+        <span class="label">Về chúng tôi</span>
+
+        <h2>Đơn giản, tinh tế<br>và thân thiện.</h2>
+
+        <p>
+            Hapi Luxe Hotel mang đến không gian lưu trú tinh tế,
+            hài hòa giữa thiên nhiên và tiện nghi hiện đại.
+            Nằm tại Quận 1, nơi nhịp sống sôi động và tiện lợi,
+            khách sạn là điểm dừng chân lý tưởng cho mọi hành trình.
+        </p>
+
+    </div>
+
+</div>
 
   <section id="rooms">
     <div class="section-head">
