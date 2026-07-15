@@ -382,7 +382,7 @@ Tiếp
 
     position:absolute;
 
-    left:6px;
+    left:12px;
 
     top:0;
 
@@ -393,34 +393,33 @@ Tiếp
     background:rgba(214,177,118,.45);
 
 }
-Tiếp
-
 .timeline-item{
-
     position:relative;
-
-    padding-left:26px;
-
+    padding-left:24px;
     margin-bottom:42px;
-
 }
 
-.timeline-dot{
+.timeline-item::before{
+
+    content:"";
+
     position:absolute;
 
-    left:-24px;
-    top:6px;
+    left:-18px;
+
+    top:5px;
 
     width:12px;
     height:12px;
 
     border-radius:50%;
 
-    background:#d6b176;
+    background:var(--gold);
 
     border:2px solid #6b4a28;
 
     box-shadow:0 0 0 3px rgba(214,177,118,.18);
+
 }
 
 .timeline-item h4{
@@ -436,8 +435,6 @@ color:var(--gold);
 margin-bottom:4px;
 
 }
-
-Tiếp
 
 .timeline-item p{
 
@@ -457,7 +454,7 @@ width:1px;
 
 background:rgba(214,177,118,.22);
 
-height:100%;
+align-self:stretch;
 
 }
 
@@ -1071,7 +1068,6 @@ margin-bottom:20px;
     <div class="about-timeline">
 
         <div class="timeline-item">
-            <span class="timeline-dot"></span>
 
             <div>
                 <h4>2026</h4>
@@ -1080,7 +1076,6 @@ margin-bottom:20px;
         </div>
 
         <div class="timeline-item">
-            <span class="timeline-dot"></span>
 
             <div>
                 <h4>Boutique Tropical</h4>
@@ -1089,7 +1084,6 @@ margin-bottom:20px;
         </div>
 
         <div class="timeline-item">
-            <span class="timeline-dot"></span>
 
             <div>
                 <h4>Quận 1, TP.HCM</h4>
