@@ -361,27 +361,17 @@ linear-gradient(90deg,rgba(18,12,8,.72) 0%,rgba(18,12,8,.50) 38%,rgba(18,12,8,.2
   box-shadow: 0 25px 60px rgba(0,0,0,0.35);
 }
 .about-inner{
-
-display:flex;
-
+display:grid;
+grid-template-columns:180px 1px 1fr;
+column-gap:42px;
+align-items:start;
 height:100%;
-
-gap:34px;
-
-align-items:flex-start;
-
 }
-
 Tiếp tục
 
 .about-timeline{
-
-width:220px;
-
 position:relative;
-
-padding-left:28px;
-
+padding-left:30px;
 }
 
 Tiếp
@@ -410,7 +400,7 @@ Tiếp
 
 position:relative;
 
-margin-bottom:42px;
+margin-bottom:54px;
 
 }
 
@@ -440,13 +430,15 @@ Tiếp
 
 .timeline-item h4{
 
-margin:0;
-
 font-family:'Cormorant Garamond',serif;
 
-font-size:27px;
+font-size:21px;
+
+font-weight:600;
 
 color:var(--gold);
+
+margin-bottom:4px;
 
 }
 
@@ -454,25 +446,23 @@ Tiếp
 
 .timeline-item p{
 
-margin-top:6px;
-
 font-size:15px;
 
-line-height:1.7;
+line-height:1.6;
 
 color:#cdbca8;
 
-}
+max-width:150px;
 
-Tiếp
+}
 
 .about-divider{
 
 width:1px;
 
-background:rgba(214,177,118,.16);
+background:rgba(214,177,118,.22);
 
-align-self:stretch;
+height:100%;
 
 }
 
@@ -480,31 +470,33 @@ Tiếp
 
 .about-content{
 
-flex:1;
+    padding-top:6px;
+
+    max-width:470px;
 
 }
-
-Tiếp
 
 .about-content h2{
 
-font-size:52px;
+    font-size:58px;
 
-line-height:1.05;
+    line-height:1.05;
 
-margin:18px 0 24px;
+    margin:18px 0 28px;
+
+    max-width:420px;
 
 }
 
-Tiếp
-
 .about-content p{
 
-font-size:17px;
+    font-size:16px;
 
-line-height:1.85;
+    line-height:2;
 
-max-width:470px;
+    max-width:460px;
+
+    color:#cdbca8;
 
 }
     .rooms-grid, .services-grid {
