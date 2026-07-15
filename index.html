@@ -335,22 +335,21 @@ linear-gradient(90deg,rgba(18,12,8,.72) 0%,rgba(18,12,8,.50) 38%,rgba(18,12,8,.2
 
     .section-head p { color: var(--muted); margin-top: 16px; }
 
-    .about{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:44px;
-    align-items:stretch;
-    background:var(--brown);
-}
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 44px;
+      align-items: center;
+      background: var(--brown);
+    }
 
-    .about-card{
-    padding:34px;
-    border:1px solid rgba(214,177,118,.18);
-    border-radius:32px;
-    background:rgba(255,250,242,.04);
+    .about-card {
+      padding: 34px;
+      border: 1px solid rgba(214,177,118,0.18);
+      border-radius: 32px;
+      background: rgba(255,250,242,0.04);
+    }
 
-    display:flex;
-}
     .about-card p { color: var(--muted); margin-bottom: 16px; }
 
     .about-img {
@@ -362,17 +361,20 @@ linear-gradient(90deg,rgba(18,12,8,.72) 0%,rgba(18,12,8,.50) 38%,rgba(18,12,8,.2
   box-shadow: 0 25px 60px rgba(0,0,0,0.35);
 }
 .about-inner{
-    display:grid;
-    grid-template-columns:180px 1px 1fr;
-    column-gap:30px;
-
-    width:100%;
-
+display:grid;
+grid-template-columns:180px 1px 1fr;
+column-gap:30px;
+align-items:start;
+height:100%;
+}
+Tiếp tục
 
 .about-timeline{
-    position:relative;
-    padding-left:38px;
+position:relative;
+padding-left:30px;
 }
+
+Tiếp
 
 .about-timeline::before{
 
@@ -380,37 +382,51 @@ linear-gradient(90deg,rgba(18,12,8,.72) 0%,rgba(18,12,8,.50) 38%,rgba(18,12,8,.2
 
     position:absolute;
 
-    left:7px;
+    left:6px;
 
-    top:8px;
+    top:0;
 
-    bottom:8px;
+    bottom:0;
 
     width:2px;
 
     background:rgba(214,177,118,.45);
 
 }
+Tiếp
 
 .timeline-item{
-    position:relative;
-    padding-left:26px;
-    margin-bottom:38px;
 
-    display:flex;
-    align-items:flex-start;
+    position:relative;
+
+    padding-left:26px;
+
+    margin-bottom:42px;
+
 }
 
+Tiếp
+
 .timeline-dot{
+
     position:absolute;
-    left:-8px;
+
+    left:-1px;
+
     top:4px;
-    width:16px;
-    height:16px;
+
+    width:14px;
+
+    height:14px;
+
     border-radius:50%;
+
     background:var(--gold);
+
     border:3px solid #6b4a28;
-    box-shadow:0 0 0 4px rgba(214,177,118,.18);
+
+    box-shadow:0 0 0 3px rgba(214,177,118,.18);
+
     z-index:2;
 
 }
@@ -429,6 +445,7 @@ margin-bottom:4px;
 
 }
 
+Tiếp
 
 .timeline-item p{
 
@@ -452,6 +469,7 @@ height:100%;
 
 }
 
+Tiếp
 
 .about-content{
 
