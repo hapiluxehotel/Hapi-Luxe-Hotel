@@ -502,8 +502,19 @@ Tiếp
 }
 
 .room{
-  transition:0.35s;
-  cursor:pointer;
+
+    background:var(--brown);
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+    border:1px solid rgba(214,177,118,.16);
+
+    transition:.35s;
+
+    cursor:pointer;
+
 }
 
 .room:hover{
@@ -518,7 +529,9 @@ Tiếp
       display: block;
     }
 
-    .room-body, .service { padding: 26px; }
+    .room-body{
+    padding:26px;
+}
 
     h3 { font-size: 26px; color: var(--white); margin-bottom: 10px; }
     .room p, .service p { color: var(--muted); font-size: 15px; }
