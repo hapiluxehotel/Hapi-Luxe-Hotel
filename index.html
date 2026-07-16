@@ -2069,7 +2069,7 @@ const translations = {
 
     document.getElementById("book-text").textContent =
         translations[lang].book;
-
+    localStorage.setItem("language", lang);
 }
 langBtn.onclick = (e)=>{
 
@@ -2112,6 +2112,19 @@ document.querySelectorAll(".lang-menu div").forEach(item=>{
     }
 
 });
+  const savedLanguage = localStorage.getItem("language") || "vi";
+
+setLanguage(savedLanguage);
+
+if(savedLanguage === "en"){
+
+    langBtn.innerHTML='🌐 EN <i class="fa-solid fa-chevron-down"></i>';
+
+}else{
+
+    langBtn.innerHTML='🌐 VI <i class="fa-solid fa-chevron-down"></i>';
+
+}
 </script>
 
 </body>
