@@ -1199,7 +1199,89 @@ margin-bottom:20px;
       background: #0b0705;
       font-size: 14px;
     }
+/* ===========================
+   DECOR LEAVES
+=========================== */
 
+.hero,
+.about{
+    position:relative;
+    overflow:hidden;
+}
+
+/* Hero */
+
+.hero-leaf{
+    position:absolute;
+    z-index:5;
+    pointer-events:none;
+}
+
+.hero-leaf img{
+
+    width:100%;
+
+    display:block;
+
+    filter:
+
+        drop-shadow(0 20px 35px rgba(0,0,0,.35));
+
+}
+
+.hero-leaf-left{
+
+    width:340px;
+
+    top:90px;
+
+    left:-65px;
+
+    transform:rotate(-8deg);
+
+}
+
+.hero-leaf-right{
+
+    width:260px;
+
+    right:-55px;
+
+    bottom:-35px;
+
+    transform:rotate(10deg);
+
+}
+
+/* About */
+
+.about-leaf{
+
+    position:absolute;
+
+    left:-90px;
+
+    bottom:-95px;
+
+    width:420px;
+
+    z-index:5;
+
+    pointer-events:none;
+
+}
+
+.about-leaf img{
+
+    width:100%;
+
+    display:block;
+
+    filter:
+
+        drop-shadow(0 25px 45px rgba(0,0,0,.4));
+
+}
     @media (max-width: 900px) {
       .menu { display: none; }
       .about, .booking { grid-template-columns: 1fr; }
@@ -1249,6 +1331,13 @@ margin-bottom:20px;
 </div>
 
 <header class="hero" id="top">
+  <div class="hero-leaf hero-leaf-left">
+    <img src="images/decor/leaf-left.png" alt="">
+</div>
+
+<div class="hero-leaf hero-leaf-right">
+    <img src="images/decor/leaf-right.png" alt="">
+</div>
     <div class="hero-box">
       <span class="label">Boutique Tropical Hotel</span>
       <h1>Nghỉ dưỡng tinh tế giữa lòng Sài Gòn.</h1>
@@ -1291,6 +1380,9 @@ margin-bottom:20px;
   </header>
 
   <section class="about" id="about">
+    <div class="about-leaf">
+    <img src="images/decor/about-leaf.png" alt="">
+</div>
     <div class="about-card">
      <div class="about-inner">
 
