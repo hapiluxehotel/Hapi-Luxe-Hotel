@@ -818,7 +818,129 @@ max-width:300px;
 .room-modal.show{
     display:flex;
 }
+/* ===========================
+   GALLERY MODAL
+=========================== */
 
+.gallery-modal{
+
+    position:fixed;
+    inset:0;
+
+    display:none;
+    justify-content:center;
+    align-items:center;
+
+    background:rgba(0,0,0,.88);
+    backdrop-filter:blur(10px);
+
+    z-index:100000;
+
+}
+
+.gallery-modal.show{
+
+    display:flex;
+
+}
+
+.gallery-modal img{
+
+    width:min(1100px,88vw);
+    max-height:82vh;
+
+    object-fit:cover;
+
+    border-radius:22px;
+
+    box-shadow:0 30px 80px rgba(0,0,0,.45);
+
+}
+
+.gallery-close{
+
+    position:absolute;
+
+    top:28px;
+    right:34px;
+
+    background:none;
+    border:none;
+
+    color:#fff;
+
+    font-size:42px;
+
+    cursor:pointer;
+
+}
+
+.gallery-prev,
+.gallery-next{
+
+    position:absolute;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    width:58px;
+    height:58px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.10);
+
+    color:white;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.gallery-prev:hover,
+.gallery-next:hover{
+
+    background:rgba(255,255,255,.22);
+
+}
+
+.gallery-prev{
+
+    left:40px;
+
+}
+
+.gallery-next{
+
+    right:40px;
+
+}
+
+.gallery-title{
+
+    position:absolute;
+
+    bottom:40px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    font-family:'Cinzel',serif;
+
+    font-size:24px;
+
+    color:white;
+
+    letter-spacing:2px;
+
+}
 .room-modal-content{
 
 width:min(1200px,92%);
@@ -1273,7 +1395,7 @@ margin-bottom:20px;
         <h2>HAPI LUXE</h2>
     </div>
     <div class="services-grid">
-<div class="service">
+<div class="service tropical-card">
 
   <img src="images/tropicalmood.png" alt="Tropical Mood">
 
@@ -1289,6 +1411,7 @@ margin-bottom:20px;
 </div>
 
 </div>
+      
       <div class="service">
 
   <img src="https://www.foodrepublic.com/img/gallery/room-service-etiquette-tips-you-need-for-a-luxury-experience/call-ahead-for-custom-orders-1698258771.jpg" alt="Reception">
@@ -1418,7 +1541,25 @@ margin-bottom:20px;
     </div>
 
 </div>
+<!-- GALLERY MODAL -->
 
+<div class="gallery-modal" id="galleryModal">
+
+    <button class="gallery-close">&times;</button>
+
+    <button class="gallery-prev">
+        <i class="fa-solid fa-chevron-left"></i>
+    </button>
+
+    <img id="galleryImage">
+
+    <button class="gallery-next">
+        <i class="fa-solid fa-chevron-right"></i>
+    </button>
+
+    <div class="gallery-title" id="galleryTitle"></div>
+
+</div>
 <script>
 
 const modal = document.getElementById("roomModal");
@@ -1608,7 +1749,96 @@ document.querySelector(".suite-card").onclick = () => {
         </div>
 
     `;
+  }
+  document.querySelector(".tropical-card").onclick = ()=>{
 
+    openGallery([
+
+        "images/tropical/1.jpg",
+        "images/tropical/2.jpg",
+        "images/tropical/3.jpg",
+        "images/tropical/4.jpg"
+
+    ],"TROPICAL MOOD");
+
+}
+// ===============================
+// GALLERY SLIDER
+// ===============================
+
+const galleryModal = document.getElementById("galleryModal");
+const galleryImage = document.getElementById("galleryImage");
+const galleryTitle = document.getElementById("galleryTitle");
+
+const galleryClose = document.querySelector(".gallery-close");
+const galleryPrev = document.querySelector(".gallery-prev");
+const galleryNext = document.querySelector(".gallery-next");
+
+let galleryImages = [];
+let currentImage = 0;
+
+function openGallery(images, title){
+
+    galleryImages = images;
+    currentImage = 0;
+
+    galleryTitle.innerHTML = title;
+
+    showGalleryImage();
+
+    galleryModal.classList.add("show");
+
+}
+
+function showGalleryImage(){
+
+    galleryImage.src = galleryImages[currentImage];
+
+}
+
+galleryNext.onclick = ()=>{
+
+    currentImage++;
+
+    if(currentImage >= galleryImages.length){
+
+        currentImage = 0;
+
+    }
+
+    showGalleryImage();
+
+}
+
+galleryPrev.onclick = ()=>{
+
+    currentImage--;
+
+    if(currentImage < 0){
+
+        currentImage = galleryImages.length-1;
+
+    }
+
+    showGalleryImage();
+
+}
+
+galleryClose.onclick = ()=>{
+
+    galleryModal.classList.remove("show");
+
+}
+
+galleryModal.onclick = (e)=>{
+
+    if(e.target === galleryModal){
+
+        galleryModal.classList.remove("show");
+
+    }
+
+}
 }
 const sections = document.querySelectorAll("header[id], section[id]");
 const navLinks = document.querySelectorAll(".section-nav a");
