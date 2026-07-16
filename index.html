@@ -1306,11 +1306,11 @@ margin-bottom:20px;
   HAPI LUXE HOTEL
 </a>
     <div class="menu">
-    <a href="#about">Giới thiệu</a>
-    <a href="#rooms">Phòng</a>
-    <a href="#services">Tiện ích</a>
-    <a href="#contact">Vị trí</a>
-    <a href="#contact">Liên hệ</a>
+    <a href="#about" id="menu-about">Giới thiệu</a>
+    <a href="#rooms" id="menu-room">Phòng</a>
+    <a href="#services" id="menu-service">Tiện ích</a>
+    <a href="#contact" id="menu-location">Vị trí</a>
+    <a href="#contact" id="menu-contact">Liên hệ</a>
 </div>
 
 <div class="topbar-right">
@@ -1339,9 +1339,14 @@ margin-bottom:20px;
     </div>
 
     <a href="#booking" class="book-btn">
+
+    <span id="book-text">
         Đặt phòng ngay
-        <span>→</span>
-    </a>
+    </span>
+
+    <span>→</span>
+
+</a>
 
 </div>
     
@@ -2020,7 +2025,52 @@ sections.forEach(section=>observer.observe(section));
 
 const langSwitcher = document.querySelector(".lang-switcher");
 const langBtn = document.querySelector(".lang-btn");
+const translations = {
 
+    vi:{
+
+        about:"Giới thiệu",
+        room:"Phòng",
+        service:"Tiện ích",
+        location:"Vị trí",
+        contact:"Liên hệ",
+        book:"Đặt phòng ngay"
+
+    },
+
+    en:{
+
+        about:"About",
+        room:"Rooms",
+        service:"Facilities",
+        location:"Location",
+        contact:"Contact",
+        book:"Book Now"
+
+    }
+
+};
+  function setLanguage(lang){
+
+    document.getElementById("menu-about").textContent =
+        translations[lang].about;
+
+    document.getElementById("menu-room").textContent =
+        translations[lang].room;
+
+    document.getElementById("menu-service").textContent =
+        translations[lang].service;
+
+    document.getElementById("menu-location").textContent =
+        translations[lang].location;
+
+    document.getElementById("menu-contact").textContent =
+        translations[lang].contact;
+
+    document.getElementById("book-text").textContent =
+        translations[lang].book;
+
+}
 langBtn.onclick = (e)=>{
 
     e.stopPropagation();
@@ -2034,6 +2084,34 @@ document.onclick = ()=>{
     langSwitcher.classList.remove("open");
 
 }
+
+document.querySelectorAll(".lang-menu div").forEach(item=>{
+
+    item.onclick = ()=>{
+
+        const text = item.textContent;
+
+        if(text.includes("English")){
+
+            setLanguage("en");
+
+            langBtn.innerHTML='🌐 EN <i class="fa-solid fa-chevron-down"></i>';
+
+        }
+
+        else{
+
+            setLanguage("vi");
+
+            langBtn.innerHTML='🌐 VI <i class="fa-solid fa-chevron-down"></i>';
+
+        }
+
+        langSwitcher.classList.remove("open");
+
+    }
+
+});
 </script>
 
 </body>
