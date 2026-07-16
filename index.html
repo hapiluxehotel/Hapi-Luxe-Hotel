@@ -1199,87 +1199,74 @@ margin-bottom:20px;
       background: #0b0705;
       font-size: 14px;
     }
-/* ===========================
-   DECOR LEAVES
-=========================== */
+/*================ HERO DECOR ================*/
 
-.hero,
-.about{
+.hero{
     position:relative;
     overflow:hidden;
 }
 
-/* Hero */
+.hero-decor{
 
-.hero-leaf{
     position:absolute;
-    z-index:5;
+
+    z-index:8;
+
     pointer-events:none;
+
 }
 
-.hero-leaf img{
+.hero-decor img{
 
     width:100%;
 
     display:block;
 
+    user-select:none;
+
     filter:
-
-        drop-shadow(0 20px 35px rgba(0,0,0,.35));
-
-}
-
-.hero-leaf-left{
-
-    width:340px;
-
-    top:90px;
-
-    left:-65px;
-
-    transform:rotate(-8deg);
+        drop-shadow(0 18px 35px rgba(0,0,0,.35));
 
 }
 
-.hero-leaf-right{
 
-    width:260px;
+/* Lá chuối góc trái trên */
 
-    right:-55px;
+.hero-left-top{
+
+    width:320px;
+
+    top:-10px;
+
+    left:-20px;
+
+}
+
+
+/* Monstera góc trái dưới */
+
+.hero-left-bottom{
+
+    width:360px;
+
+    left:-120px;
+
+    bottom:-120px;
+
+}
+
+
+/* Monstera góc phải dưới */
+
+.hero-right-bottom{
+
+    width:220px;
+
+    right:-35px;
 
     bottom:-35px;
 
-    transform:rotate(10deg);
-
 }
-
-/* About */
-
-.about-leaf{
-
-    position:absolute;
-
-    left:-90px;
-
-    bottom:-95px;
-
-    width:420px;
-
-    z-index:5;
-
-    pointer-events:none;
-
-}
-
-.about-leaf img{
-
-    width:100%;
-
-    display:block;
-
-    filter:
-
-        drop-shadow(0 25px 45px rgba(0,0,0,.4));
 
 }
     @media (max-width: 900px) {
@@ -1331,12 +1318,16 @@ margin-bottom:20px;
 </div>
 
 <header class="hero" id="top">
-  <div class="hero-leaf hero-leaf-left">
-    <img src="images/decor/leaf-left.png" alt="">
+ <div class="hero-decor hero-left-top">
+    <img src="images/decor/hero-left-top.png" alt="">
 </div>
 
-<div class="hero-leaf hero-leaf-right">
-    <img src="images/decor/leaf-right.png" alt="">
+<div class="hero-decor hero-left-bottom">
+    <img src="images/decor/hero-left-bottom.png" alt="">
+</div>
+
+<div class="hero-decor hero-right-bottom">
+    <img src="images/decor/hero-right-bottom.png" alt="">
 </div>
     <div class="hero-box">
       <span class="label">Boutique Tropical Hotel</span>
