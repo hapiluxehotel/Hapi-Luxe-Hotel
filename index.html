@@ -1412,7 +1412,7 @@ margin-bottom:20px;
 
 </div>
       
-      <div class="service">
+     <div class="service support-card">
 
   <img src="https://www.foodrepublic.com/img/gallery/room-service-etiquette-tips-you-need-for-a-luxury-experience/call-ahead-for-custom-orders-1698258771.jpg" alt="Reception">
 
@@ -1428,7 +1428,7 @@ margin-bottom:20px;
 </div>
 
 </div>
-<div class="service">
+<div class="service location-card"> 
 
   <img src="https://images.unsplash.com/photo-1583417319070-4a69db38a482?q=80&w=1200&auto=format&fit=crop" alt="Ben Thanh Market">
 
@@ -1762,6 +1762,28 @@ document.querySelector(".suite-card").onclick = () => {
     ],"TROPICAL MOOD");
 
 }
+  document.querySelector(".support-card").onclick = ()=>{
+
+    openGallery([
+
+        "images/support/1.jpg",
+        "images/support/2.jpg",
+        "images/support/3.jpg"
+
+    ],"HỖ TRỢ THÂN THIỆN");
+
+}
+  document.querySelector(".location-card").onclick = ()=>{
+
+    openGallery([
+
+        "images/location/1.jpg",
+        "images/location/2.jpg",
+        "images/location/3.jpg"
+
+    ],"VỊ TRÍ QUẬN 1");
+
+}
 // ===============================
 // GALLERY SLIDER
 // ===============================
@@ -1839,7 +1861,7 @@ galleryModal.onclick = (e)=>{
     }
 
 }
-}
+
 const sections = document.querySelectorAll("header[id], section[id]");
 const navLinks = document.querySelectorAll(".section-nav a");
 
