@@ -1199,74 +1199,45 @@ margin-bottom:20px;
       background: #0b0705;
       font-size: 14px;
     }
-/*================ HERO DECOR ================*/
+/* ===========================
+   DECOR LEAVES
+=========================== */
 
-.hero{
+.hero,
+.about{
     position:relative;
     overflow:hidden;
 }
 
-.hero-decor{
+
+
+/* About */
+
+.about-leaf{
 
     position:absolute;
 
-    z-index:8;
+    left:-90px;
+
+    bottom:-95px;
+
+    width:420px;
+
+    z-index:5;
 
     pointer-events:none;
 
 }
 
-.hero-decor img{
+.about-leaf img{
 
     width:100%;
 
     display:block;
 
-    user-select:none;
-
     filter:
-        drop-shadow(0 18px 35px rgba(0,0,0,.35));
 
-}
-
-
-/* Lá chuối góc trái trên */
-
-.hero-left-top{
-
-    width:320px;
-
-    top:-10px;
-
-    left:-20px;
-
-}
-
-
-/* Monstera góc trái dưới */
-
-.hero-left-bottom{
-
-    width:360px;
-
-    left:-120px;
-
-    bottom:-120px;
-
-}
-
-
-/* Monstera góc phải dưới */
-
-.hero-right-bottom{
-
-    width:220px;
-
-    right:-35px;
-
-    bottom:-35px;
-
-}
+        drop-shadow(0 25px 45px rgba(0,0,0,.4));
 
 }
     @media (max-width: 900px) {
@@ -1318,17 +1289,6 @@ margin-bottom:20px;
 </div>
 
 <header class="hero" id="top">
- <div class="hero-decor hero-left-top">
-    <img src="images/decor/hero-left-top.png" alt="">
-</div>
-
-<div class="hero-decor hero-left-bottom">
-    <img src="images/decor/hero-left-bottom.png" alt="">
-</div>
-
-<div class="hero-decor hero-right-bottom">
-    <img src="images/decor/hero-right-bottom.png" alt="">
-</div>
     <div class="hero-box">
       <span class="label">Boutique Tropical Hotel</span>
       <h1>Nghỉ dưỡng tinh tế giữa lòng Sài Gòn.</h1>
