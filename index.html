@@ -1280,53 +1280,7 @@ margin-bottom:20px;
     50%{ transform: translateY(10px) rotate(-4deg); }
 }
     /* Hero decor leaves */
-.hero-box{
-    position:relative;
-    z-index:3;
-}
 
-.hero-leaf-deco{
-    position:absolute;
-    inset:0;
-    pointer-events:none;
-}
-
-.hero-leaf-top{
-    position:absolute;
-    top:-90px;
-    right:-70px;
-    width:360px;
-    z-index:3;
-    filter:
-        drop-shadow(0 35px 45px rgba(0,0,0,.55))
-        drop-shadow(0 6px 14px rgba(0,0,0,.35));
-    animation: heroLeafTopFloat 7s ease-in-out infinite;
-}
-.hero-leaf-top img{ width:100%; display:block; }
-
-.hero-leaf-back{
-    position:absolute;
-    bottom:-70px;
-    left:-50px;
-    width:280px;
-    z-index:1;
-    opacity:.5;
-    filter:
-        blur(2px) brightness(.7)
-        drop-shadow(0 25px 35px rgba(0,0,0,.4));
-    animation: heroLeafBackFloat 9s ease-in-out infinite;
-}
-.hero-leaf-back img{ width:100%; display:block; }
-
-@keyframes heroLeafTopFloat{
-    0%,100%{ transform: translateY(0) rotate(158deg) scaleX(-1); }
-    50%{ transform: translateY(-16px) rotate(163deg) scaleX(-1); }
-}
-
-@keyframes heroLeafBackFloat{
-    0%,100%{ transform: translateY(0) rotate(-8deg); }
-    50%{ transform: translateY(12px) rotate(-4deg); }
-}
     @media (max-width: 900px) {
       .menu { display: none; }
       .about, .booking { grid-template-columns: 1fr; }
