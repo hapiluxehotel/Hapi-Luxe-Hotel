@@ -1279,25 +1279,25 @@ margin-bottom:20px;
     0%,100%{ transform: translateY(0) rotate(-8deg); }
     50%{ transform: translateY(10px) rotate(-4deg); }
 }
-    .hero-leaf-bottom-right{
+    .hero-leaf-bottom-left{
     position:absolute;
-    bottom:-45px;
-    right:-35px;
+    bottom:-40px;
+    left:60px;
     width:190px;
     z-index:4;
     pointer-events:none;
     filter: drop-shadow(0 22px 32px rgba(0,0,0,.5)) drop-shadow(0 5px 10px rgba(0,0,0,.3));
-    animation: bottomRightLeafFloat 8.5s ease-in-out infinite;
+    animation: bottomLeftLeafFloat 8.5s ease-in-out infinite;
 }
-.hero-leaf-bottom-right img{ width:100%; display:block; }
+.hero-leaf-bottom-left img{ width:100%; display:block; transform: scaleX(-1); }
 
-@keyframes bottomRightLeafFloat{
-    0%,100%{ transform: translateY(0) rotate(6deg); }
-    50%{ transform: translateY(-10px) rotate(9deg); }
+@keyframes bottomLeftLeafFloat{
+    0%,100%{ transform: translateY(0) rotate(-6deg); }
+    50%{ transform: translateY(-10px) rotate(-9deg); }
 }
 
 @media (max-width: 900px){
-    .hero-leaf-bottom-right{ width:120px; right:-20px; bottom:-25px; }
+    .hero-leaf-bottom-left{ width:120px; left:30px; bottom:-20px; }
 }
     /* Hero decor leaves */
 
@@ -1354,7 +1354,7 @@ margin-bottom:20px;
 <div class="hero-leaf-deco">
   <div class="hero-leaf-top"><img src="images/decor/leaf-right2.png" alt=""></div>
   <div class="hero-leaf-back"><img src="images/decor/about-leaf.png" alt=""></div>
-<div class="hero-leaf-bottom-right"><img src="images/decor/leaf-leftback.png" alt=""></div>
+<div class="hero-leaf-bottom-left"><img src="images/decor/leaf-leftback.png" alt=""></div>
 </div>
     <div class="hero-box">
       <span class="label">Boutique Tropical Hotel</span>
