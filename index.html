@@ -1318,52 +1318,6 @@ margin-bottom:20px;
   </style>
 </head>
 <body>
- <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <symbol id="monsteraLeaf" viewBox="0 0 260 320">
-    <defs>
-      <linearGradient id="lg" x1="0%" y1="100%" x2="0%" y2="0%">
-        <stop offset="0%" stop-color="#8fae6a"/>
-        <stop offset="55%" stop-color="#4f7e40"/>
-        <stop offset="100%" stop-color="#274c22"/>
-      </linearGradient>
-      <linearGradient id="lgBack" x1="0%" y1="100%" x2="0%" y2="0%">
-        <stop offset="0%" stop-color="#6c8a55"/>
-        <stop offset="60%" stop-color="#3c5f32"/>
-        <stop offset="100%" stop-color="#1c351a"/>
-      </linearGradient>
-      <radialGradient id="shine" cx="50%" cy="10%" r="45%">
-        <stop offset="0%" stop-color="#ffffff" stop-opacity="0.30"/>
-        <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
-      </radialGradient>
-      <path id="leafletBig" d="M0,0 C-34,-30 -40,-95 0,-160 C40,-95 34,-30 0,0 Z"/>
-      <path id="leafletMed" d="M0,0 C-26,-24 -30,-75 0,-125 C30,-75 26,-24 0,0 Z"/>
-      <path id="leafletSmall" d="M0,0 C-20,-18 -22,-55 0,-95 C22,-55 20,-18 0,0 Z"/>
-      <mask id="holesBig">
-        <rect x="-60" y="-170" width="120" height="180" fill="#fff"/>
-        <ellipse cx="-8" cy="-70" rx="8" ry="17" fill="#000"/>
-        <ellipse cx="10" cy="-105" rx="7" ry="15" fill="#000"/>
-      </mask>
-      <mask id="holesMed">
-        <rect x="-45" y="-130" width="90" height="140" fill="#fff"/>
-        <ellipse cx="-6" cy="-55" rx="6" ry="13" fill="#000"/>
-      </mask>
-    </defs>
-    <g transform="translate(130,300)">
-      <g transform="rotate(-62)"><use href="#leafletSmall" fill="url(#lgBack)"/></g>
-      <g transform="rotate(62)"><use href="#leafletSmall" fill="url(#lgBack)"/></g>
-      <g transform="rotate(-38)"><use href="#leafletMed" fill="url(#lgBack)" mask="url(#holesMed)"/></g>
-      <g transform="rotate(38)"><use href="#leafletMed" fill="url(#lgBack)" mask="url(#holesMed)"/></g>
-      <g transform="rotate(-16)"><use href="#leafletBig" fill="url(#lg)" mask="url(#holesBig)"/></g>
-      <g transform="rotate(16)"><use href="#leafletBig" fill="url(#lg)" mask="url(#holesBig)"/></g>
-      <g transform="rotate(0)">
-        <use href="#leafletBig" fill="url(#lg)" mask="url(#holesBig)"/>
-        <use href="#leafletBig" fill="url(#shine)" mask="url(#holesBig)"/>
-        <path d="M0,-4 C-1,-60 1,-120 0,-158" stroke="#173015" stroke-width="1.6" opacity="0.55" fill="none"/>
-      </g>
-      <path d="M0,0 C2,10 -2,20 0,30" stroke="#3c5f32" stroke-width="6" stroke-linecap="round" fill="none"/>
-    </g>
-  </symbol>
-</svg>
   <nav class="topbar">
     <a href="#top" class="brand" style="display:flex; align-items:center; gap:10px;">
   <img src="logo.png" style="height:35px;">
