@@ -1239,15 +1239,15 @@ margin-bottom:20px;
 .hero-leaf-deco{ position:absolute; inset:0; pointer-events:none; }
 
 .hero-leaf-top{
-    position:absolute; top:-70px; right:-50px; width:260px; z-index:3;
-    filter: drop-shadow(0 30px 40px rgba(0,0,0,.55)) drop-shadow(0 6px 14px rgba(0,0,0,.35));
+    position:absolute; top:-30px; right:-45px; width:150px; z-index:3;
+    filter: drop-shadow(0 20px 26px rgba(0,0,0,.5)) drop-shadow(0 4px 10px rgba(0,0,0,.3));
     animation: heroLeafTopFloat 7s ease-in-out infinite;
 }
 .hero-leaf-top svg{ width:100%; display:block; }
 
 .hero-leaf-back{
-    position:absolute; bottom:-50px; left:-40px; width:200px; z-index:1; opacity:.5;
-    filter: blur(2px) brightness(.7) drop-shadow(0 25px 35px rgba(0,0,0,.4));
+    position:absolute; bottom:-35px; left:-25px; width:130px; z-index:1; opacity:.45;
+    filter: blur(1.5px) brightness(.75) drop-shadow(0 18px 24px rgba(0,0,0,.35));
     animation: heroLeafBackFloat 9s ease-in-out infinite;
 }
 .hero-leaf-back svg{ width:100%; display:block; }
@@ -1318,31 +1318,50 @@ margin-bottom:20px;
   </style>
 </head>
 <body>
-  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <symbol id="monsteraLeaf" viewBox="0 0 240 300">
+ <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="monsteraLeaf" viewBox="0 0 260 320">
     <defs>
-      <linearGradient id="monsteraLeafGrad" x1="15%" y1="0%" x2="85%" y2="100%">
-        <stop offset="0%" stop-color="#a9d69a"/>
-        <stop offset="45%" stop-color="#5f8f52"/>
-        <stop offset="100%" stop-color="#2e4a27"/>
+      <linearGradient id="lg" x1="0%" y1="100%" x2="0%" y2="0%">
+        <stop offset="0%" stop-color="#8fae6a"/>
+        <stop offset="55%" stop-color="#4f7e40"/>
+        <stop offset="100%" stop-color="#274c22"/>
       </linearGradient>
-      <radialGradient id="monsteraLeafShine" cx="30%" cy="20%" r="60%">
-        <stop offset="0%" stop-color="#ffffff" stop-opacity="0.55"/>
-        <stop offset="60%" stop-color="#ffffff" stop-opacity="0"/>
+      <linearGradient id="lgBack" x1="0%" y1="100%" x2="0%" y2="0%">
+        <stop offset="0%" stop-color="#6c8a55"/>
+        <stop offset="60%" stop-color="#3c5f32"/>
+        <stop offset="100%" stop-color="#1c351a"/>
+      </linearGradient>
+      <radialGradient id="shine" cx="50%" cy="10%" r="45%">
+        <stop offset="0%" stop-color="#ffffff" stop-opacity="0.30"/>
+        <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
       </radialGradient>
-      <mask id="monsteraLeafMask">
-        <path d="M120,8 L188,50 L168,75 L222,105 L192,135 L228,170 L196,195 L205,235 L170,255 L140,285 L120,268 L100,285 L70,255 L35,235 L44,195 L12,170 L48,135 L18,105 L72,75 L52,50 Z" fill="#fff"/>
-        <ellipse cx="152" cy="88" rx="10" ry="20" transform="rotate(28 152 88)" fill="#000"/>
-        <ellipse cx="88" cy="108" rx="9" ry="18" transform="rotate(-24 88 108)" fill="#000"/>
-        <ellipse cx="162" cy="158" rx="11" ry="22" transform="rotate(22 162 158)" fill="#000"/>
-        <ellipse cx="78" cy="178" rx="10" ry="20" transform="rotate(-20 78 178)" fill="#000"/>
-        <ellipse cx="132" cy="215" rx="9" ry="17" transform="rotate(12 132 215)" fill="#000"/>
-        <ellipse cx="90" cy="222" rx="8" ry="14" transform="rotate(-14 90 222)" fill="#000"/>
+      <path id="leafletBig" d="M0,0 C-34,-30 -40,-95 0,-160 C40,-95 34,-30 0,0 Z"/>
+      <path id="leafletMed" d="M0,0 C-26,-24 -30,-75 0,-125 C30,-75 26,-24 0,0 Z"/>
+      <path id="leafletSmall" d="M0,0 C-20,-18 -22,-55 0,-95 C22,-55 20,-18 0,0 Z"/>
+      <mask id="holesBig">
+        <rect x="-60" y="-170" width="120" height="180" fill="#fff"/>
+        <ellipse cx="-8" cy="-70" rx="8" ry="17" fill="#000"/>
+        <ellipse cx="10" cy="-105" rx="7" ry="15" fill="#000"/>
+      </mask>
+      <mask id="holesMed">
+        <rect x="-45" y="-130" width="90" height="140" fill="#fff"/>
+        <ellipse cx="-6" cy="-55" rx="6" ry="13" fill="#000"/>
       </mask>
     </defs>
-    <path d="M120,8 L188,50 L168,75 L222,105 L192,135 L228,170 L196,195 L205,235 L170,255 L140,285 L120,268 L100,285 L70,255 L35,235 L44,195 L12,170 L48,135 L18,105 L72,75 L52,50 Z" fill="url(#monsteraLeafGrad)" mask="url(#monsteraLeafMask)"/>
-    <path d="M120,8 L188,50 L168,75 L222,105 L192,135 L228,170 L196,195 L205,235 L170,255 L140,285 L120,268 L100,285 L70,255 L35,235 L44,195 L12,170 L48,135 L18,105 L72,75 L52,50 Z" fill="url(#monsteraLeafShine)" mask="url(#monsteraLeafMask)" style="mix-blend-mode:overlay"/>
-    <path d="M120,20 C122,95 122,190 120,272" stroke="#22381d" stroke-width="2.2" fill="none" opacity="0.5" mask="url(#monsteraLeafMask)"/>
+    <g transform="translate(130,300)">
+      <g transform="rotate(-62)"><use href="#leafletSmall" fill="url(#lgBack)"/></g>
+      <g transform="rotate(62)"><use href="#leafletSmall" fill="url(#lgBack)"/></g>
+      <g transform="rotate(-38)"><use href="#leafletMed" fill="url(#lgBack)" mask="url(#holesMed)"/></g>
+      <g transform="rotate(38)"><use href="#leafletMed" fill="url(#lgBack)" mask="url(#holesMed)"/></g>
+      <g transform="rotate(-16)"><use href="#leafletBig" fill="url(#lg)" mask="url(#holesBig)"/></g>
+      <g transform="rotate(16)"><use href="#leafletBig" fill="url(#lg)" mask="url(#holesBig)"/></g>
+      <g transform="rotate(0)">
+        <use href="#leafletBig" fill="url(#lg)" mask="url(#holesBig)"/>
+        <use href="#leafletBig" fill="url(#shine)" mask="url(#holesBig)"/>
+        <path d="M0,-4 C-1,-60 1,-120 0,-158" stroke="#173015" stroke-width="1.6" opacity="0.55" fill="none"/>
+      </g>
+      <path d="M0,0 C2,10 -2,20 0,30" stroke="#3c5f32" stroke-width="6" stroke-linecap="round" fill="none"/>
+    </g>
   </symbol>
 </svg>
   <nav class="topbar">
@@ -1384,9 +1403,9 @@ margin-bottom:20px;
 </div>
 
 <header class="hero" id="top">
-  <div class="hero-leaf-deco">
-  <div class="hero-leaf-top"><svg viewBox="0 0 240 300"><use href="#monsteraLeaf"/></svg></div>
-  <div class="hero-leaf-back"><svg viewBox="0 0 240 300"><use href="#monsteraLeaf"/></svg></div>
+<div class="hero-leaf-deco">
+  <div class="hero-leaf-top"><svg viewBox="0 0 260 320"><use href="#monsteraLeaf"/></svg></div>
+  <div class="hero-leaf-back"><svg viewBox="0 0 260 320"><use href="#monsteraLeaf"/></svg></div>
 </div>
     <div class="hero-box">
       <span class="label">Boutique Tropical Hotel</span>
