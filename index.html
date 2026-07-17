@@ -1251,7 +1251,26 @@ margin-bottom:20px;
     animation: heroLeafBackFloat 9s ease-in-out infinite;
 }
 .hero-leaf-back img{ width:100%; display:block; }
+.edge-leaf-left{
+    position:absolute;
+    top:-10px;
+    left:-60px;
+    width:300px;
+    z-index:150;
+    pointer-events:none;
+    filter: drop-shadow(0 25px 40px rgba(0,0,0,.55)) drop-shadow(0 6px 12px rgba(0,0,0,.35));
+    animation: edgeLeafFloat 8s ease-in-out infinite;
+}
+.edge-leaf-left img{ width:100%; display:block; }
 
+@keyframes edgeLeafFloat{
+    0%,100%{ transform: translateY(0) rotate(-3deg); }
+    50%{ transform: translateY(12px) rotate(-1deg); }
+}
+
+@media (max-width: 900px){
+    .edge-leaf-left{ width:180px; left:-40px; }
+}
 @keyframes heroLeafTopFloat{
     0%,100%{ transform: translateY(0) rotate(158deg) scaleX(-1); }
     50%{ transform: translateY(-14px) rotate(163deg) scaleX(-1); }
@@ -1318,6 +1337,7 @@ margin-bottom:20px;
   </style>
 </head>
 <body>
+  <div class="edge-leaf-left"><img src="images/decor/leaf-left.png" alt=""></div>
   <nav class="topbar">
     <a href="#top" class="brand" style="display:flex; align-items:center; gap:10px;">
   <img src="logo.png" style="height:35px;">
