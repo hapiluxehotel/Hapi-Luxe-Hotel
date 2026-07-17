@@ -1235,6 +1235,31 @@ margin-bottom:20px;
     filter:
         drop-shadow(0 25px 45px rgba(0,0,0,.4));
 }
+    .hero-box{ position:relative; z-index:3; }
+.hero-leaf-deco{ position:absolute; inset:0; pointer-events:none; }
+
+.hero-leaf-top{
+    position:absolute; top:-70px; right:-50px; width:260px; z-index:3;
+    filter: drop-shadow(0 30px 40px rgba(0,0,0,.55)) drop-shadow(0 6px 14px rgba(0,0,0,.35));
+    animation: heroLeafTopFloat 7s ease-in-out infinite;
+}
+.hero-leaf-top svg{ width:100%; display:block; }
+
+.hero-leaf-back{
+    position:absolute; bottom:-50px; left:-40px; width:200px; z-index:1; opacity:.5;
+    filter: blur(2px) brightness(.7) drop-shadow(0 25px 35px rgba(0,0,0,.4));
+    animation: heroLeafBackFloat 9s ease-in-out infinite;
+}
+.hero-leaf-back svg{ width:100%; display:block; }
+
+@keyframes heroLeafTopFloat{
+    0%,100%{ transform: translateY(0) rotate(158deg) scaleX(-1); }
+    50%{ transform: translateY(-14px) rotate(163deg) scaleX(-1); }
+}
+@keyframes heroLeafBackFloat{
+    0%,100%{ transform: translateY(0) rotate(-8deg); }
+    50%{ transform: translateY(10px) rotate(-4deg); }
+}
     /* Hero decor leaves */
 .hero-box{
     position:relative;
@@ -1293,6 +1318,33 @@ margin-bottom:20px;
   </style>
 </head>
 <body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="monsteraLeaf" viewBox="0 0 240 300">
+    <defs>
+      <linearGradient id="monsteraLeafGrad" x1="15%" y1="0%" x2="85%" y2="100%">
+        <stop offset="0%" stop-color="#a9d69a"/>
+        <stop offset="45%" stop-color="#5f8f52"/>
+        <stop offset="100%" stop-color="#2e4a27"/>
+      </linearGradient>
+      <radialGradient id="monsteraLeafShine" cx="30%" cy="20%" r="60%">
+        <stop offset="0%" stop-color="#ffffff" stop-opacity="0.55"/>
+        <stop offset="60%" stop-color="#ffffff" stop-opacity="0"/>
+      </radialGradient>
+      <mask id="monsteraLeafMask">
+        <path d="M120,8 L188,50 L168,75 L222,105 L192,135 L228,170 L196,195 L205,235 L170,255 L140,285 L120,268 L100,285 L70,255 L35,235 L44,195 L12,170 L48,135 L18,105 L72,75 L52,50 Z" fill="#fff"/>
+        <ellipse cx="152" cy="88" rx="10" ry="20" transform="rotate(28 152 88)" fill="#000"/>
+        <ellipse cx="88" cy="108" rx="9" ry="18" transform="rotate(-24 88 108)" fill="#000"/>
+        <ellipse cx="162" cy="158" rx="11" ry="22" transform="rotate(22 162 158)" fill="#000"/>
+        <ellipse cx="78" cy="178" rx="10" ry="20" transform="rotate(-20 78 178)" fill="#000"/>
+        <ellipse cx="132" cy="215" rx="9" ry="17" transform="rotate(12 132 215)" fill="#000"/>
+        <ellipse cx="90" cy="222" rx="8" ry="14" transform="rotate(-14 90 222)" fill="#000"/>
+      </mask>
+    </defs>
+    <path d="M120,8 L188,50 L168,75 L222,105 L192,135 L228,170 L196,195 L205,235 L170,255 L140,285 L120,268 L100,285 L70,255 L35,235 L44,195 L12,170 L48,135 L18,105 L72,75 L52,50 Z" fill="url(#monsteraLeafGrad)" mask="url(#monsteraLeafMask)"/>
+    <path d="M120,8 L188,50 L168,75 L222,105 L192,135 L228,170 L196,195 L205,235 L170,255 L140,285 L120,268 L100,285 L70,255 L35,235 L44,195 L12,170 L48,135 L18,105 L72,75 L52,50 Z" fill="url(#monsteraLeafShine)" mask="url(#monsteraLeafMask)" style="mix-blend-mode:overlay"/>
+    <path d="M120,20 C122,95 122,190 120,272" stroke="#22381d" stroke-width="2.2" fill="none" opacity="0.5" mask="url(#monsteraLeafMask)"/>
+  </symbol>
+</svg>
   <nav class="topbar">
     <a href="#top" class="brand" style="display:flex; align-items:center; gap:10px;">
   <img src="logo.png" style="height:35px;">
@@ -1333,8 +1385,8 @@ margin-bottom:20px;
 
 <header class="hero" id="top">
   <div class="hero-leaf-deco">
-  <div class="hero-leaf-top"><img src="images/decor/about-leaf.png" alt=""></div>
-  <div class="hero-leaf-back"><img src="images/decor/about-leaf.png" alt=""></div>
+  <div class="hero-leaf-top"><svg viewBox="0 0 240 300"><use href="#monsteraLeaf"/></svg></div>
+  <div class="hero-leaf-back"><svg viewBox="0 0 240 300"><use href="#monsteraLeaf"/></svg></div>
 </div>
     <div class="hero-box">
       <span class="label">Boutique Tropical Hotel</span>
