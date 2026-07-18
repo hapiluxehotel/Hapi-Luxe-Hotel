@@ -1637,14 +1637,33 @@ margin-bottom:20px;
 
     }
 
-    .rooms-grid,
-
     .services-grid{
+    grid-template-columns:1fr;
+}
 
-        grid-template-columns:1fr;
+.rooms-slider{
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+    scroll-snap-type:x mandatory;
+    scrollbar-width:none;
+}
 
-    }
+.rooms-slider::-webkit-scrollbar{
+    display:none;
+}
 
+.rooms-grid{
+    display:flex;
+    gap:18px;
+    width:max-content;
+    padding:0 20px;
+}
+
+.room{
+    flex:0 0 82vw;
+    max-width:340px;
+    scroll-snap-align:center;
+}
     .about-img{
 
         min-height:340px;
@@ -1830,6 +1849,7 @@ margin-bottom:20px;
       <h2>Phòng nghỉ ấm áp, tiện nghi và dễ chịu.</h2>
       <p>Thiết kế tối giản, màu sắc nhẹ nhàng, phù hợp cho khách du lịch, công tác hoặc cặp đôi.</p>
     </div>
+    <div class="rooms-slider">
     <div class="rooms-grid">
       <div class="room deluxe-card">
   <img src="images/Ava3hang/Avadeluxe.jpg" alt="Deluxe Room">
