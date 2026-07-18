@@ -2540,6 +2540,61 @@ window.addEventListener("load",()=>{
     updateActiveCard();
 
 });
+  /* ===========================
+   ROOM TAB
+=========================== */
+
+const slider=document.querySelector(".rooms-slider");
+const tabs=document.querySelectorAll(".room-tab");
+const rooms=document.querySelectorAll(".room");
+
+function updateRoomTabs(){
+
+    const center=slider.scrollLeft+slider.offsetWidth/2;
+
+    let active=0;
+    let min=999999;
+
+    rooms.forEach((room,index)=>{
+
+        const x=room.offsetLeft+room.offsetWidth/2;
+
+        const d=Math.abs(center-x);
+
+        if(d<min){
+
+            min=d;
+            active=index;
+
+        }
+
+    });
+
+    tabs.forEach(tab=>tab.classList.remove("active"));
+
+    tabs[active].classList.add("active");
+
+}
+
+slider.addEventListener("scroll",updateRoomTabs);
+
+tabs.forEach((tab,index)=>{
+
+    tab.addEventListener("click",()=>{
+
+        slider.scrollTo({
+
+            left:rooms[index].offsetLeft-20,
+
+            behavior:"smooth"
+
+        });
+
+    });
+
+});
+
+window.addEventListener("load",updateRoomTabs);
 </script>
 
 </body>
