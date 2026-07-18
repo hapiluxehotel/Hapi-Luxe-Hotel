@@ -1439,13 +1439,12 @@ margin-bottom:20px;
 @media (max-width: 900px){
     .hero-leaf-bottom-left{ width:120px; left:30px; bottom:-20px; }
 }
-    /* Hero decor leaves */
-
+    
    /* =====================================================
    MOBILE RESPONSIVE
 ===================================================== */
 .room-tabs{
-    display:flex;
+    display:none;
     justify-content:center;
     align-items:center;
     gap:18px;
@@ -1468,7 +1467,17 @@ margin-bottom:20px;
 .divider{
     color:rgba(255,255,255,.45);
 }
+    .rooms-wrapper .room-arrow{
+    display:none;
+}
 @media (max-width:900px){
+  .room-tabs{
+    display:flex;
+}
+
+.rooms-wrapper .room-arrow{
+    display:flex;
+}
 /* ===== ABOUT MOBILE ===== */
 
 .about{
