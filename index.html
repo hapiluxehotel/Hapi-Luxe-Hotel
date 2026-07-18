@@ -1785,6 +1785,68 @@ margin-bottom:20px;
     }
 
 }
+    /* ==========================
+   INTRO
+========================== */
+
+#intro{
+
+    position:fixed;
+
+    inset:0;
+
+    background:#120c08;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:999999;
+
+    transition:opacity .6s ease;
+
+}
+
+#intro img{
+
+    width:120px;
+
+    opacity:0;
+
+    transform:scale(.82);
+
+    animation:introLogo .8s forwards;
+
+}
+
+@keyframes introLogo{
+
+    0%{
+        opacity:0;
+        transform:scale(.82);
+    }
+
+    55%{
+        opacity:1;
+        transform:scale(1);
+    }
+
+    100%{
+        opacity:1;
+        transform:scale(1);
+    }
+
+}
+
+#intro.hide{
+
+    opacity:0;
+
+    pointer-events:none;
+
+}
   </style>
  <script type="application/ld+json">
 {
@@ -1813,6 +1875,11 @@ margin-bottom:20px;
 </script>
 </head>
 <body>
+  <div id="intro">
+
+    <img src="logo.png" alt="Hapi Luxe Hotel">
+
+</div>
   <div class="edge-leaf-left"><img src="images/decor/leaf-left2.png" alt=""></div>
   <nav class="topbar">
     <a href="#top" class="brand" style="display:flex; align-items:center; gap:10px;">
@@ -2637,6 +2704,21 @@ document.querySelector(".room-next").onclick=()=>{
     });
 
 }
+  /* ==========================
+   INTRO
+========================== */
+
+window.addEventListener("load",()=>{
+
+    setTimeout(()=>{
+
+        document
+        .getElementById("intro")
+        .classList.add("hide");
+
+    },800);
+
+});
 </script>
 
 </body>
