@@ -1809,15 +1809,69 @@ margin-bottom:20px;
 
 }
 
+.intro-content{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:16px;
+
+}
+
 #intro img{
 
-    width:120px;
+    width:110px;
 
     opacity:0;
 
-    transform:scale(.82);
+    transform:scale(.85);
+
+    filter:
+        drop-shadow(0 0 12px rgba(214,177,118,.45));
 
     animation:introLogo .8s forwards;
+
+}
+
+.intro-content h1{
+
+    margin:0;
+
+    font-family:'Cinzel',serif;
+
+    font-size:42px;
+
+    letter-spacing:5px;
+
+    color:#e9d1a2;
+
+    opacity:0;
+
+    text-shadow:
+        0 0 18px rgba(214,177,118,.25);
+
+    animation:introText .8s forwards;
+
+}
+
+.intro-content p{
+
+    margin:0;
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:22px;
+
+    color:#cdbca8;
+
+    letter-spacing:2px;
+
+    opacity:0;
+
+    animation:introText .8s forwards;
 
 }
 
@@ -1845,6 +1899,25 @@ margin-bottom:20px;
     opacity:0;
 
     pointer-events:none;
+
+}
+    @keyframes introText{
+
+    0%{
+
+        opacity:0;
+
+        transform:translateY(10px);
+
+    }
+
+    100%{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
 
 }
   </style>
@@ -1875,9 +1948,17 @@ margin-bottom:20px;
 </script>
 </head>
 <body>
-  <div id="intro">
+<div id="intro">
 
-    <img src="logo.png" alt="Hapi Luxe Hotel">
+    <div class="intro-content">
+
+        <img src="logo.png" alt="Hapi Luxe Hotel">
+
+        <h1>HAPI LUXE</h1>
+
+        <p>Boutique Tropical Hotel</p>
+
+    </div>
 
 </div>
   <div class="edge-leaf-left"><img src="images/decor/leaf-left2.png" alt=""></div>
