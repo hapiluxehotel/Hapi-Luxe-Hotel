@@ -1652,17 +1652,44 @@ margin-bottom:20px;
     display:none;
 }
 
+.rooms-slider{
+    overflow-x:auto;
+    overflow-y:hidden;
+    scroll-snap-type:x mandatory;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:none;
+}
+
+.rooms-slider::-webkit-scrollbar{
+    display:none;
+}
+
 .rooms-grid{
     display:flex;
-    gap:18px;
+    align-items:center;
+    gap:22px;
+
+    padding:0 calc(50vw - 160px);
+
     width:max-content;
-    padding:0 20px;
 }
 
 .room{
-    flex:0 0 82vw;
-    max-width:340px;
+    flex:0 0 320px;
+
     scroll-snap-align:center;
+
+    transform:scale(.90);
+
+    opacity:.55;
+
+    transition:.35s;
+}
+  
+  .room.active{
+    transform:scale(1);
+    opacity:1;
+    z-index:10;
 }
     .about-img{
 
@@ -2396,6 +2423,56 @@ const observer = new IntersectionObserver((entries)=>{
 });
 
 sections.forEach(section=>observer.observe(section));
+  /* ===== Mobile Room Carousel ===== */
+
+const slider = document.querySelector(".rooms-slider");
+const cards = document.querySelectorAll(".room");
+
+function updateActiveCard(){
+
+    const sliderCenter =
+        slider.scrollLeft + slider.offsetWidth/2;
+
+    let closest = null;
+    let minDistance = Infinity;
+
+    cards.forEach(card=>{
+
+        const cardCenter =
+            card.offsetLeft + card.offsetWidth/2;
+
+        const distance =
+            Math.abs(sliderCenter-cardCenter);
+
+        if(distance < minDistance){
+
+            minDistance = distance;
+            closest = card;
+        }
+
+    });
+
+    cards.forEach(card=>card.classList.remove("active"));
+
+    if(closest){
+        closest.classList.add("active");
+    }
+
+}
+
+slider.addEventListener("scroll",updateActiveCard);
+
+window.addEventListener("load",()=>{
+
+    const first = cards[0];
+
+    slider.scrollLeft =
+        first.offsetLeft
+        - (slider.offsetWidth-first.offsetWidth)/2;
+
+    updateActiveCard();
+
+});
 </script>
 
 </body>
