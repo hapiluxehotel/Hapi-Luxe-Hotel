@@ -1663,7 +1663,43 @@ margin-bottom:20px;
 .rooms-slider::-webkit-scrollbar{
     display:none;
 }
+.room-tabs{
 
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:22px;
+
+    margin-bottom:30px;
+
+}
+
+.room-tab{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:24px;
+
+    color:#fff;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.room-tab.active{
+
+    color:#d6b176;
+
+    text-shadow:
+        0 0 8px rgba(214,177,118,.6),
+        0 0 18px rgba(214,177,118,.35);
+
+}
 .rooms-grid{
     display:flex;
     align-items:center;
@@ -1696,7 +1732,25 @@ margin-bottom:20px;
         min-height:340px;
 
     }
+.room.active{
+    transform:scale(1);
+    opacity:1;
+    z-index:10;
+}
 
+.room-tabs{
+    gap:16px;
+}
+
+.room-tab{
+    font-size:18px;
+}
+
+.about-img{
+    min-height:340px;
+}
+
+}
 }
   </style>
  <script type="application/ld+json">
@@ -1869,13 +1923,26 @@ margin-bottom:20px;
     </div>
     <div class="about-img" aria-label="Không gian khách sạn"></div>
   </section>
-
+  
   <section id="rooms">
     <div class="section-head">
       <span class="label">Hạng phòng</span>
       <h2>Phòng nghỉ ấm áp, tiện nghi và dễ chịu.</h2>
       <p>Thiết kế tối giản, màu sắc nhẹ nhàng, phù hợp cho khách du lịch, công tác hoặc cặp đôi.</p>
     </div>
+    <div class="room-tabs">
+
+    <span class="room-tab active">DELUXE</span>
+
+    <span>|</span>
+
+    <span class="room-tab">PREMIUM</span>
+
+    <span>|</span>
+
+    <span class="room-tab">SUITE</span>
+
+</div>
     <div class="rooms-slider">
     <div class="rooms-grid">
       <div class="room deluxe-card">
