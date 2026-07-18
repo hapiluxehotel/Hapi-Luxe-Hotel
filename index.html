@@ -1444,7 +1444,30 @@ margin-bottom:20px;
    /* =====================================================
    MOBILE RESPONSIVE
 ===================================================== */
+.room-tabs{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:22px;
+    margin:20px 0 35px;
+}
 
+.room-tab{
+    font-family:'Cinzel',serif;
+    font-size:22px;
+    color:#ffffff;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.room-tab.active{
+    color:#d6b176;
+    text-shadow:0 0 12px rgba(214,177,118,.6);
+}
+
+.divider{
+    color:rgba(255,255,255,.45);
+}
 @media (max-width:900px){
 /* ===== ABOUT MOBILE ===== */
 
@@ -1876,6 +1899,13 @@ margin-bottom:20px;
       <h2>Phòng nghỉ ấm áp, tiện nghi và dễ chịu.</h2>
       <p>Thiết kế tối giản, màu sắc nhẹ nhàng, phù hợp cho khách du lịch, công tác hoặc cặp đôi.</p>
     </div>
+    <div class="room-tabs">
+    <span class="room-tab active">DELUXE</span>
+    <span class="divider">|</span>
+    <span class="room-tab">PREMIUM</span>
+    <span class="divider">|</span>
+    <span class="room-tab">SUITE</span>
+</div>
     <div class="rooms-slider">
     <div class="rooms-grid">
       <div class="room deluxe-card">
@@ -2473,6 +2503,41 @@ window.addEventListener("load",()=>{
     updateActiveCard();
 
 });
+  /* ===== ROOM TABS ===== */
+
+const roomTabs = document.querySelectorAll(".room-tab");
+const roomCards = document.querySelectorAll(".room");
+const roomSlider = document.querySelector(".rooms-slider");
+
+function updateRoomTab(){
+
+    const center = roomSlider.scrollLeft + roomSlider.offsetWidth / 2;
+
+    let index = 0;
+    let min = Infinity;
+
+    roomCards.forEach((card,i)=>{
+
+        const cardCenter =
+            card.offsetLeft + card.offsetWidth/2;
+
+        const d = Math.abs(center-cardCenter);
+
+        if(d < min){
+            min = d;
+            index = i;
+        }
+
+    });
+
+    roomTabs.forEach(tab=>tab.classList.remove("active"));
+    roomTabs[index].classList.add("active");
+
+}
+
+roomSlider.addEventListener("scroll",updateRoomTab);
+
+window.addEventListener("load",updateRoomTab);
 </script>
 
 </body>
